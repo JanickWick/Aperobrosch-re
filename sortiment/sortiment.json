@@ -138,6 +138,125 @@
     ]
    ],
    "preis_offen": "Ohne Salzstängeli neu kalkulieren. Referenz bisher: CHF 2.50 pro Stück."
+  },
+  {
+   "name": "Platte Fleisch & Käse",
+   "bisher": "Palmblatt Fleisch & Käse",
+   "beschreibung": "Mit regionalem Käse und Fleisch für 2–8 Personen.",
+   "gefaess": "Neu auf silbrigen oder schwarzen Platten statt Palmblatt — klein / mittel / gross nach Personenzahl. Grössenstufen noch zu fixieren; bis dahin gelten die bisherigen Stufen 2/4/6/8 Personen.",
+   "preise": [
+    [
+     "2 Personen",
+     "pro Platte",
+     29.0
+    ],
+    [
+     "4 Personen",
+     "pro Platte",
+     56.0
+    ],
+    [
+     "6 Personen",
+     "pro Platte",
+     81.0
+    ],
+    [
+     "8 Personen",
+     "pro Platte",
+     104.0
+    ]
+   ]
+  },
+  {
+   "name": "Platte Käse",
+   "bisher": "Palmblatt Käse",
+   "beschreibung": "Regionaler Käse, unter anderem von der Käserei Rüttiberg in Schänis.",
+   "gefaess": "Neu auf silbrigen oder schwarzen Platten statt Palmblatt — klein / mittel / gross nach Personenzahl. Grössenstufen noch zu fixieren; bis dahin gelten die bisherigen Stufen 2/4/6/8 Personen.",
+   "preise": [
+    [
+     "2 Personen",
+     "pro Platte",
+     27.0
+    ],
+    [
+     "4 Personen",
+     "pro Platte",
+     53.0
+    ],
+    [
+     "6 Personen",
+     "pro Platte",
+     75.0
+    ],
+    [
+     "8 Personen",
+     "pro Platte",
+     96.0
+    ]
+   ]
+  },
+  {
+   "name": "Platte mit Früchten",
+   "bisher": "Palmblatt mit Früchten",
+   "beschreibung": "Saisonale Früchte zum Direktverzehr angerichtet. Ein Hingucker für jedes Buffet.",
+   "gefaess": "Neu auf silbrigen oder schwarzen Platten statt Palmblatt — klein / mittel / gross nach Personenzahl. Grössenstufen noch zu fixieren; bis dahin gelten die bisherigen Stufen 2/4/6/8 Personen.",
+   "preise": [
+    [
+     "2 Personen",
+     "pro Platte",
+     12.0
+    ],
+    [
+     "4 Personen",
+     "pro Platte",
+     22.0
+    ],
+    [
+     "6 Personen",
+     "pro Platte",
+     32.0
+    ],
+    [
+     "8 Personen",
+     "pro Platte",
+     40.0
+    ]
+   ]
+  },
+  {
+   "name": "Platte mit Gemüse und Dips",
+   "bisher": "Palmblatt mit Gemüse",
+   "beschreibung": "Bunte Platte mit saisonalem Gemüse. Dazu unsere hausgemachten Dips. Pro Zwei-Personen-Platte kann ein Dip ausgewählt werden (8 Personen = 4 Dips).",
+   "gefaess": "Neu auf silbrigen oder schwarzen Platten statt Palmblatt — klein / mittel / gross nach Personenzahl. Grössenstufen noch zu fixieren; bis dahin gelten die bisherigen Stufen 2/4/6/8 Personen.",
+   "preise": [
+    [
+     "2 Personen",
+     "pro Platte",
+     14.0
+    ],
+    [
+     "4 Personen",
+     "pro Platte",
+     27.5
+    ],
+    [
+     "6 Personen",
+     "pro Platte",
+     39.5
+    ],
+    [
+     "8 Personen",
+     "pro Platte",
+     51.0
+    ]
+   ],
+   "dips": [
+    "Quark",
+    "Tartar",
+    "Cocktail",
+    "Humus (vegan)"
+   ],
+   "hinweis_catering": "Die kleinen Plastikschälchen mit Löffeli eignen sich nicht fürs Buffet. Für Caterings: mehr Sauce in separatem Geschirr. Ohne Catering (Lieferung/privat) wie bisher."
   }
  ],
  "Confiserie": [],
