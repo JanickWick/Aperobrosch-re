@@ -197,6 +197,42 @@
      70.0
     ]
    ]
+  },
+  {
+   "name": "Laugenherz / Laugenbrezel am Meter / Zopfherz, gefüllt",
+   "beschreibung": "Das bayerische Original im Wick-Stil. Auffallend gefüllt und ein Gaumenschmaus. Neu auch als Zopfherz.",
+   "menge": "Znüni 10 cm pro Person · Mittagessen 20 cm pro Person",
+   "varianten": [
+    "Laugenherz",
+    "Laugenbrezel am Meter",
+    "Zopfherz (neu)"
+   ],
+   "fuellungen": [
+    "Fleischkäse",
+    "Schinken",
+    "Rohschinken",
+    "Bündnerfleisch",
+    "Salami",
+    "Käse",
+    "Ei",
+    "Tomaten & Mozzarella",
+    "Kräuterquark",
+    "Lachs",
+    "Thon"
+   ],
+   "preise": [
+    [
+     "Laugenherz / Laugenbrezel",
+     "pro Stück",
+     70.0
+    ],
+    [
+     "Zopfherz",
+     "pro Stück",
+     null
+    ]
+   ],
+   "preis_offen": "Zopfherz ist neu — Preis nach Kalkulation."
   }
  ]
 }
