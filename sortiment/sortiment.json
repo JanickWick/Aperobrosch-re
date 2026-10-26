@@ -296,6 +296,46 @@
    ],
    "offen": "Erdbeer-Nutella-Spiessli nicht genannt — bleibt oder weg?",
    "preis_offen": "Neue Sorten nach Kalkulation. Referenz bestehende Spiessli: CHF 3.80 pro Stück."
+  },
+  {
+   "name": "Mousse-Schale gefüllt",
+   "beschreibung": "Verschieden gefüllte Mousse-Schalen. Für 4 bis 8 Personen. Eine Geschmacksrichtung auswählen, mit der gewünschten Basis — Rahm, Quark oder Joghurt. Weitere Geschmacksrichtungen auf Anfrage.",
+   "basis": [
+    "Rahm",
+    "Quark",
+    "Joghurt"
+   ],
+   "sorten": [
+    "Mango",
+    "Passionsfrucht",
+    "Blutorangen",
+    "Erdbeer",
+    "Himbeer",
+    "Waldbeeren",
+    "Tiramisu",
+    "Schoggimousse dunkel",
+    "Schoggimousse weiss",
+    "Oreo",
+    "Biscoff",
+    "Caramel"
+   ],
+   "preise": [
+    [
+     "4 Personen",
+     "pro Schale",
+     24.0
+    ],
+    [
+     "6 Personen",
+     "pro Schale",
+     33.0
+    ],
+    [
+     "8 Personen",
+     "pro Schale",
+     42.0
+    ]
+   ]
   }
  ],
  "Confiserie": [],
