@@ -367,6 +367,28 @@
      2.6
     ]
    ]
+  },
+  {
+   "name": "Cup Cakes",
+   "beschreibung": "Unsere Cup Cakes erstrahlen im neuen Kleid — entweder in herzigen Kinder-Sujets oder in zeitlosen Pastellfarben. Mindestbestellmenge pro Sorte 10 Stück.",
+   "mindestmenge": "10 Stück pro Sorte",
+   "varianten": [
+    "Kinder-Sujets",
+    "Pastellfarben"
+   ],
+   "sorten": [
+    "Schoggi",
+    "Vanille",
+    "Blueberry",
+    "Lemon"
+   ],
+   "preise": [
+    [
+     "Cup Cake",
+     "pro Stück",
+     5.9
+    ]
+   ]
   }
  ],
  "Confiserie": [],
