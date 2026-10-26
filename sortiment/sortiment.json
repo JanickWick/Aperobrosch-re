@@ -125,6 +125,78 @@
     ]
    ],
    "preis_offen": "Neue Variante — Preis nach Kalkulation. Referenz bisher: Minibrötli CHF 2.50, Partybrötli CHF 2.80 pro Stück."
+  },
+  {
+   "name": "Brot am Stück 50 cm / 100 cm",
+   "beschreibung": "Ein Eyecatcher für jedes Buffet. Das gefüllte Brot am Stück.",
+   "menge": "Znüni 10 cm pro Person · Mittagessen 20 cm pro Person",
+   "brotsorten": [
+    "Parisette",
+    "Laugenparisette",
+    "Zwirbelwick",
+    "Zwirbelwick Rustico"
+   ],
+   "fuellungen": [
+    "Fleischkäse",
+    "Schinken",
+    "Rohschinken",
+    "Bündnerfleisch",
+    "Salami",
+    "Käse",
+    "Ei",
+    "Tomaten & Mozzarella",
+    "Kräuterquark",
+    "Lachs",
+    "Thon"
+   ],
+   "preise": [
+    [
+     "50 cm",
+     "pro Stück",
+     44.0
+    ],
+    [
+     "100 cm",
+     "pro Stück",
+     64.0
+    ],
+    [
+     "Zuschlag geschnitten",
+     "",
+     6.0
+    ]
+   ]
+  },
+  {
+   "name": "Brot am Meter in Zahlenform",
+   "beschreibung": "Für einen Geburtstag der perfekte Apéro. Deine Jahreszahl in XXL gefüllt.",
+   "menge": "Znüni 10 cm pro Person · Mittagessen 20 cm pro Person",
+   "brotsorten": [
+    "Parisette",
+    "Laugenparisette",
+    "Zwirbelwick",
+    "Zwirbelwick Rustico"
+   ],
+   "fuellungen": [
+    "Fleischkäse",
+    "Schinken",
+    "Rohschinken",
+    "Bündnerfleisch",
+    "Salami",
+    "Käse",
+    "Ei",
+    "Tomaten & Mozzarella",
+    "Kräuterquark",
+    "Lachs",
+    "Thon"
+   ],
+   "preise": [
+    [
+     "Zahl",
+     "pro Stück",
+     70.0
+    ]
+   ]
   }
  ]
 }
