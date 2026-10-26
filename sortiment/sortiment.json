@@ -60,6 +60,31 @@
      15.0
     ]
    ]
+  },
+  {
+   "name": "Apérogebäck",
+   "beschreibung": "Zum kalt oder warm geniessen, mit einer Mindestbestellmenge von 10 Stück pro Sorte.",
+   "mindestmenge": "10 Stück pro Sorte",
+   "sorten": [
+    "Chäschüechli",
+    "saisonales Chüechli",
+    "Pizzachüechli",
+    "Spinatchüechli",
+    "Schinkengipfel",
+    "Chili Würstli im Briochesmantel"
+   ],
+   "preise": [
+    [
+     "Apérogebäck",
+     "pro Stück",
+     2.2
+    ],
+    [
+     "Chili Würstli im Briochesmantel",
+     "pro Stück",
+     2.8
+    ]
+   ]
   }
  ],
  "Konditorei": [
