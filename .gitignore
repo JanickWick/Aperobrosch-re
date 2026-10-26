@@ -10,3 +10,6 @@ uebersicht/daten.js
 uebersicht/ref/*.log
 uebersicht/ref/fetcher.pid
 uebersicht/kand.json
+uebersicht/wahl-vorlaeufig.json
+uebersicht/ref.json
+uebersicht/ref/*.jpg
