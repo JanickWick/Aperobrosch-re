@@ -62,7 +62,40 @@
    ]
   }
  ],
- "Konditorei": [],
+ "Konditorei": [
+  {
+   "name": "Belegte Brötli",
+   "beschreibung": "Ein halbes Toastbrot, schön ausgarniert. Ohne Sulz, mit einer Mindestbestellmenge von 10 Stück. Viertel-Canapés sind nur in 4er-Schritten bestellbar.",
+   "mindestmenge": "10 Stück · Viertel in 4er-Schritten",
+   "fuellungen": [
+    "Schinken",
+    "Salami",
+    "Rohschinken",
+    "Bündnerfleisch",
+    "Fleischkäse",
+    "Käse",
+    "Ei",
+    "Spargeln",
+    "Kräuterquark",
+    "Thon",
+    "Lachs",
+    "Tatar",
+    "Zigerbrüüt"
+   ],
+   "preise": [
+    [
+     "diagonal",
+     "pro Stück",
+     3.2
+    ],
+    [
+     "viertel",
+     "pro Stück",
+     2.2
+    ]
+   ]
+  }
+ ],
  "Confiserie": [],
  "Küche": [],
  "Traiteur": [
