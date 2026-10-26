@@ -6,7 +6,8 @@ ROOT = pathlib.Path(__file__).parent.resolve(); OUT = ROOT / 'out'; OUT.mkdir(ex
 PDF = OUT / 'wick-sortiment-uebersicht.pdf'
 import json
 U = ROOT / 'uebersicht'
-ref = json.loads((U / 'ref.json').read_text()) if (U / 'ref.json').exists() else {}
+import os
+ref = {} if os.environ.get('OHNE_BILDER') else (json.loads((U / 'ref.json').read_text()) if (U / 'ref.json').exists() else {})
 (U / 'daten.js').write_text('window.PROD = ' + (U / 'sortiment.json').read_text() + ';\nwindow.REF = ' + json.dumps(ref, ensure_ascii=False) + ';\n')
 with sync_playwright() as pw:
     b = pw.chromium.launch(executable_path='/opt/pw-browsers/chromium-1243/chrome-linux64/chrome')

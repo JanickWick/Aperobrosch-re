@@ -38,7 +38,7 @@ h2 small { float: right; font-weight: 500; font-size: 7.5pt; color: #B78F76; let
 </head>
 <body>
 <h1>Unser Sortiment<em>— die Übersicht zum Fixieren.</em></h1>
-<p class="intro">Jedes Produkt mit Oberkategorie, kurzer Beschreibung und einem Referenzbild aus dem Internet — so könnte es aussehen, nicht wie es bei uns aussieht. Pro Produkt ankreuzen: bleibt, weg oder ändern. Platten und Mengen klären wir danach, Produkt für Produkt.</p>
+<p class="intro">Jedes Produkt mit Oberkategorie, kurzer Beschreibung und einem Bildplatzhalter — die Fotos kommen später. Pro Produkt ankreuzen: bleibt, weg oder ändern. Platten und Mengen klären wir danach, Produkt für Produkt.</p>
 <div class="legende">
   <span><i class="tag">bestehend</i> steht heute im Sortiment</span>
   <span><i class="tag neu">neu</i> Vorschlag aus den Filialen oder der Recherche</span>
@@ -47,7 +47,7 @@ h2 small { float: right; font-weight: 500; font-size: 7.5pt; color: #B78F76; let
   <span><i class="tag streichen">streichen?</i> zur Streichung vorgeschlagen</span>
 </div>
 <div id="inhalt"></div>
-<div class="fuss"><span>Wick — Sortiment 2027 · Arbeitsstand</span><span>Bilder: Referenzen aus dem Internet (CC-Lizenzen, Nachweis je Bild) — nicht für den Druck</span></div>
+<div class="fuss"><span>Wick — Sortiment 2027 · Arbeitsstand</span><span>Bilder folgen — Platzhalter</span></div>
 <script src="daten.js"></script>
 <script>
 const slug = s => s.normalize('NFKD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/ß/g, 'ss').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 60);
@@ -60,7 +60,7 @@ const LABEL = { bestehend: 'bestehend', neu: 'neu', entwurf: 'Entwurf', saisonal
     for (const p of liste) {
       const r = ref[slug(p.name)];
       const bild = r ? `<div class="bild"><img src="${r.datei}" alt=""></div><div class="credit">Bild: ${(r.urheber || r.titel || 'Openverse').toString().slice(0, 28)} · ${r.lizenz.toUpperCase()}</div>`
-                     : `<div class="bild leer">Referenzbild folgt</div>`;
+                     : `<div class="bild leer">Bild<br>Platzhalter</div>`;
       html += `<div class="karte"><div>${bild}</div><div class="text"><b>${p.name}</b><p>${p.beschreibung}</p>
         <div><i class="tag ${p.status}">${LABEL[p.status]}</i></div>
         <div class="wahl" style="margin-top:1.6mm"><span>bleibt</span><span>weg</span><span>ändern</span></div></div></div>`;

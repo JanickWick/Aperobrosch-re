@@ -628,5 +628,54 @@
   "beschreibung": "Mandelgipfel, Nussgipfel",
   "status": "bestehend",
   "such": "almond crescent cookies"
+ },
+ {
+  "kat": "Brot & Brötli",
+  "name": "Wicks Biräbrot / Glarner Biräbrot",
+  "beschreibung": "Klein oder gross — regionale Spezialität, Herbst und Winter",
+  "status": "saisonal",
+  "such": "birnbrot"
+ },
+ {
+  "kat": "Platten & Sharing",
+  "name": "Antipasti",
+  "beschreibung": "Grilliertes Gemüse, Oliven, Mozzarella — aus dem Shop",
+  "status": "bestehend",
+  "such": "antipasti platter"
+ },
+ {
+  "kat": "Süsses",
+  "name": "Stückli divers",
+  "beschreibung": "Spitzbueb, Vogelnestli, Vanille- und Schoggibrezel, Cookies, Schoggi-S, Rüebli-Chüechli",
+  "status": "bestehend",
+  "such": "swiss pastries assorted"
+ },
+ {
+  "kat": "Süsses",
+  "name": "Anggäzältä",
+  "beschreibung": "Glarner Spezialität",
+  "status": "bestehend",
+  "such": "glarner spezialitaet"
+ },
+ {
+  "kat": "Süsses",
+  "name": "Schlosstürmli",
+  "beschreibung": "Konditorei-Spezialität des Hauses",
+  "status": "bestehend",
+  "such": "schlossturm patisserie"
+ },
+ {
+  "kat": "Torten & Confiserie",
+  "name": "Ladentorten",
+  "beschreibung": "Himbeer-Quark, Schwarzwälder, Schweden-, Fruchttorte — mit Schriftzug auf Wunsch",
+  "status": "bestehend",
+  "such": "cream cake whole"
+ },
+ {
+  "kat": "Torten & Confiserie",
+  "name": "Glarnerpastete",
+  "beschreibung": "Zwetschgen oder Mandeln, 8 bis 20 Personen",
+  "status": "bestehend",
+  "such": "glarner pastete"
  }
 ]
