@@ -8,7 +8,9 @@ e = html.escape
 def chf(v): return 'nach Kalkulation' if v is None else f'CHF {v:.2f}'
 def liste(t, items): return f'<div class="z"><b>{t}</b><span>{" · ".join(e(x) for x in items)}</span></div>' if items else ''
 def karte(p):
-    h = f'<div class="karte"><div class="ph">Bild folgt</div><div class="text"><h3>{e(p["name"])}</h3><p>{e(p.get("beschreibung", ""))}</p>'
+    bl = p.get("bilder") or []
+    bild = ''.join(f'<img src="{b}">' for b in bl[:3]) if bl else '<div class="ph">Bild folgt</div>'
+    h = f'<div class="karte"><div class="bild n{min(len(bl),3)}">{bild}</div><div class="text"><h3>{e(p["name"])}</h3><p>{e(p.get("beschreibung", ""))}</p>'
     if p.get('bisher'): h += f'<div class="z"><b>bisher</b><span>{e(p["bisher"])}</span></div>'
     if p.get('ersetzt'): h += f'<div class="z"><b>ersetzt</b><span>{e(p["ersetzt"])}</span></div>'
     if p.get('menge'): h += f'<div class="z"><b>Menge</b><span>{e(p["menge"])}</span></div>'
@@ -19,7 +21,7 @@ def karte(p):
     else: h += liste('Sorten', p.get('sorten'))
     h += liste('Füllungen', p.get('fuellungen')) + liste('Dips', p.get('dips')) + liste('Saisonal', p.get('saisonal')) + liste('Mit Alkohol', p.get('alkoholisch'))
     if p.get('preise'): h += '<div class="z"><b>Preis</b><span>' + '<br>'.join(f'{e(n)}{" · " + e(u) if u else ""}: {chf(v)}' for n, u, v in p['preise']) + '</span></div>'
-    for k, t in (('preis_offen', 'Preis offen'), ('gestrichen', 'gestrichen'), ('geaendert', 'geändert'), ('offen', 'offen'), ('produktion', 'Produktion'), ('gefaess', 'Gefäss'), ('hinweis_catering', 'Catering')):
+    for k, t in (('preis_offen', 'Preis offen'), ('gestrichen', 'gestrichen'), ('geaendert', 'geändert'), ('offen', 'offen'), ('produktion', 'Produktion'), ('gefaess', 'Gefäss'), ('hinweis_catering', 'Catering'), ('bild_hinweis', 'Bild')):
         v = p.get(k)
         if v: h += f'<div class="z note"><b>{t}</b><span>{e(" · ".join(v) if isinstance(v, list) else v)}</span></div>'
     return h + '</div></div>'
@@ -36,6 +38,9 @@ h1 em {{ font-style: normal; color: #7A4424; }}
 h2 {{ font-family: 'Wick Sans', sans-serif; font-weight: 600; font-size: 12pt; letter-spacing: .07em; text-transform: uppercase; color: #7A4424; margin: 6mm 0 3mm; padding-bottom: 1.4mm; border-bottom: 0.4mm solid #CFC0A6; break-after: avoid; }}
 h2 small {{ float: right; font-weight: 500; font-size: 7.5pt; color: #B78F76; }}
 .karte {{ display: grid; grid-template-columns: 26mm 1fr; column-gap: 4mm; break-inside: avoid; border-bottom: 0.2mm solid #E6DCCB; padding: 2.5mm 0; }}
+.bild {{ width: 26mm; display: grid; gap: 1mm; align-content: start; }}
+.bild img {{ width: 26mm; height: 20mm; object-fit: cover; display: block; border-radius: 1mm; }}
+.bild.n2 img, .bild.n3 img {{ height: 17mm; }}
 .ph {{ width: 26mm; height: 26mm; background: #F1EADC; display: flex; align-items: center; justify-content: center; font-family: 'Wick Sans', sans-serif; font-size: 6.5pt; color: #B78F76; }}
 h3 {{ font-family: 'Wick Sans', sans-serif; font-weight: 600; font-size: 10.5pt; margin-bottom: 1mm; }}
 .text p {{ font-size: 8.8pt; line-height: 1.34; color: #3B3733; margin-bottom: 1.6mm; }}
@@ -46,7 +51,7 @@ h3 {{ font-family: 'Wick Sans', sans-serif; font-weight: 600; font-size: 10.5pt;
 .fuss {{ position: fixed; bottom: -9mm; left: 0; right: 0; font-family: 'Wick Sans', sans-serif; font-size: 6.5pt; letter-spacing: .06em; text-transform: uppercase; color: #B78F76; display: flex; justify-content: space-between; }}
 </style></head><body>
 <h1>Unser Sortiment<em> — nach Abteilungen.</em></h1>
-<p class="intro">Fünf Abteilungen, jedes Produkt mit den Angaben aus den Vorlagen. «Nach Kalkulation» heisst: neue oder geänderte Position, Preis noch nicht festgelegt. Bilder folgen.</p>
+<p class="intro">Fünf Abteilungen, jedes Produkt mit den Angaben aus den Vorlagen. «Nach Kalkulation» heisst: neue oder geänderte Position, Preis noch nicht festgelegt..</p>
 {teile}
 <div class="fuss"><span>Wick — Sortiment · Arbeitsstand</span><span>{sum(len(v) for v in S.values())} Produkte</span></div>
 </body></html>'''

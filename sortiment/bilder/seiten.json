@@ -1,0 +1,605 @@
+[
+ {
+  "seite": 1,
+  "titel": "Apéro",
+  "bilder": [
+   {
+    "datei": "sortiment/bilder/kand/p01-1.jpg",
+    "px": [
+     380,
+     417
+    ]
+   },
+   {
+    "datei": "sortiment/bilder/kand/p01-2.jpg",
+    "px": [
+     391,
+     389
+    ]
+   },
+   {
+    "datei": "sortiment/bilder/kand/p01-3.jpg",
+    "px": [
+     375,
+     399
+    ]
+   },
+   {
+    "datei": "sortiment/bilder/kand/p01-4.jpg",
+    "px": [
+     491,
+     253
+    ]
+   },
+   {
+    "datei": "sortiment/bilder/kand/p01-5.jpg",
+    "px": [
+     1387,
+     368
+    ]
+   }
+  ]
+ },
+ {
+  "seite": 2,
+  "titel": "Hier dreht sich alles um Ihren Event. Wir sind ihr verlässlicher Partner im Bereich Catering und",
+  "bilder": []
+ },
+ {
+  "seite": 3,
+  "titel": "Ideal für einen Teamevent, Ausflug oder eine schnelle Verpflegung. In den vielseitigen",
+  "bilder": [
+   {
+    "datei": "sortiment/bilder/kand/p03-1.jpg",
+    "px": [
+     343,
+     390
+    ]
+   },
+   {
+    "datei": "sortiment/bilder/kand/p03-2.jpg",
+    "px": [
+     329,
+     435
+    ]
+   },
+   {
+    "datei": "sortiment/bilder/kand/p03-3.jpg",
+    "px": [
+     342,
+     391
+    ]
+   },
+   {
+    "datei": "sortiment/bilder/kand/p03-4.jpg",
+    "px": [
+     335,
+     438
+    ]
+   }
+  ]
+ },
+ {
+  "seite": 4,
+  "titel": "Helle, dunkle oder körnige Brötchen als Trauben zusammengefügt.",
+  "bilder": [
+   {
+    "datei": "sortiment/bilder/kand/p04-1.jpg",
+    "px": [
+     494,
+     434
+    ]
+   },
+   {
+    "datei": "sortiment/bilder/kand/p04-2.jpg",
+    "px": [
+     570,
+     475
+    ]
+   },
+   {
+    "datei": "sortiment/bilder/kand/p04-3.jpg",
+    "px": [
+     624,
+     180
+    ]
+   },
+   {
+    "datei": "sortiment/bilder/kand/p04-4.jpg",
+    "px": [
+     693,
+     265
+    ]
+   }
+  ]
+ },
+ {
+  "seite": 5,
+  "titel": "Der Turm kann mit bis zu fünf verschiedenen Füllungen gefüllt werden.",
+  "bilder": [
+   {
+    "datei": "sortiment/bilder/kand/p05-1.jpg",
+    "px": [
+     535,
+     476
+    ]
+   },
+   {
+    "datei": "sortiment/bilder/kand/p05-2.jpg",
+    "px": [
+     486,
+     477
+    ]
+   },
+   {
+    "datei": "sortiment/bilder/kand/p05-3.jpg",
+    "px": [
+     710,
+     519
+    ]
+   }
+  ]
+ },
+ {
+  "seite": 6,
+  "titel": "Ein Eyecatcher für jedes Buffet. Das gefüllte Brot am Stück.",
+  "bilder": [
+   {
+    "datei": "sortiment/bilder/kand/p06-1.jpg",
+    "px": [
+     728,
+     242
+    ]
+   },
+   {
+    "datei": "sortiment/bilder/kand/p06-2.jpg",
+    "px": [
+     836,
+     223
+    ]
+   },
+   {
+    "datei": "sortiment/bilder/kand/p06-3.jpg",
+    "px": [
+     272,
+     444
+    ]
+   },
+   {
+    "datei": "sortiment/bilder/kand/p06-4.jpg",
+    "px": [
+     330,
+     455
+    ]
+   }
+  ]
+ },
+ {
+  "seite": 7,
+  "titel": "Das bayerische Orginal im Wick Stil. Auffallend gefüllt und ein Gaumenschmaus.",
+  "bilder": [
+   {
+    "datei": "sortiment/bilder/kand/p07-1.jpg",
+    "px": [
+     512,
+     366
+    ]
+   },
+   {
+    "datei": "sortiment/bilder/kand/p07-2.jpg",
+    "px": [
+     555,
+     363
+    ]
+   },
+   {
+    "datei": "sortiment/bilder/kand/p07-3.jpg",
+    "px": [
+     424,
+     494
+    ]
+   },
+   {
+    "datei": "sortiment/bilder/kand/p07-4.jpg",
+    "px": [
+     717,
+     389
+    ]
+   }
+  ]
+ },
+ {
+  "seite": 8,
+  "titel": "Eine runde Toastscheibe schön ausgarniert.",
+  "bilder": [
+   {
+    "datei": "sortiment/bilder/kand/p08-1.jpg",
+    "px": [
+     509,
+     636
+    ]
+   },
+   {
+    "datei": "sortiment/bilder/kand/p08-2.jpg",
+    "px": [
+     703,
+     495
+    ]
+   },
+   {
+    "datei": "sortiment/bilder/kand/p08-3.jpg",
+    "px": [
+     682,
+     294
+    ]
+   },
+   {
+    "datei": "sortiment/bilder/kand/p08-4.jpg",
+    "px": [
+     663,
+     363
+    ]
+   }
+  ]
+ },
+ {
+  "seite": 9,
+  "titel": "Zum kalt oder warm geniessen mit einer Mindestbestellmenge von 10 Stück pro Sorte.",
+  "bilder": [
+   {
+    "datei": "sortiment/bilder/kand/p09-1.jpg",
+    "px": [
+     663,
+     13
+    ]
+   },
+   {
+    "datei": "sortiment/bilder/kand/p09-2.jpg",
+    "px": [
+     419,
+     336
+    ]
+   },
+   {
+    "datei": "sortiment/bilder/kand/p09-3.jpg",
+    "px": [
+     331,
+     262
+    ]
+   },
+   {
+    "datei": "sortiment/bilder/kand/p09-4.jpg",
+    "px": [
+     474,
+     253
+    ]
+   },
+   {
+    "datei": "sortiment/bilder/kand/p09-5.jpg",
+    "px": [
+     488,
+     241
+    ]
+   },
+   {
+    "datei": "sortiment/bilder/kand/p09-6.jpg",
+    "px": [
+     400,
+     482
+    ]
+   }
+  ]
+ },
+ {
+  "seite": 10,
+  "titel": "In drei leckeren Varianten erhältlich. Mindestbestellmenge pro Sorte 10stk.",
+  "bilder": [
+   {
+    "datei": "sortiment/bilder/kand/p10-1.jpg",
+    "px": [
+     534,
+     398
+    ]
+   },
+   {
+    "datei": "sortiment/bilder/kand/p10-2.jpg",
+    "px": [
+     550,
+     394
+    ]
+   },
+   {
+    "datei": "sortiment/bilder/kand/p10-3.jpg",
+    "px": [
+     1021,
+     634
+    ]
+   }
+  ]
+ },
+ {
+  "seite": 11,
+  "titel": "Mit regionalem Käse und Fleisch für 2-8 Personen.",
+  "bilder": [
+   {
+    "datei": "sortiment/bilder/kand/p11-1.jpg",
+    "px": [
+     989,
+     664
+    ]
+   },
+   {
+    "datei": "sortiment/bilder/kand/p11-2.jpg",
+    "px": [
+     914,
+     626
+    ]
+   }
+  ]
+ },
+ {
+  "seite": 12,
+  "titel": "Saisonale Früchte zum Direktverzehr angerichtet. Ein Hingucker für jedes Buffet.",
+  "bilder": [
+   {
+    "datei": "sortiment/bilder/kand/p12-1.jpg",
+    "px": [
+     980,
+     702
+    ]
+   },
+   {
+    "datei": "sortiment/bilder/kand/p12-2.jpg",
+    "px": [
+     926,
+     587
+    ]
+   }
+  ]
+ },
+ {
+  "seite": 13,
+  "titel": "Die Spiessli im trendigen Look gibt es bei uns in drei Variationen",
+  "bilder": [
+   {
+    "datei": "sortiment/bilder/kand/p13-1.jpg",
+    "px": [
+     574,
+     405
+    ]
+   },
+   {
+    "datei": "sortiment/bilder/kand/p13-2.jpg",
+    "px": [
+     545,
+     405
+    ]
+   },
+   {
+    "datei": "sortiment/bilder/kand/p13-3.jpg",
+    "px": [
+     636,
+     806
+    ]
+   }
+  ]
+ },
+ {
+  "seite": 14,
+  "titel": "Verschieden gefüllt Mousse Schalen. Für 4 bis 8 Personen.",
+  "bilder": [
+   {
+    "datei": "sortiment/bilder/kand/p14-1.jpg",
+    "px": [
+     1102,
+     508
+    ]
+   },
+   {
+    "datei": "sortiment/bilder/kand/p14-2.jpg",
+    "px": [
+     756,
+     956
+    ]
+   }
+  ]
+ },
+ {
+  "seite": 15,
+  "titel": "Diverse hausgemachte Kreationen für den Direktverzehr geeignet.",
+  "bilder": [
+   {
+    "datei": "sortiment/bilder/kand/p15-1.jpg",
+    "px": [
+     1199,
+     662
+    ]
+   },
+   {
+    "datei": "sortiment/bilder/kand/p15-2.jpg",
+    "px": [
+     1199,
+     667
+    ]
+   }
+  ]
+ },
+ {
+  "seite": 16,
+  "titel": "Unsere Cup Cakes erstahlen im neuen Kleid; entweder in herzigen Kinder Sujet`s",
+  "bilder": [
+   {
+    "datei": "sortiment/bilder/kand/p16-1.jpg",
+    "px": [
+     383,
+     289
+    ]
+   },
+   {
+    "datei": "sortiment/bilder/kand/p16-2.jpg",
+    "px": [
+     434,
+     271
+    ]
+   },
+   {
+    "datei": "sortiment/bilder/kand/p16-3.jpg",
+    "px": [
+     411,
+     309
+    ]
+   },
+   {
+    "datei": "sortiment/bilder/kand/p16-4.jpg",
+    "px": [
+     394,
+     298
+    ]
+   },
+   {
+    "datei": "sortiment/bilder/kand/p16-5.jpg",
+    "px": [
+     395,
+     296
+    ]
+   },
+   {
+    "datei": "sortiment/bilder/kand/p16-6.jpg",
+    "px": [
+     688,
+     450
+    ]
+   }
+  ]
+ },
+ {
+  "seite": 17,
+  "titel": "Unsere veganen Alternativen überzgeugen nicht nur im optischen.  Sie sind Gesund, nachhaltig",
+  "bilder": [
+   {
+    "datei": "sortiment/bilder/kand/p17-1.jpg",
+    "px": [
+     479,
+     525
+    ]
+   },
+   {
+    "datei": "sortiment/bilder/kand/p17-2.jpg",
+    "px": [
+     458,
+     508
+    ]
+   },
+   {
+    "datei": "sortiment/bilder/kand/p17-3.jpg",
+    "px": [
+     724,
+     386
+    ]
+   }
+  ]
+ },
+ {
+  "seite": 18,
+  "titel": "Sie planen eine Firmenfeier, Hochzeit oder Geburtstagsfeier und sind noch auf der Suche nach",
+  "bilder": []
+ },
+ {
+  "seite": 19,
+  "titel": "Werden in einem Suppentopf geliefert.",
+  "bilder": []
+ },
+ {
+  "seite": 20,
+  "titel": "Warmer Schinken mit Kartoffelsalat",
+  "bilder": []
+ },
+ {
+  "seite": 21,
+  "titel": "Falafelbällchen, Ingwer-Karottensauce, Gemüsecouscous",
+  "bilder": [
+   {
+    "datei": "sortiment/bilder/kand/p21-1.jpg",
+    "px": [
+     1086,
+     772
+    ]
+   }
+  ]
+ },
+ {
+  "seite": 22,
+  "titel": "Classic",
+  "bilder": []
+ },
+ {
+  "seite": 23,
+  "titel": "Teller (Hauptgang-/Vorspeise-/Dessertteller, Suppentasse)",
+  "bilder": []
+ },
+ {
+  "seite": 24,
+  "titel": "info@baeckerei-wick.ch",
+  "bilder": [
+   {
+    "datei": "sortiment/bilder/kand/p24-1.jpg",
+    "px": [
+     491,
+     253
+    ]
+   },
+   {
+    "datei": "sortiment/bilder/kand/p24-2.jpg",
+    "px": [
+     1387,
+     368
+    ]
+   }
+  ]
+ },
+ {
+  "seite": 25,
+  "titel": "",
+  "bilder": []
+ },
+ {
+  "seite": 26,
+  "titel": "",
+  "bilder": []
+ },
+ {
+  "seite": 27,
+  "titel": "",
+  "bilder": []
+ },
+ {
+  "seite": 28,
+  "titel": "",
+  "bilder": []
+ },
+ {
+  "seite": 29,
+  "titel": "",
+  "bilder": []
+ },
+ {
+  "seite": 30,
+  "titel": "",
+  "bilder": []
+ },
+ {
+  "seite": 31,
+  "titel": "",
+  "bilder": []
+ },
+ {
+  "seite": 32,
+  "titel": "",
+  "bilder": []
+ },
+ {
+  "seite": 33,
+  "titel": "",
+  "bilder": []
+ }
+]

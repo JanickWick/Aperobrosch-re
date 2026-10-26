@@ -20,6 +20,9 @@
      "pro Stück",
      1.3
     ]
+   ],
+   "bilder": [
+    "bilder/produkte/traubenbrot-1.jpg"
    ]
   },
   {
@@ -42,6 +45,9 @@
      "pro Stück",
      1.3
     ]
+   ],
+   "bilder": [
+    "bilder/produkte/picknickbrot-1.jpg"
    ]
   },
   {
@@ -59,6 +65,10 @@
      "pro Stück",
      15.0
     ]
+   ],
+   "bilder": [
+    "bilder/produkte/partybrot-1.jpg",
+    "bilder/produkte/partybrot-2.jpg"
    ]
   },
   {
@@ -84,6 +94,11 @@
      "pro Stück",
      2.8
     ]
+   ],
+   "bilder": [
+    "bilder/produkte/aperogeback-1.jpg",
+    "bilder/produkte/aperogeback-2.jpg",
+    "bilder/produkte/aperogeback-3.jpg"
    ]
   }
  ],
@@ -118,6 +133,10 @@
      "pro Stück",
      2.2
     ]
+   ],
+   "bilder": [
+    "bilder/produkte/belegte-brotli-1.jpg",
+    "bilder/produkte/belegte-brotli-2.jpg"
    ]
   },
   {
@@ -137,7 +156,12 @@
      null
     ]
    ],
-   "preis_offen": "Ohne Salzstängeli neu kalkulieren. Referenz bisher: CHF 2.50 pro Stück."
+   "preis_offen": "Ohne Salzstängeli neu kalkulieren. Referenz bisher: CHF 2.50 pro Stück.",
+   "bilder": [
+    "bilder/produkte/frischkase-pralinen-1.jpg",
+    "bilder/produkte/frischkase-pralinen-2.jpg"
+   ],
+   "bild_hinweis": "Referenzbild: noch mit Salzstängeli"
   },
   {
    "name": "Platte Fleisch & Käse",
@@ -165,6 +189,9 @@
      "pro Platte",
      104.0
     ]
+   ],
+   "bilder": [
+    "bilder/produkte/platte-fleisch-kase-1.jpg"
    ]
   },
   {
@@ -193,6 +220,9 @@
      "pro Platte",
      96.0
     ]
+   ],
+   "bilder": [
+    "bilder/produkte/platte-kase-1.jpg"
    ]
   },
   {
@@ -221,6 +251,9 @@
      "pro Platte",
      40.0
     ]
+   ],
+   "bilder": [
+    "bilder/produkte/platte-mit-fruchten-1.jpg"
    ]
   },
   {
@@ -256,7 +289,10 @@
     "Cocktail",
     "Humus (vegan)"
    ],
-   "hinweis_catering": "Die kleinen Plastikschälchen mit Löffeli eignen sich nicht fürs Buffet. Für Caterings: mehr Sauce in separatem Geschirr. Ohne Catering (Lieferung/privat) wie bisher."
+   "hinweis_catering": "Die kleinen Plastikschälchen mit Löffeli eignen sich nicht fürs Buffet. Für Caterings: mehr Sauce in separatem Geschirr. Ohne Catering (Lieferung/privat) wie bisher.",
+   "bilder": [
+    "bilder/produkte/platte-mit-gemuse-und-dips-1.jpg"
+   ]
   },
   {
    "name": "Spiessli",
@@ -295,7 +331,13 @@
     "Frucht-Nutella-Spiessli"
    ],
    "offen": "Erdbeer-Nutella-Spiessli nicht genannt — bleibt oder weg?",
-   "preis_offen": "Neue Sorten nach Kalkulation. Referenz bestehende Spiessli: CHF 3.80 pro Stück."
+   "preis_offen": "Neue Sorten nach Kalkulation. Referenz bestehende Spiessli: CHF 3.80 pro Stück.",
+   "bilder": [
+    "bilder/produkte/spiessli-1.jpg",
+    "bilder/produkte/spiessli-2.jpg",
+    "bilder/produkte/spiessli-3.jpg"
+   ],
+   "bild_hinweis": "Referenzbilder: Frucht, Tomaten-Mozzarella (noch mit Focaccia), Antipasti — neue Sorten ohne Foto"
   },
   {
    "name": "Mousse-Schale gefüllt",
@@ -335,6 +377,10 @@
      "pro Schale",
      42.0
     ]
+   ],
+   "bilder": [
+    "bilder/produkte/mousse-schale-gefullt-1.jpg",
+    "bilder/produkte/mousse-schale-gefullt-2.jpg"
    ]
   },
   {
@@ -366,6 +412,10 @@
      "pro Stück",
      2.6
     ]
+   ],
+   "bilder": [
+    "bilder/produkte/mini-patisserie-1.jpg",
+    "bilder/produkte/mini-patisserie-2.jpg"
    ]
   },
   {
@@ -388,6 +438,10 @@
      "pro Stück",
      5.9
     ]
+   ],
+   "bilder": [
+    "bilder/produkte/cup-cakes-1.jpg",
+    "bilder/produkte/cup-cakes-2.jpg"
    ]
   },
   {
@@ -410,6 +464,9 @@
      "pro Stück",
      4.5
     ]
+   ],
+   "bilder": [
+    "bilder/produkte/cake-pops-1.jpg"
    ]
   }
  ],
@@ -443,6 +500,10 @@
      "pro Stück",
      34.0
     ]
+   ],
+   "bilder": [
+    "bilder/produkte/pain-surprise-party-brioches-1.jpg",
+    "bilder/produkte/pain-surprise-party-brioches-2.jpg"
    ]
   },
   {
@@ -474,7 +535,12 @@
      null
     ]
    ],
-   "preis_offen": "Neue Variante — Preis nach Kalkulation. Referenz bisher: Minibrötli CHF 2.50, Partybrötli CHF 2.80 pro Stück."
+   "preis_offen": "Neue Variante — Preis nach Kalkulation. Referenz bisher: Minibrötli CHF 2.50, Partybrötli CHF 2.80 pro Stück.",
+   "bilder": [
+    "bilder/produkte/knopfli-gefullt-laugen-und-butterknopfli-1.jpg",
+    "bilder/produkte/knopfli-gefullt-laugen-und-butterknopfli-2.jpg"
+   ],
+   "bild_hinweis": "Referenzbild: bisherige gefüllte Partybrötli / Minibrötli — neues Foto mit Laugen- und Butterknöpfli nötig"
   },
   {
    "name": "Brot am Stück 50 cm / 100 cm",
@@ -515,6 +581,10 @@
      "",
      6.0
     ]
+   ],
+   "bilder": [
+    "bilder/produkte/brot-am-stuck-50-cm-100-cm-1.jpg",
+    "bilder/produkte/brot-am-stuck-50-cm-100-cm-2.jpg"
    ]
   },
   {
@@ -546,6 +616,10 @@
      "pro Stück",
      70.0
     ]
+   ],
+   "bilder": [
+    "bilder/produkte/brot-am-meter-in-zahlenform-1.jpg",
+    "bilder/produkte/brot-am-meter-in-zahlenform-2.jpg"
    ]
   },
   {
@@ -582,7 +656,11 @@
      null
     ]
    ],
-   "preis_offen": "Zopfherz ist neu — Preis nach Kalkulation."
+   "preis_offen": "Zopfherz ist neu — Preis nach Kalkulation.",
+   "bilder": [
+    "bilder/produkte/laugenherz-laugenbrezel-am-meter-zopfher-1.jpg",
+    "bilder/produkte/laugenherz-laugenbrezel-am-meter-zopfher-2.jpg"
+   ]
   },
   {
    "name": "Apérowrap",
@@ -601,7 +679,12 @@
      null
     ]
    ],
-   "preis_offen": "Neues, kleineres Format — Preis nach Kalkulation. Referenz bisher: CHF 2.70 / 2.90 pro Stück."
+   "preis_offen": "Neues, kleineres Format — Preis nach Kalkulation. Referenz bisher: CHF 2.70 / 2.90 pro Stück.",
+   "bilder": [
+    "bilder/produkte/aperowrap-1.jpg",
+    "bilder/produkte/aperowrap-2.jpg"
+   ],
+   "bild_hinweis": "Referenzbild: bisheriges Format — neues Foto im kleineren Format nötig"
   }
  ]
 }
