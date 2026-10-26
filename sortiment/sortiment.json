@@ -94,6 +94,37 @@
      34.0
     ]
    ]
+  },
+  {
+   "name": "Knöpfli gefüllt — Laugen- und Butterknöpfli, mini",
+   "beschreibung": "Mini-Laugenknöpfli und Mini-Butterknöpfli, verschieden gefüllt. Standardgemäss werden die Knöpfli automatisch gemischt.",
+   "ersetzt": "Brötli gefüllt (Weiss, Para, Sonny, Vollkorn, Laugen)",
+   "fuellungen": [
+    "Fleischkäse",
+    "Schinken",
+    "Rohschinken",
+    "Bündnerfleisch",
+    "Salami",
+    "Käse",
+    "Ei",
+    "Tomaten & Mozzarella",
+    "Kräuterquark",
+    "Lachs",
+    "Thon"
+   ],
+   "preise": [
+    [
+     "Laugenknöpfli mini, gefüllt",
+     "pro Stück",
+     null
+    ],
+    [
+     "Butterknöpfli mini, gefüllt",
+     "pro Stück",
+     null
+    ]
+   ],
+   "preis_offen": "Neue Variante — Preis nach Kalkulation. Referenz bisher: Minibrötli CHF 2.50, Partybrötli CHF 2.80 pro Stück."
   }
  ]
 }
