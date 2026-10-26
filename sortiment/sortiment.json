@@ -389,6 +389,28 @@
      5.9
     ]
    ]
+  },
+  {
+   "name": "Cake Pops",
+   "beschreibung": "Cake Pops sind modern und so fein. Es gibt sie mit verschiedenen Füllungen, und sie können ganz nach Ihren Wünschen ausdekoriert werden. Mindestbestellmenge pro Sorte 10 Stück.",
+   "mindestmenge": "10 Stück pro Sorte",
+   "sorten": [
+    "Schokolade",
+    "Zitrone",
+    "Marmor",
+    "Mandel"
+   ],
+   "alkoholisch": [
+    "Baileys",
+    "Champagner"
+   ],
+   "preise": [
+    [
+     "Cake Pop",
+     "pro Stück",
+     4.5
+    ]
+   ]
   }
  ],
  "Confiserie": [],
