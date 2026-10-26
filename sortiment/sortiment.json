@@ -119,6 +119,25 @@
      2.2
     ]
    ]
+  },
+  {
+   "name": "Frischkäse-Pralinen",
+   "beschreibung": "In drei Varianten erhältlich, ohne Salzstängeli — nur die Pralinen. Mindestbestellmenge pro Sorte 10 Stück.",
+   "mindestmenge": "10 Stück pro Sorte",
+   "sorten": [
+    "Sesam-Mohn",
+    "Baumnuss-Cranberry",
+    "Schnittlauch-Chili"
+   ],
+   "geaendert": "bisher «Frischkäsekugeln mit Salzstängeli» — Salzstängeli entfällt",
+   "preise": [
+    [
+     "Frischkäse-Praline",
+     "pro Stück",
+     null
+    ]
+   ],
+   "preis_offen": "Ohne Salzstängeli neu kalkulieren. Referenz bisher: CHF 2.50 pro Stück."
   }
  ],
  "Confiserie": [],
