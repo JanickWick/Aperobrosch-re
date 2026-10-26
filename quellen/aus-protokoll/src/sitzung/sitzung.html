@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8">
+<title>Wick — Brainstorming Sortiment</title>
+<link rel="stylesheet" href="../../assets/fonts/fonts-static.css">
+<link rel="stylesheet" href="sitzung.css">
+</head>
+<body>
+<div id="blaetter"></div>
+
+<script src="../../assets/svg/brand.js"></script>
+<script>
+const P = [];
+const logo = () => (window.WickBrand && window.WickBrand.logo) || '';
+
+const blatt = (nr, wo, inhalt) => P.push(`
+  <div class="blatt">
+    <div class="kopf">
+      <div class="kopf__logo">${logo()}</div>
+      <div class="kopf__wo">${wo}</div>
+    </div>
+    ${inhalt}
+    <div class="fuss">
+      <span><b>Sortiment neu gedacht</b> &nbsp;·&nbsp; Brainstorming im Team</span>
+      <span>Blatt ${nr} von 2</span>
+    </div>
+  </div>`);
+
+/* ======================================================================
+   Blatt 1 — Der Auftrag und was sich ändern soll
+   ====================================================================== */
+blatt(1, 'Bäckerei · Küche<br>Traiteur · Konditorei', `
+  <h1>Unser Sortiment<em>neu gedacht.</em></h1>
+
+  <p class="lead">Wir bauen die Apéro- und Cateringbroschüre neu auf. Was am Ende
+  drinsteht, soll nicht am Schreibtisch entstehen, sondern <strong>bei euch</strong>
+  — bei denen, die es jeden Tag produzieren.</p>
+
+  <p class="lead" style="margin-bottom:6mm">Denkt im Team einmal in Ruhe darüber
+  nach und schreibt auf, was euch einfällt. Nichts muss fertig sein, Stichworte
+  genügen. <strong>Danach setzen wir uns zusammen und gehen es gemeinsam durch.</strong></p>
+
+  <div class="termin" style="grid-template-columns:1fr 1fr">
+    <div><u>Besprechung</u><b>Datum folgt</b>
+      <span>Wir melden uns, sobald der Termin steht.</span></div>
+    <div><u>Mitbringen</u><b>Dieses Blatt mit euren Notizen</b>
+      <span>Die Zeilen dafür sind auf der Rückseite.</span></div>
+  </div>
+
+  <h2>Worüber ihr nachdenken sollt</h2>
+  <div class="fragen">
+    <div><u>01</u><span><b>Was fehlt?</b>
+      <span>Produkte, die ihr gerne im Sortiment hättet. Etwas, das ihr schon
+      könnt und das nirgends auftaucht — oder das Kundschaft immer wieder
+      fragt.</span></span></div>
+
+    <div><u>02</u><span><b>Was kann weg?</b>
+      <span>Die wichtigere Frage. Was wird selten bestellt, was ist zu aufwendig,
+      was sieht auf dem Buffet nach zwanzig Minuten nicht mehr gut aus?</span></span></div>
+
+    <div><u>03</u><span><b>Was müsste anders sein?</b>
+      <span>Nicht das Produkt, sondern wie es verkauft wird: Portionsgrössen,
+      Stückzahlen, Einheiten, Namen.</span></span></div>
+
+    <div><u>04</u><span><b>Was fragt die Kundschaft, das wir nicht anbieten?</b>
+      <span>Die Frage, auf die ihr regelmässig Nein sagen müsst. Dort liegt oft
+      das nächste Produkt.</span></span></div>
+  </div>
+
+  <h2>Was sich ändern soll</h2>
+  <div class="aender">
+    <div><b>Alles kommt auf die Platte.</b> Statt pro Stück mit Mindestmenge
+    bestellt man künftig eine <strong>kleine, mittlere oder grosse Platte</strong> —
+    bei den Canapés genauso wie beim Apérogebäck oder beim Süssen. Wir müssen
+    wissen: Was gehört auf welche Grösse, und für wie viele Gäste reicht sie?</div>
+
+    <div><b>Geliefert oder von uns vor Ort.</b> Was wir liefern, geht auf Einweg,
+    Palmblatt oder Tray und kommt nicht zurück. Was wir <strong>selbst
+    durchführen</strong>, kommt auf Mehrweggeschirr und echte Platten — wir
+    richten an und nehmen alles wieder mit. Was von euren Produkten passt nur in
+    die eine oder andere Welt?</div>
+
+    <div><b>Verpackung — hier sind wir offen.</b> Neben dem Palmblatt gibt es
+    heute Trays in allen Formen, Holz, Schiefer, Kraftkarton, Gläser,
+    Mehrwegboxen. Was habt ihr gesehen, das zu uns passen würde?</div>
+  </div>`);
+
+/* ======================================================================
+   Blatt 2 — Die Zeilen
+   ====================================================================== */
+const feld = (titel, hinweis, zeilen, spalte2) => `
+  <div class="feld">
+    <u>${titel}</u><i>${hinweis}</i>
+    ${spalte2 ? `<div class="eintrag"><span>Was</span><span>${spalte2}</span></div>` : ''}
+    <div class="zeilen">${'<div></div>'.repeat(zeilen)}</div>
+  </div>`;
+
+blatt(2, 'Eure Notizen<br>Stichworte genügen', `
+  <h2 style="margin-top:0">Eure Notizen</h2>
+
+  ${feld('Neu — das hätten wir gerne im Sortiment',
+         'Name, kurz was es ist, und warum ihr daran glaubt.', 5, 'Warum?')}
+  ${feld('Weg — das würden wir streichen',
+         'Und der Grund: läuft nicht, zu aufwendig, passt nicht mehr.', 4, 'Warum?')}
+  ${feld('Anders — Menge, Einheit, Name oder Portion stimmt nicht',
+         'Was steht heute da, was müsste stattdessen dastehen?', 3, 'Neu wie?')}
+  ${feld('Platten und Verpackung',
+         'Was gehört auf klein, mittel, gross? Was nur geliefert, was nur vor Ort? '
+       + 'Und worauf servieren wir es?', 4)}
+
+  <div class="feld" style="margin-bottom:0">
+    <u>Abteilung und wer dabei war</u>
+    <div class="zeilen"><div></div></div>
+  </div>`);
+
+document.getElementById('blaetter').innerHTML = P.join('');
+document.body.dataset.mode =
+  new URLSearchParams(location.search).get('mode') || 'screen';
+</script>
+</body>
+</html>

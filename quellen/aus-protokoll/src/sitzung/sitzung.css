@@ -1,0 +1,296 @@
+/* ==========================================================================
+   WICK — Vorbereitungsblatt für die Abteilungssitzungen
+   A4 hoch, vierseitig, zum Doppelseitig-Drucken.
+   Eigene Gestaltung, aber dieselben Schriften und Farben wie die Broschüre.
+   ========================================================================== */
+
+@page { size: A4 portrait; margin: 0; }
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --ink:        #1F1F1F;
+  --ink-soft:   #3B3733;
+  --brown:      #7A4424;
+  --brown-deep: #5E3319;
+  --brown-45:   #B78F76;
+  --brown-12:   #EFE6DF;
+  --sand:       #E6DCCB;
+  --sand-pale:  #F1EADC;
+  --sand-deep:  #CFC0A6;
+  --paper:      #FFFFFF;
+  --ls:         .07em;
+  --seite-w:    210mm;
+  --seite-h:    297mm;
+  --rand:       16mm;
+}
+
+html { background: #8C8C8C; }
+body { font-family: 'Wick Slab', Georgia, serif; color: var(--ink); }
+
+.blatt {
+  position: relative;
+  width: var(--seite-w); height: var(--seite-h);
+  background: var(--paper);
+  padding: var(--rand) var(--rand) 20mm;
+  overflow: hidden;
+  page-break-after: always;
+  margin: 0 auto;
+}
+.blatt:last-child { page-break-after: auto; }
+
+body[data-mode="screen"] .blatt { margin: 8mm auto; box-shadow: 0 2mm 6mm rgba(0,0,0,.4); }
+
+/* --- Kopf ---------------------------------------------------------------- */
+.kopf {
+  display: flex; align-items: flex-end; justify-content: space-between;
+  border-bottom: 0.8mm solid var(--ink);
+  padding-bottom: 3mm; margin-bottom: 7mm;
+}
+.kopf__logo { width: 42mm; }
+.kopf__logo svg { width: 100%; height: auto; fill: var(--ink); display: block; }
+.kopf__wo {
+  font-family: 'Wick Sans', sans-serif; font-weight: 600; font-size: 7.5pt;
+  letter-spacing: var(--ls); text-transform: uppercase; color: var(--brown);
+  text-align: right; line-height: 1.5;
+}
+
+h1 {
+  font-family: 'Wick Sans', sans-serif; font-weight: 700;
+  font-size: 26pt; line-height: 1.04; letter-spacing: -0.01em;
+  margin-bottom: 3mm;
+}
+h1 em { font-style: normal; color: var(--brown); display: block; }
+
+.lead {
+  font-size: 11pt; line-height: 1.42; max-width: 152mm;
+  margin-bottom: 6mm;
+}
+
+h2 {
+  font-family: 'Wick Sans', sans-serif; font-weight: 600;
+  font-size: 11pt; letter-spacing: var(--ls); text-transform: uppercase;
+  color: var(--brown); padding-bottom: 1.8mm; margin: 7mm 0 3.5mm;
+  border-bottom: 0.4mm solid var(--sand-deep);
+}
+h2:first-of-type { margin-top: 0; }
+
+p { font-size: 10.5pt; line-height: 1.42; }
+p + p { margin-top: 2.5mm; }
+strong { font-weight: 700; }
+
+/* --- Der Termin ---------------------------------------------------------- */
+.termin {
+  background: var(--ink); color: #fff;
+  padding: 5mm 6mm; margin-bottom: 7mm;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 4mm 8mm;
+}
+.termin div u {
+  display: block; text-decoration: none;
+  font-family: 'Wick Sans', sans-serif; font-weight: 600; font-size: 7.5pt;
+  letter-spacing: var(--ls); text-transform: uppercase; color: var(--sand);
+  margin-bottom: 1mm;
+}
+.termin div b { font-family: 'Wick Sans', sans-serif; font-weight: 600; font-size: 12pt; }
+.termin div span { font-size: 9.5pt; line-height: 1.32; display: block; }
+.linie { display: inline-block; border-bottom: 0.3mm solid var(--sand);
+  min-width: 42mm; height: 5mm; }
+
+/* --- Nummerierte Leitfragen ---------------------------------------------- */
+.fragen { display: grid; row-gap: 4.5mm; }
+.fragen > div { display: grid; grid-template-columns: 11mm 1fr; align-items: start; }
+.fragen u {
+  text-decoration: none; font-family: 'Wick Sans', sans-serif; font-weight: 700;
+  font-size: 15pt; color: var(--brown-45); line-height: 1;
+}
+.fragen b {
+  display: block; font-family: 'Wick Sans', sans-serif; font-weight: 600;
+  font-size: 11.5pt; letter-spacing: .02em; margin-bottom: 1.2mm;
+}
+.fragen span { display: block; font-size: 10pt; line-height: 1.38; color: var(--ink-soft); }
+
+/* --- Kategorientabelle --------------------------------------------------- */
+table.kat { width: 100%; border-collapse: collapse; font-size: 9.5pt; }
+table.kat th {
+  font-family: 'Wick Sans', sans-serif; font-weight: 600; font-size: 7.5pt;
+  letter-spacing: var(--ls); text-transform: uppercase; color: var(--brown);
+  text-align: left; padding: 0 1.5mm 2mm; border-bottom: 0.4mm solid var(--ink);
+  vertical-align: bottom;
+}
+table.kat th.abt, table.kat td.abt { text-align: center; width: 13mm; }
+table.kat td {
+  padding: 1.9mm 1.5mm; border-bottom: 0.2mm solid var(--brown-12);
+  line-height: 1.26; vertical-align: top;
+}
+table.kat td.s {
+  font-family: 'Wick Sans', sans-serif; font-weight: 500; font-size: 8.5pt;
+  color: var(--brown-45); width: 15mm; white-space: nowrap;
+}
+table.kat tr.gruppe td {
+  font-family: 'Wick Sans', sans-serif; font-weight: 600; font-size: 8pt;
+  letter-spacing: var(--ls); text-transform: uppercase;
+  color: var(--ink); background: var(--sand-pale);
+  padding-top: 2.4mm; padding-bottom: 2.4mm;
+}
+table.kat td i { font-style: normal; display: block; font-size: 8.5pt;
+  color: var(--ink-soft); margin-top: 0.6mm; }
+.pkt { display: inline-block; width: 3.4mm; height: 3.4mm; border-radius: 50%;
+  background: var(--brown); }
+.pkt--neben { background: none; border: 0.4mm solid var(--brown-45); }
+
+.legende {
+  display: flex; gap: 9mm; margin-top: 4mm;
+  font-family: 'Wick Sans', sans-serif; font-size: 8pt; letter-spacing: .02em;
+  color: var(--ink-soft); align-items: center;
+}
+.legende span { display: flex; align-items: center; gap: 2mm; }
+
+/* --- Blöcke pro Abteilung ------------------------------------------------ */
+.abt-block { border-left: 1.2mm solid var(--brown); padding-left: 5mm; margin-bottom: 6mm; }
+.abt-block h3 {
+  font-family: 'Wick Sans', sans-serif; font-weight: 700; font-size: 13pt;
+  letter-spacing: .01em; margin-bottom: 1.5mm;
+}
+.abt-block h3 s {
+  text-decoration: none; font-weight: 500; font-size: 8pt; color: var(--brown-45);
+  letter-spacing: var(--ls); text-transform: uppercase; margin-left: 2.5mm;
+}
+.abt-block ol { margin: 0 0 0 4.5mm; font-size: 10pt; line-height: 1.4; }
+.abt-block ol li { margin-bottom: 1.2mm; padding-left: 1mm; }
+.abt-block .entwurf {
+  margin-top: 2.5mm; padding: 2.6mm 3.4mm; background: var(--sand-pale);
+  font-size: 9pt; line-height: 1.36;
+}
+.abt-block .entwurf b {
+  font-family: 'Wick Sans', sans-serif; font-weight: 600; font-size: 7.5pt;
+  letter-spacing: var(--ls); text-transform: uppercase; color: var(--brown);
+  display: block; margin-bottom: 1mm;
+}
+
+/* --- Prüfliste ----------------------------------------------------------- */
+.pruef { display: grid; grid-template-columns: 1fr 1fr; gap: 2.6mm 7mm; }
+.pruef div { display: grid; grid-template-columns: 5mm 1fr; font-size: 9.5pt;
+  line-height: 1.34; align-items: start; }
+.kaestli { width: 3.4mm; height: 3.4mm; border: 0.35mm solid var(--ink-soft);
+  margin-top: 0.8mm; }
+
+.warnung {
+  border: 0.4mm solid var(--brown); padding: 4mm 5mm; margin-top: 5mm;
+  font-size: 9.5pt; line-height: 1.38;
+}
+.warnung b { font-family: 'Wick Sans', sans-serif; font-weight: 600; font-size: 8pt;
+  letter-spacing: var(--ls); text-transform: uppercase; color: var(--brown);
+  display: block; margin-bottom: 1.5mm; }
+
+/* --- Notizfelder --------------------------------------------------------- */
+.feld { margin-bottom: 6mm; }
+.feld u {
+  display: block; text-decoration: none;
+  font-family: 'Wick Sans', sans-serif; font-weight: 600; font-size: 9.5pt;
+  letter-spacing: var(--ls); text-transform: uppercase; color: var(--brown);
+  margin-bottom: 1mm;
+}
+.feld i { font-style: normal; display: block; font-size: 8.5pt;
+  color: var(--ink-soft); margin-bottom: 2.5mm; }
+.zeilen { border-top: 0.25mm solid var(--sand-deep); }
+.zeilen div { height: 8mm; border-bottom: 0.25mm solid var(--sand-deep); }
+
+.eintrag { display: grid; grid-template-columns: 1fr 34mm; gap: 0; }
+.eintrag > span {
+  font-family: 'Wick Sans', sans-serif; font-weight: 600; font-size: 7pt;
+  letter-spacing: var(--ls); text-transform: uppercase; color: var(--brown-45);
+  padding-bottom: 1mm;
+}
+.eintrag > span + span { padding-left: 2.5mm; }
+
+/* --- Fuss ---------------------------------------------------------------- */
+.fuss {
+  position: absolute; left: var(--rand); right: var(--rand); bottom: 11mm;
+  display: flex; justify-content: space-between; align-items: baseline;
+  border-top: 0.3mm solid var(--sand-deep); padding-top: 2.2mm;
+  font-family: 'Wick Sans', sans-serif; font-size: 7.5pt;
+  letter-spacing: var(--ls); text-transform: uppercase; color: var(--brown-45);
+}
+.fuss b { font-weight: 600; color: var(--brown); }
+
+/* ==========================================================================
+   Ergänzung — Plattenverkauf, Lieferung gegen vor Ort, Verpackung
+   ========================================================================== */
+
+/* Grundsatzentscheid: Kasten mit Buchstabe statt Nummer */
+.wechsel { border: 0.4mm solid var(--ink); padding: 4mm 5mm 4.4mm; margin-bottom: 4.5mm; }
+.wechsel > u {
+  display: block; text-decoration: none; margin-bottom: 1.8mm;
+  font-family: 'Wick Sans', sans-serif; font-weight: 700; font-size: 12.5pt;
+}
+.wechsel > u s {
+  text-decoration: none; color: var(--brown); margin-right: 2.5mm;
+}
+.wechsel p { font-size: 9.5pt; line-height: 1.36; }
+.wechsel .frage {
+  margin-top: 2.6mm; padding-top: 2.4mm; border-top: 0.25mm solid var(--sand-deep);
+  font-size: 9pt; line-height: 1.34;
+}
+.wechsel .frage b {
+  display: block; font-family: 'Wick Sans', sans-serif; font-weight: 600;
+  font-size: 7.5pt; letter-spacing: var(--ls); text-transform: uppercase;
+  color: var(--brown); margin-bottom: 1.2mm;
+}
+.wechsel .frage ul { margin: 0 0 0 4mm; padding: 0; }
+.wechsel .frage li { margin-bottom: 0.7mm; }
+
+/* Zwei Welten nebeneinander */
+.zwei { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; margin-top: 2.6mm; }
+.zwei > div { background: var(--sand-pale); padding: 3mm 3.6mm; }
+.zwei > div.dunkel { background: var(--ink); color: #fff; }
+.zwei b {
+  display: block; font-family: 'Wick Sans', sans-serif; font-weight: 600;
+  font-size: 9pt; letter-spacing: .02em; margin-bottom: 1.4mm;
+}
+.zwei ul { margin: 0 0 0 3.6mm; padding: 0; font-size: 8.5pt; line-height: 1.34; }
+.zwei li { margin-bottom: 0.5mm; }
+
+/* Rechenhilfe aus den heute belegten Zahlen */
+.rechenhilfe {
+  border-left: 1.2mm solid var(--brown-45); background: var(--sand-pale);
+  padding: 3mm 4mm; font-size: 8.5pt; line-height: 1.36; margin-top: 3mm;
+}
+.rechenhilfe b {
+  display: block; font-family: 'Wick Sans', sans-serif; font-weight: 600;
+  font-size: 7.5pt; letter-spacing: var(--ls); text-transform: uppercase;
+  color: var(--brown); margin-bottom: 1.2mm;
+}
+
+/* Arbeitsblatt Platten */
+table.platten { width: 100%; border-collapse: collapse; }
+table.platten th {
+  font-family: 'Wick Sans', sans-serif; font-weight: 600; font-size: 8pt;
+  letter-spacing: var(--ls); text-transform: uppercase; color: var(--brown);
+  text-align: left; padding: 0 2mm 2mm; border-bottom: 0.4mm solid var(--ink);
+  vertical-align: bottom;
+}
+table.platten th small {
+  display: block; font-weight: 500; font-size: 6.6pt; letter-spacing: .03em;
+  text-transform: none; color: var(--brown-45); margin-top: 0.6mm;
+}
+table.platten td {
+  padding: 0 2mm; height: 11.4mm;
+  border-bottom: 0.25mm solid var(--sand-deep); vertical-align: bottom;
+}
+table.platten td.gruppe {
+  font-size: 9pt; line-height: 1.18; vertical-align: middle;
+  border-bottom: 0.25mm solid var(--brown-12);
+}
+table.platten td.gruppe i {
+  font-style: normal; display: block; font-size: 7.2pt; color: var(--brown-45);
+  margin-top: 0.4mm;
+}
+table.platten td.wo { vertical-align: middle; border-bottom: 0.25mm solid var(--brown-12); }
+table.platten td.wo span {
+  display: flex; align-items: center; gap: 1.4mm; font-size: 7.2pt;
+  color: var(--ink-soft); margin-bottom: 0.8mm;
+}
+table.platten td.wo span:last-child { margin-bottom: 0; }
+.kaestli--s { width: 2.6mm; height: 2.6mm; border: 0.3mm solid var(--ink-soft); flex: 0 0 auto; }
+table.platten tr.leer td.gruppe { background: repeating-linear-gradient(
+  transparent 0, transparent 100%); }

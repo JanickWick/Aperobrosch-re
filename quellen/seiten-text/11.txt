@@ -1,0 +1,51 @@
+BROT
+TRAUBENBROT
+Helle, dunkle oder körnige Brötchen, als Traube zusammengefügt.
+Menge pro Person
+Minibrötli (ca. 20 g)
+3 Stück
+Partybrötli (ca. 30 g)
+2 Stück
+Bürli (ca. 70 g)
+1 Stück
+Minibrötli
+pro Stück 0.80
+Partybrötli
+pro Stück 0.90
+Bürli
+pro Stück 1.30
+PICKNICKBROT
+Verschiedene Brötli aneinandergeformt.
+Menge pro Person
+Minibrötli (ca. 20 g)
+3 Stück
+Partybrötli (ca. 30 g)
+2 Stück
+Bürli (ca. 70 g)
+1 Stück
+Minibrötli
+pro Stück 0.80
+Partybrötli
+pro Stück 0.90
+Bürli
+pro Stück 1.30
+PARTYBROT
+WICK-SIGNATURE
+Holzofenbrot, dunkel und sehr kräftig gebacken.
+Menge pro Person
+100–150 g pro Person
+Partybrot
+pro kg 11.00
+Schriftzug auf Schild
+pro Stück 15.00
+04
+Alle Preise in Schweizer Franken.
+BROT &
+BRÖTLI
+Brot ist unser Ursprung. Unsere Teige ruhen bis zu 48 Stunden —
+das gibt Aroma und macht das Brot bekömmlicher. Für den Apéro
+formen wir es zu Trauben, Picknickbroten und Laiben, die man
+teilt.
+KAPITEL 0 4 / 0 6
+WICK — APÉRO & CATERING
+11

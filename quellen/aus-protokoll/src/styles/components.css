@@ -1,0 +1,114 @@
+
+/* ==========================================================================
+   18 · Warme Küche — Wege, Buffetkarten, Rechenbeispiel
+   ========================================================================== */
+
+/* Ernährungsmarke: steht in dichten Listen hinter dem Namen. Kleiner und
+   ruhiger als ein Badge, aber immer noch eindeutig. */
+.dt {
+  font-style: normal; font-family: var(--font-sans); font-weight: 600;
+  font-size: 6.6pt; letter-spacing: .06em; text-transform: uppercase;
+  vertical-align: 0.9mm; margin-left: 0.8mm; color: var(--sand);
+}
+.dt--vegan { color: var(--white); }
+.panel--paper .dt, .col--paper .dt { color: var(--brown-45); }
+.panel--paper .dt--vegan, .col--paper .dt--vegan { color: var(--brown); }
+
+/* Die drei Wege zum warmen Essen */
+.wege { display: grid; grid-template-columns: repeat(3, 1fr); column-gap: 14mm; }
+.weg { position: relative; padding-top: 7mm; border-top: 0.5mm solid var(--sand); }
+.weg u {
+  position: absolute; top: -0.4mm; left: 0; text-decoration: none;
+  font-family: var(--font-sans); font-weight: 600; font-size: 9pt;
+  letter-spacing: var(--ls-sans); color: var(--sand);
+}
+.weg b {
+  display: block; font-family: var(--font-sans); font-weight: 600;
+  font-size: 15pt; letter-spacing: var(--ls-sans); text-transform: uppercase;
+  line-height: 1.1;
+}
+.weg i {
+  display: block; margin-top: 1.6mm; font-style: normal;
+  font-family: var(--font-sans); font-weight: 500; font-size: 8.6pt;
+  letter-spacing: var(--ls-sans); text-transform: uppercase; color: var(--sand);
+}
+.weg span { display: block; margin-top: 3.4mm;
+  font-family: var(--font-slab); font-size: 11pt; line-height: 1.3; }
+.weg em { display: block; font-style: normal; margin-top: 2.2mm;
+  font-family: var(--font-slab); font-size: 10pt; line-height: 1.28;
+  color: var(--on-ink-dim); }
+
+/* Buffetkarte: Name, Charakter, Inhalt, Preis */
+.bkarte { display: flex; flex-direction: column; height: 100%; }
+.bkarte b {
+  font-family: var(--font-sans); font-weight: 600; font-size: 12.5pt;
+  letter-spacing: var(--ls-sans); text-transform: uppercase; line-height: 1.12;
+}
+.bkarte i {
+  display: block; margin-top: 1.4mm; font-style: normal;
+  font-family: var(--font-slab); font-size: 9.5pt; line-height: 1.26;
+  color: var(--on-ink-dim);
+}
+.bkarte ul {
+  margin: 3.4mm 0 0; padding: 3.4mm 0 0; list-style: none;
+  border-top: 0.3mm solid var(--ink-line);
+  font-family: var(--font-slab); font-size: 10.5pt; line-height: 1.42;
+}
+.bkarte li::before { content: "·"; padding-right: 1.6mm; color: var(--sand); }
+.bkarte em {
+  display: block; font-style: normal; margin-top: auto; padding-top: 4mm;
+  font-family: var(--font-sans); font-weight: 600; font-size: 14pt;
+  color: var(--sand); font-variant-numeric: tabular-nums;
+}
+.bkarte em s {
+  display: block; text-decoration: none; margin-top: 0.6mm;
+  font-weight: 500; font-size: 8.4pt; letter-spacing: var(--ls-sans);
+  text-transform: uppercase; color: var(--on-ink-dim);
+}
+
+/* Rechenbeispiel: vier Bausteine, eine Summe */
+.rechnung { display: grid; row-gap: 0; }
+.rechnung > u {
+  text-decoration: none; margin-bottom: 3mm;
+  font-family: var(--font-sans); font-weight: 600; font-size: 9pt;
+  letter-spacing: var(--ls-sans); text-transform: uppercase; color: var(--sand);
+}
+.rechnung__z, .rechnung__t {
+  display: grid; grid-template-columns: 9mm 1fr 15mm 18mm;
+  align-items: baseline; column-gap: 2mm; padding: 2.2mm 0;
+  border-top: 0.25mm solid var(--ink-line);
+  font-family: var(--font-slab); font-size: 11pt;
+}
+.rechnung__z s {
+  text-decoration: none; font-family: var(--font-sans); font-weight: 600;
+  font-size: 8.4pt; color: var(--sand);
+}
+.rechnung__z i { font-style: normal; font-size: 9pt; color: var(--on-ink-dim);
+  text-align: right; }
+.rechnung__z em, .rechnung__t em {
+  font-style: normal; text-align: right; font-variant-numeric: tabular-nums;
+}
+.rechnung__t {
+  margin-top: 1.4mm; border-top: 0.5mm solid var(--sand);
+  font-family: var(--font-sans); font-weight: 600; font-size: 13pt;
+  color: var(--sand); grid-template-columns: 9mm 1fr 15mm 18mm;
+}
+.rechnung__t b { grid-column: 1 / 3; letter-spacing: var(--ls-sans);
+  text-transform: uppercase; font-size: 11pt; }
+.rechnung__t i { font-style: normal; font-size: 8.4pt; text-align: right;
+  letter-spacing: var(--ls-sans); text-transform: uppercase;
+  color: var(--on-ink-dim); font-weight: 500; }
+
+/* Abschnittstitel innerhalb einer Fläche. Die Kapitelbox sitzt über einer
+   Spalte und taugt dafür nicht — das hier steht mitten im Satz. */
+.sect {
+  font-family: var(--font-sans); font-weight: 600;
+  font-size: 12pt; letter-spacing: var(--ls-sans); text-transform: uppercase;
+  color: var(--sand); padding-bottom: 2.2mm; margin-bottom: 3.4mm;
+  border-bottom: 0.5mm solid var(--sand);
+}
+.sect small {
+  display: block; margin-top: 1.2mm; font-weight: 500; font-size: 8.4pt;
+  color: var(--on-ink-dim); text-transform: none; letter-spacing: 0;
+  font-family: var(--font-slab);
+}
