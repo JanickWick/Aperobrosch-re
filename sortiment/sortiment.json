@@ -1,7 +1,69 @@
 {
-  "Bäckerei":   [],
-  "Konditorei": [],
-  "Confiserie": [],
-  "Küche":      [],
-  "Traiteur":   []
+ "Bäckerei": [
+  {
+   "name": "Traubenbrot",
+   "beschreibung": "Helle, dunkle oder körnige Brötchen als Trauben zusammengefügt.",
+   "menge": "pro Person: Minibrötli (ca. 20 g) 3 Stück · Partybrötli (ca. 30 g) 2 Stück · Bürli (ca. 70 g) 1 Stück",
+   "preise": [
+    [
+     "Minibrötli",
+     "pro Stück",
+     0.8
+    ],
+    [
+     "Partybrötli",
+     "pro Stück",
+     0.9
+    ],
+    [
+     "Bürli",
+     "pro Stück",
+     1.3
+    ]
+   ]
+  },
+  {
+   "name": "Picknickbrot",
+   "beschreibung": "Verschiedene Brötli aneinandergeformt.",
+   "menge": "pro Person: Minibrötli (ca. 20 g) 3 Stück · Partybrötli (ca. 30 g) 2 Stück · Bürli (ca. 70 g) 1 Stück",
+   "preise": [
+    [
+     "Minibrötli",
+     "pro Stück",
+     0.8
+    ],
+    [
+     "Partybrötli",
+     "pro Stück",
+     0.9
+    ],
+    [
+     "Bürli",
+     "pro Stück",
+     1.3
+    ]
+   ]
+  },
+  {
+   "name": "Partybrot",
+   "beschreibung": "Holzofenbrot, dunkel und sehr kräftig gebacken.",
+   "menge": "pro Person 100–150 g",
+   "preise": [
+    [
+     "Partybrot",
+     "pro kg",
+     11.0
+    ],
+    [
+     "Schriftzug auf Schild",
+     "pro Stück",
+     15.0
+    ]
+   ]
+  }
+ ],
+ "Konditorei": [],
+ "Confiserie": [],
+ "Küche": [],
+ "Traiteur": []
 }
