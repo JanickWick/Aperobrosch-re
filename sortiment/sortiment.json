@@ -291,6 +291,25 @@
     ]
    ],
    "preis_offen": "Zopfherz ist neu — Preis nach Kalkulation."
+  },
+  {
+   "name": "Apérowrap",
+   "beschreibung": "In zwei Variationen, mit einer Mindestbestellmenge von 10 Stück pro Sorte. Kleiner als bisher — im Format wie beim Circus Knie.",
+   "mindestmenge": "10 Stück pro Sorte",
+   "sorten": [
+    "Poulet-Bratgemüse in einem Weizentortilla",
+    "Lachs mit Zitronenpfeffer in einem Spinattortilla"
+   ],
+   "gestrichen": "saisonaler Couscous im Randentortilla (vegan)",
+   "produktion": "Kleineres Format als heute, wie für den Circus Knie produziert.",
+   "preise": [
+    [
+     "Apérowrap klein",
+     "pro Stück",
+     null
+    ]
+   ],
+   "preis_offen": "Neues, kleineres Format — Preis nach Kalkulation. Referenz bisher: CHF 2.70 / 2.90 pro Stück."
   }
  ]
 }
