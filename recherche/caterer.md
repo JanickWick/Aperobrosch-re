@@ -29,3 +29,40 @@ Preise sind Momentaufnahmen der jeweiligen Website, keine Vorgabe.
 5. **Vegan ist entweder eigene Linie** (Beck Maier) **oder gleichberechtigtes Paket** (VBZ) — nie nur Fussnote.
 6. **Saisonales wird als Paket oder Marker geführt**, nicht als eigene Broschüre (eventcatering.ch, Chämi Metzg).
 7. **Gläsli/Weckglas** ist bei Metzgern und Bäckern angekommen (Köferli, Beck Maier) — passt zum Filial-Input «Gemüsestängeli im Glas».
+
+## Nachtrag — weitere Anbieter (gelesen am 26.10.2026)
+
+| # | Anbieter | Typ | Verkaufslogik | Platten / Gebinde | Besonderes |
+|---|---|---|---|---|---|
+| 15 | Strictly Fingerfood, Zürich | Fingerfood-Lieferant | **Platte = fixe Stückzahl × fixe Sortenzahl** | Mini-Brötli 24 = 4 Sorten × 6; Purkorn-Schnitten 18 = 3 × 6; Zopfsandwiches 30 = 3 × 10; Canapés 48 = 6 × 8 oder 54 = 9 × 6; Focaccia 48 = 3 × 16 | **Drei Linien zum gleichen Preis: Classic / Premium / vegan** (CHF 109 für 30 Zopfsandwiches, alle drei). Richtwert 8–10 Stk p. P., Vorlauf 2 Tage, kein Mindestbestellwert, Thermoboxen |
+| 16 | Feinkost Käfer, München | Feinkost-Caterer (DE) | Pack 12 Stk = 2 je Sorte (€ 79); Messe-Platte 25er-Set (€ 75 vegetarisch / € 87.50 herzhaft) | — | Eigene Kategorie **«Herzhaftes Fingerfood aus der Backstube»**: Mini-Quiches (Kürbis, Spinat-Feta, Brie), Strudelröschen, Käse-Millefeuille — Bäckerhandwerk als Premium-Fingerfood positioniert |
+| 17 | tibits | vegetarisches Restaurant-Catering | **Platte für 10–12 Personen**, Fixpreis | Apéroplatte klassisch CHF 129, mediterran CHF 144, Bao Bun CHF 144 — alle vegan | nur Abholung in 12 Restaurants, 3 Arbeitstage Vorlauf; Gläsli/Tartelette/Spiess als vegane Standardformen |
+| 18 | Sarys, Zürich | Lieferplatten | Fixpreis pro Platte, «klein / gross» nur bei Fleisch und Käse | Fingerfood assortiert CHF 140, Crostini CHF 140 (auch vegetarisch, glutenfrei), Apérogebäck CHF 55, Gemüsesticks mit 2 Dips CHF 59, Partybrötchen CHF 82.50 | 22 Platten, keine Stück- oder Personenangabe auf der Übersicht |
+| 19 | Eldora, Personalrestaurant Sisseln | Gemeinschaftsgastronomie | pro Stück | Partybrötli CHF 4.50, kleine Sandwiches CHF 4.00 (ab 2 Stk), warmes Fingerfood ab 5 Stk pro Sorte | Herkunft jeder Fleischart deklariert; vegetarisch/vegan mit Symbol; Gebäck und Gipfeli als Sitzungsverpflegung |
+| 20 | Bäckerei Stocker (gipfeli.ch), Zürich | Bäckerei | Platten, Details nur auf Anfrage | Apéro-Platten salzig, Dessertplatten, Wähen | Lieferung Stadt Zürich CHF 29 (2-Std-Fenster) / CHF 39 Express; Bestellung per E-Mail bis 14 Uhr |
+| 21 | Bäckerei Schwyter, St. Gallen | Bäckerei | Website blockiert Abruf; aus früherer Broschüre bekannt | — | Lieferung ab CHF 150 gratis im Grossraum St. Gallen, 2 Arbeitstage Vorlauf. Nur als Marktreferenz gelesen — Gestaltung bleibt ausgeschlossen |
+| 22 | Candrian / ZFV / SV / Dolce / Berest | Grosscaterer | **keine veröffentlichten Preise**, Offerte | — | Arbeiten ab 1000 Gästen über Offerten; Transparenz im Lieferbereich ist bei Grossen nicht üblich |
+| 23 | Hiltl Catering | vegetarisch | ab 20 Personen, Offerte | — | Fingerfood als Take-away, keine Plattenliste online |
+| 24 | Rehmanufaktur / Future Cuisine | rein vegane Caterer | Offerte | — | existieren als Nische; Preise nicht öffentlich |
+
+## Muster, verdichtet
+
+**Gebinde statt Stück ist bei Bäckerei-Caterern Standard.** Bachmann, Creabeck, Beck Maier, Strictly Fingerfood: fixe Stückzahlen, meist in drei Stufen. Korridor: klein 15–24, mittel 30–42, gross 40–64. **«4 Sorten = 40 Stück» taucht dreimal unabhängig auf** (VBZ, Sarys, Bachmann «4 Sorten wählbar»). Wicks 20 / 40 / 60 liegt mitten drin.
+
+**Drei Linien zum gleichen Preis** (Classic / Premium / vegan) ist die eleganteste Lösung für gemischte Stückpreise — Strictly macht es durchgehend, Beck Maier führt vegan als eigene Linie, Bachmann trennt Karton und Schieferoptik.
+
+**Preiskorridor pro Stück:** Bäckerei-Caterer 2.00–2.90 (Creabeck, Bachmann, Rapperswiler Beck), Fingerfood-Lieferanten 2.80–3.60 (Strictly), Event-Caterer 3.30–4.50 (VBZ, Eldora). Wick heute 2.20–3.90 — bäckertypisch, Luft nach oben bei Premium-Linien.
+
+**Platte für 40 Stück:** CHF 79 (Creabeck Pastetli) · 84 (Bachmann 30 Canapés) · 140 (Sarys) · 149–159 (Strictly 48–54) · 165 (VBZ). Spannweite zeigt: Bäcker verkaufen Gebäck günstig, belegte Ware teurer.
+
+**Häppchen pro Person:** 4–6 bei Bäckern, 6 Standard / 8–10 Riche bei Event-Caterern.
+
+**Mehrweg mit Depot** (CHF 10, Künzli Beck; Silberplatte, Rapperswiler Beck) ist bei Bäckern verbreitet; Thermoboxen bei Lieferanten.
+
+**Vorlauf 2 Tage** ist die Norm (Strictly, Bachmann, Schwyter), 3 Arbeitstage bei tibits, 24 h bei Brot.
+
+**Gläsli** ist überall: Weckglas (Köferli), 21er-Gläsli (Beck Maier), Verrines, Gemüse-Dip im Glas — bestätigt den Filial-Input.
+
+**Saisonales als Paket** (Weihnachts-, Oktoberfest-Apéro bei eventcatering.ch) oder als Marker (Chämi Metzg: Sommerbuffets Mai–September) — nie als eigene Broschüre.
+
+**Bäckerhandwerk als Premium-Fingerfood** (Käfer «aus der Backstube»: Mini-Quiche Kürbis, Strudelröschen) — genau Wicks Stärke, von einem Feinkost-Haus als Oberklasse verkauft.
