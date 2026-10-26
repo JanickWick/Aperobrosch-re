@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8">
+<title>Wick — Sortimentsübersicht</title>
+<style>
+@page { size: A4 portrait; margin: 14mm 14mm 16mm; }
+@font-face { font-family: 'Wick Sans'; src: url('../assets/fonts/QGYsz_wNahGAdqQ43Rh_cqDpp_k.woff2') format('woff2'); font-weight: 100 900; }
+@font-face { font-family: 'Wick Slab'; src: url('../assets/fonts/bitter-latin.woff2') format('woff2'); font-weight: 100 900; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Wick Slab', Georgia, serif; color: #1F1F1F; font-size: 9pt; }
+h1 { font-family: 'Wick Sans', sans-serif; font-weight: 700; font-size: 22pt; line-height: 1.05; margin-bottom: 2mm; }
+h1 em { font-style: normal; color: #7A4424; }
+.intro { font-size: 9.5pt; line-height: 1.4; max-width: 150mm; margin-bottom: 4mm; }
+.legende { display: flex; gap: 5mm; flex-wrap: wrap; font-family: 'Wick Sans', sans-serif; font-size: 7.5pt;
+  margin-bottom: 6mm; padding-bottom: 3mm; border-bottom: 0.6mm solid #1F1F1F; }
+.legende span { display: inline-flex; align-items: center; gap: 1.5mm; }
+.tag { display: inline-block; font-family: 'Wick Sans', sans-serif; font-weight: 600; font-size: 6.5pt; letter-spacing: .06em;
+  text-transform: uppercase; padding: 0.6mm 1.6mm; border-radius: 0.6mm; color: #fff; background: #1F1F1F; }
+.tag.neu { background: #7A4424; } .tag.entwurf { background: #B78F76; } .tag.saisonal { background: #4F6B3A; }
+.tag.streichen { background: #fff; color: #9B2C2C; border: 0.3mm solid #9B2C2C; }
+h2 { font-family: 'Wick Sans', sans-serif; font-weight: 600; font-size: 11pt; letter-spacing: .07em; text-transform: uppercase;
+  color: #7A4424; margin: 5mm 0 2.5mm; padding-bottom: 1.4mm; border-bottom: 0.4mm solid #CFC0A6; break-after: avoid; }
+h2 small { float: right; font-weight: 500; font-size: 7.5pt; color: #B78F76; letter-spacing: .04em; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; column-gap: 6mm; row-gap: 3mm; }
+.karte { display: grid; grid-template-columns: 32mm 1fr; column-gap: 3mm; break-inside: avoid; border-bottom: 0.2mm solid #E6DCCB; padding-bottom: 2.4mm; }
+.bild { width: 32mm; height: 32mm; background: #F1EADC; overflow: hidden; }
+.bild img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.bild.leer { display: flex; align-items: center; justify-content: center; font-family: 'Wick Sans', sans-serif; font-size: 6.5pt; color: #B78F76; text-align: center; padding: 2mm; }
+.text b { display: block; font-family: 'Wick Sans', sans-serif; font-weight: 600; font-size: 9.5pt; line-height: 1.15; margin-bottom: 1mm; }
+.text p { font-size: 8.5pt; line-height: 1.32; color: #3B3733; margin-bottom: 1.6mm; }
+.wahl { display: flex; gap: 4mm; font-family: 'Wick Sans', sans-serif; font-size: 7pt; letter-spacing: .04em; text-transform: uppercase; color: #3B3733; margin-top: auto; }
+.wahl span::before { content: ""; display: inline-block; width: 2.8mm; height: 2.8mm; border: 0.3mm solid #3B3733; vertical-align: -0.5mm; margin-right: 1.2mm; }
+.credit { font-family: 'Wick Sans', sans-serif; font-size: 5.6pt; color: #9A8563; line-height: 1.2; margin-top: 1mm; width: 32mm; }
+.fuss { position: fixed; bottom: -9mm; left: 0; right: 0; font-family: 'Wick Sans', sans-serif; font-size: 6.5pt; letter-spacing: .06em;
+  text-transform: uppercase; color: #B78F76; display: flex; justify-content: space-between; }
+</style>
+</head>
+<body>
+<h1>Unser Sortiment<em>— die Übersicht zum Fixieren.</em></h1>
+<p class="intro">Jedes Produkt mit Oberkategorie, kurzer Beschreibung und einem Referenzbild aus dem Internet — so könnte es aussehen, nicht wie es bei uns aussieht. Pro Produkt ankreuzen: bleibt, weg oder ändern. Platten und Mengen klären wir danach, Produkt für Produkt.</p>
+<div class="legende">
+  <span><i class="tag">bestehend</i> steht heute im Sortiment</span>
+  <span><i class="tag neu">neu</i> Vorschlag aus den Filialen oder der Recherche</span>
+  <span><i class="tag entwurf">Entwurf</i> neu entwickelt, noch nicht gekocht</span>
+  <span><i class="tag saisonal">saisonal</i> nur auf der Saisonkarte</span>
+  <span><i class="tag streichen">streichen?</i> zur Streichung vorgeschlagen</span>
+</div>
+<div id="inhalt"></div>
+<div class="fuss"><span>Wick — Sortiment 2027 · Arbeitsstand</span><span>Bilder: Referenzen aus dem Internet (CC-Lizenzen, Nachweis je Bild) — nicht für den Druck</span></div>
+<script src="daten.js"></script>
+<script>
+const slug = s => s.normalize('NFKD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/ß/g, 'ss').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 60);
+const LABEL = { bestehend: 'bestehend', neu: 'neu', entwurf: 'Entwurf', saisonal: 'saisonal', streichen: 'streichen?' };
+(() => { const prod = window.PROD, ref = window.REF || {};
+  const kats = [...new Set(prod.map(p => p.kat))]; let html = '';
+  for (const k of kats) {
+    const liste = prod.filter(p => p.kat === k);
+    html += `<h2>${k}<small>${liste.length} Produkte</small></h2><div class="grid">`;
+    for (const p of liste) {
+      const r = ref[slug(p.name)];
+      const bild = r ? `<div class="bild"><img src="${r.datei}" alt=""></div><div class="credit">Bild: ${(r.urheber || r.titel || 'Openverse').toString().slice(0, 28)} · ${r.lizenz.toUpperCase()}</div>`
+                     : `<div class="bild leer">Referenzbild folgt</div>`;
+      html += `<div class="karte"><div>${bild}</div><div class="text"><b>${p.name}</b><p>${p.beschreibung}</p>
+        <div><i class="tag ${p.status}">${LABEL[p.status]}</i></div>
+        <div class="wahl" style="margin-top:1.6mm"><span>bleibt</span><span>weg</span><span>ändern</span></div></div></div>`;
+    }
+    html += '</div>';
+  }
+  document.getElementById('inhalt').innerHTML = html; document.body.dataset.fertig = '1';
+})();
+</script>
+</body>
+</html>
