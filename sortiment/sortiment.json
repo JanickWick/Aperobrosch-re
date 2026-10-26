@@ -65,5 +65,35 @@
  "Konditorei": [],
  "Confiserie": [],
  "Küche": [],
- "Traiteur": []
+ "Traiteur": [
+  {
+   "name": "Pain Surprise / Party Brioches",
+   "beschreibung": "Der Turm kann mit bis zu fünf verschiedenen Füllungen gefüllt werden. Jede Schicht wird in 10 Stücke geteilt. Der Party Brioches ist auch als kleinere Variante mit drei Lagen erhältlich.",
+   "menge": "Znüni 3 Stück pro Person · Zmittag 5 Stück pro Person",
+   "fuellungen": [
+    "Schinken",
+    "Rohschinken",
+    "Fleischkäse",
+    "Bündnerfleisch",
+    "Salami",
+    "Lachs",
+    "Thon",
+    "Ei",
+    "Käse",
+    "Kräuterquark"
+   ],
+   "preise": [
+    [
+     "Pain Surprise / Party Brioches",
+     "pro Stück",
+     56.0
+    ],
+    [
+     "klein (drei Lagen)",
+     "pro Stück",
+     34.0
+    ]
+   ]
+  }
+ ]
 }
