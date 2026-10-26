@@ -257,6 +257,45 @@
     "Humus (vegan)"
    ],
    "hinweis_catering": "Die kleinen Plastikschälchen mit Löffeli eignen sich nicht fürs Buffet. Für Caterings: mehr Sauce in separatem Geschirr. Ohne Catering (Lieferung/privat) wie bisher."
+  },
+  {
+   "name": "Spiessli",
+   "beschreibung": "Die Spiessli im trendigen Look — kalt, in mehreren Variationen, dazu saisonal wechselnde Sorten.",
+   "sorten": [
+    {
+     "sorte": "Tomaten & Mozzarella",
+     "hinweis": "neu ohne Focaccia",
+     "preis": 3.8
+    },
+    {
+     "sorte": "Antipasti-Spiessli",
+     "preis": 3.8
+    },
+    {
+     "sorte": "Käse-Trauben-Spiessli",
+     "hinweis": "neu",
+     "preis": null
+    },
+    {
+     "sorte": "Melonen-Rohschinken-Spiessli",
+     "hinweis": "neu, saisonal",
+     "preis": null
+    },
+    {
+     "sorte": "Weitere saisonale Spiessli",
+     "hinweis": "wechselnd nach Saison — Sorten noch zu bestimmen",
+     "preis": null
+    },
+    {
+     "sorte": "Frucht klein",
+     "preis": 2.0
+    }
+   ],
+   "gestrichen": [
+    "Frucht-Nutella-Spiessli"
+   ],
+   "offen": "Erdbeer-Nutella-Spiessli nicht genannt — bleibt oder weg?",
+   "preis_offen": "Neue Sorten nach Kalkulation. Referenz bestehende Spiessli: CHF 3.80 pro Stück."
   }
  ],
  "Confiserie": [],
