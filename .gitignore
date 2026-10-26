@@ -7,3 +7,6 @@ quellen/aus-protokoll/_*.txt
 uebersicht/ref/kand/
 uebersicht/ref/boegen/
 uebersicht/daten.js
+uebersicht/ref/*.log
+uebersicht/ref/fetcher.pid
+uebersicht/kand.json

@@ -1,0 +1,626 @@
+{
+ "Traubenbrot": {
+  "datei": "bilder/traubenbrot.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   998,
+   441
+  ]
+ },
+ "Picknickbrot": {
+  "datei": "bilder/picknickbrot.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   998,
+   441
+  ]
+ },
+ "Partybrot": {
+  "datei": "bilder/partybrot.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   998,
+   441
+  ]
+ },
+ "Pain Surprise": {
+  "datei": "bilder/pain-surprise.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   718,
+   445
+  ]
+ },
+ "Party Brioches": {
+  "datei": "bilder/party-brioches.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   718,
+   445
+  ]
+ },
+ "Brot am Stück": {
+  "datei": "bilder/brot-am-stuck.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   718,
+   445
+  ]
+ },
+ "Brot am Meter Zahlenform": {
+  "datei": "bilder/brot-am-meter-zahlenform.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   718,
+   445
+  ]
+ },
+ "Belegte Brötli diagonal": {
+  "datei": "bilder/belegte-brotli-diagonal.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   626,
+   626
+  ]
+ },
+ "Belegte Brötli rund": {
+  "datei": "bilder/belegte-brotli-rund.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   626,
+   626
+  ]
+ },
+ "Belegte Brötchen Zwirbelwick Rustico": {
+  "datei": "bilder/belegte-brotchen-zwirbelwick-rustico.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   626,
+   626
+  ]
+ },
+ "Zwirbelwick-Crostino": {
+  "datei": "bilder/zwirbelwick-crostino.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   626,
+   626
+  ]
+ },
+ "Ofenranden auf Vollkorn": {
+  "datei": "bilder/ofenranden-auf-vollkorn.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   626,
+   626
+  ]
+ },
+ "Kalbstatar-Tartelette": {
+  "datei": "bilder/kalbstatar-tartelette.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   626,
+   626
+  ]
+ },
+ "Chäschüechli und Schinkengipfel": {
+  "datei": "bilder/chaschuechli-und-schinkengipfel.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   649,
+   516
+  ]
+ },
+ "Chili Würstli im Briochemantel": {
+  "datei": "bilder/chili-wurstli-im-briochemantel.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   649,
+   516
+  ]
+ },
+ "Laugenzopf mit Mostbröckli": {
+  "datei": "bilder/laugenzopf-mit-mostbrockli.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   649,
+   516
+  ]
+ },
+ "Mini-Brioche Znüni": {
+  "datei": "bilder/mini-brioche-znuni.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   649,
+   516
+  ]
+ },
+ "Blätterteig-Stängeli Sbrinz": {
+  "datei": "bilder/blatterteig-stangeli-sbrinz.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   649,
+   516
+  ]
+ },
+ "Apérowrap": {
+  "datei": "bilder/aperowrap.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   626,
+   626
+  ]
+ },
+ "Bäckerpastetli gefüllt": {
+  "datei": "bilder/backerpastetli-gefullt.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   626,
+   626
+  ]
+ },
+ "Frischkäsekugeln": {
+  "datei": "bilder/frischkasekugeln.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   626,
+   626
+  ]
+ },
+ "Spiessli": {
+  "datei": "bilder/spiessli.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   626,
+   626
+  ]
+ },
+ "Lachsröllchen auf Randen-Blini": {
+  "datei": "bilder/lachsrollchen-auf-randen-blini.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   626,
+   626
+  ]
+ },
+ "Zigerbrüüt-Röllchen": {
+  "datei": "bilder/zigerbruut-rollchen.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   626,
+   626
+  ]
+ },
+ "Chäs-Chüechli Rüttiberg": {
+  "datei": "bilder/chas-chuechli-ruttiberg.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   626,
+   626
+  ]
+ },
+ "Mini-Röstitaschen": {
+  "datei": "bilder/mini-rostitaschen.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   626,
+   626
+  ]
+ },
+ "Brätchögeli im Blätterteig": {
+  "datei": "bilder/bratchogeli-im-blatterteig.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   626,
+   626
+  ]
+ },
+ "Älpler-Magronen-Tartelette": {
+  "datei": "bilder/alpler-magronen-tartelette.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   626,
+   626
+  ]
+ },
+ "Ghackets-und-Hörnli-Krokette": {
+  "datei": "bilder/ghackets-und-hornli-krokette.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   626,
+   626
+  ]
+ },
+ "Falafel-Bissen": {
+  "datei": "bilder/falafel-bissen.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   626,
+   626
+  ]
+ },
+ "Lunchbag Zürichsee": {
+  "datei": "bilder/lunchbag-zurichsee.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   721,
+   441
+  ]
+ },
+ "Lunchbag Holzsteg": {
+  "datei": "bilder/lunchbag-holzsteg.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   721,
+   441
+  ]
+ },
+ "Lunchbag Etzel": {
+  "datei": "bilder/lunchbag-etzel.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   721,
+   441
+  ]
+ },
+ "Lunchbag Healthy": {
+  "datei": "bilder/lunchbag-healthy.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   721,
+   441
+  ]
+ },
+ "Grillplatte Classic": {
+  "datei": "bilder/grillplatte-classic.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   555,
+   441
+  ]
+ },
+ "Grillplatte Deluxe": {
+  "datei": "bilder/grillplatte-deluxe.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   555,
+   441
+  ]
+ },
+ "Grillplatte Vegiplatte": {
+  "datei": "bilder/grillplatte-vegiplatte.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   555,
+   441
+  ]
+ },
+ "Minibrötli Weiss gefüllt": {
+  "datei": "bilder/minibrotli-weiss-gefullt.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   626,
+   626
+  ]
+ },
+ "Minibrötli Para gefüllt": {
+  "datei": "bilder/minibrotli-para-gefullt.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   626,
+   626
+  ]
+ },
+ "Minibrötli Sonny gefüllt": {
+  "datei": "bilder/minibrotli-sonny-gefullt.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   626,
+   626
+  ]
+ },
+ "Minibrötli Vollkorn gefüllt": {
+  "datei": "bilder/minibrotli-vollkorn-gefullt.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   626,
+   626
+  ]
+ },
+ "Minibrötli Laugen gefüllt": {
+  "datei": "bilder/minibrotli-laugen-gefullt.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   626,
+   626
+  ]
+ },
+ "Partybrötli gefüllt": {
+  "datei": "bilder/partybrotli-gefullt.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   626,
+   626
+  ]
+ },
+ "Palmblatt Fleisch & Käse": {
+  "datei": "bilder/palmblatt-fleisch-kase.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   626,
+   626
+  ]
+ },
+ "Palmblatt Käse": {
+  "datei": "bilder/palmblatt-kase.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   626,
+   626
+  ]
+ },
+ "Palmblatt mit Früchten": {
+  "datei": "bilder/palmblatt-mit-fruchten.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   626,
+   626
+  ]
+ },
+ "Palmblatt mit Gemüse und Dips": {
+  "datei": "bilder/palmblatt-mit-gemuse-und-dips.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   626,
+   626
+  ]
+ },
+ "Grissini mit Rohschinken": {
+  "datei": "bilder/grissini-mit-rohschinken.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   626,
+   626
+  ]
+ },
+ "Tray of Snacks": {
+  "datei": "bilder/tray-of-snacks.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   626,
+   626
+  ]
+ },
+ "Kürbissuppe": {
+  "datei": "bilder/kurbissuppe.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   626,
+   626
+  ]
+ },
+ "Bündner Gerstensuppe": {
+  "datei": "bilder/bundner-gerstensuppe.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   441,
+   441
+  ]
+ },
+ "Suppe im Gläsli": {
+  "datei": "bilder/suppe-im-glasli.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   626,
+   626
+  ]
+ },
+ "Lachstatar mit Thai-Salsa": {
+  "datei": "bilder/lachstatar-mit-thai-salsa.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   626,
+   626
+  ]
+ },
+ "Burrata mit Tomaten und Basilikum": {
+  "datei": "bilder/burrata-mit-tomaten-und-basilikum.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   626,
+   626
+  ]
+ },
+ "Hausgemachte Käseravioli": {
+  "datei": "bilder/hausgemachte-kaseravioli.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   626,
+   626
+  ]
+ },
+ "Pouletbrust mit saisonaler Füllung": {
+  "datei": "bilder/pouletbrust-mit-saisonaler-fullung.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   626,
+   626
+  ]
+ },
+ "Lachsfilet": {
+  "datei": "bilder/lachsfilet.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   626,
+   626
+  ]
+ },
+ "Saisonales Risotto": {
+  "datei": "bilder/saisonales-risotto.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   626,
+   626
+  ]
+ },
+ "Käseravioli mit Bergkäse": {
+  "datei": "bilder/kaseravioli-mit-bergkase.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   626,
+   626
+  ]
+ },
+ "Konfierte Entenschenkel": {
+  "datei": "bilder/konfierte-entenschenkel.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   441,
+   441
+  ]
+ },
+ "Gebratener Tofu": {
+  "datei": "bilder/gebratener-tofu.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   626,
+   626
+  ]
+ },
+ "Roulade Zitrone": {
+  "datei": "bilder/roulade-zitrone.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   626,
+   626
+  ]
+ },
+ "Passionsfruchtmousse": {
+  "datei": "bilder/passionsfruchtmousse.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   626,
+   626
+  ]
+ },
+ "Schwarzwälderschnitte": {
+  "datei": "bilder/schwarzwalderschnitte.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   626,
+   626
+  ]
+ },
+ "Cake Pops": {
+  "datei": "bilder/cake-pops.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   441,
+   441
+  ]
+ },
+ "Schoggicornet-Bissen": {
+  "datei": "bilder/schoggicornet-bissen.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   626,
+   626
+  ]
+ },
+ "Vermicelles-Törtchen": {
+  "datei": "bilder/vermicelles-tortchen.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   626,
+   626
+  ]
+ },
+ "Hochzeitstorte": {
+  "datei": "bilder/hochzeitstorte.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   441,
+   441
+  ]
+ },
+ "Torte mit Wunschmotiv": {
+  "datei": "bilder/torte-mit-wunschmotiv.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   441,
+   441
+  ]
+ },
+ "Vegane Torte": {
+  "datei": "bilder/vegane-torte.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   626,
+   626
+  ]
+ },
+ "Pralinen aus der Confiserie": {
+  "datei": "bilder/pralinen-aus-der-confiserie.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   626,
+   626
+  ]
+ },
+ "Schokolade aus eigener Herstellung": {
+  "datei": "bilder/schokolade-aus-eigener-herstellung.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   626,
+   626
+  ]
+ },
+ "Cup Cakes": {
+  "datei": "bilder/cup-cakes.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   441,
+   441
+  ]
+ },
+ "Partybrot vegan": {
+  "datei": "bilder/partybrot-vegan.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   626,
+   626
+  ]
+ },
+ "Apéro Wrap Couscous": {
+  "datei": "bilder/apero-wrap-couscous.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   626,
+   626
+  ]
+ },
+ "Bäckerpastetli Rüebli-Sesam": {
+  "datei": "bilder/backerpastetli-ruebli-sesam.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   626,
+   626
+  ]
+ },
+ "Spiessli Frucht klein": {
+  "datei": "bilder/spiessli-frucht-klein.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   626,
+   626
+  ]
+ },
+ "Rüebli-Sesam-Tartelette": {
+  "datei": "bilder/ruebli-sesam-tartelette.jpg",
+  "quelle": "Wick-Broschüre",
+  "px": [
+   626,
+   626
+  ]
+ }
+}
