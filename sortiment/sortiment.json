@@ -336,6 +336,37 @@
      42.0
     ]
    ]
+  },
+  {
+   "name": "Mini Pâtisserie",
+   "beschreibung": "Diverse hausgemachte Kreationen, für den Direktverzehr geeignet. Mindestbestellmenge pro Sorte 10 Stück.",
+   "mindestmenge": "10 Stück pro Sorte",
+   "sorten": [
+    "Roulade Zitronen",
+    "Roulade Himbeer",
+    "Roulade Caramel",
+    "Schwedenköpfchen",
+    "Passionsfruchtmousse",
+    "Beerentörtli",
+    "Schwarzwälderschnitte",
+    "Tiramisuschnitte",
+    "Baileysmousse",
+    "Mohrenkopf",
+    "Schoggicornet",
+    "Kokosschnitte",
+    "Cremeschnitte (vegan)"
+   ],
+   "saisonal": [
+    "Erdbeertörtchen",
+    "Vermicellestörtchen"
+   ],
+   "preise": [
+    [
+     "Mini Pâtisserie",
+     "pro Stück",
+     2.6
+    ]
+   ]
   }
  ],
  "Confiserie": [],
