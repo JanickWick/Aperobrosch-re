@@ -5,6 +5,20 @@ Neueste Einträge oben.
 
 ---
 
+## 2026-10-27 · Neues Mini-Pâtisserie-Foto
+
+Euer neues Foto der Mini-Pâtisserie-Platte ist **unverändert übernommen** — nicht
+durch nano banana gelaufen, nur zugeschnitten. Es steht jetzt an drei Stellen:
+
+- **Seite 28** als Themenbild der Seite «Der süsse Abschluss»
+- **Seite 28** auf der Karte «Mini Pâtisserie assortiert»
+- **Seite 30** auf der Karte «Was sonst noch süss ist»
+
+Die «wick»-Schoggiplättchen auf den Stücken bleiben drauf — sie gehören zum
+Produkt. Das alte, erzeugte Bild ist ersetzt.
+
+---
+
 ## 2026-10-27 · Neue Seite «Weitere Locations», Karten mit Preisband, Korrekturen
 
 Die Broschüre hat jetzt **39 Seiten**.
