@@ -5,6 +5,35 @@ Neueste Einträge oben.
 
 ---
 
+## 2026-10-27 · Reihenfolge korrigiert, neue Inhaltsprüfung
+
+### Fehler
+Die Seite «Weitere Locations» stand plötzlich auf Seite 1 und der Umschlag war
+weg. Grund: die neue Seite trug den Schlüssel `1` — und `1` ist in `SEITEN` auch
+die alte Seite 1, also hat sie den Umschlag ersetzt. Neue Seiten bekommen jetzt
+Zahlen, die als alte Seitenzahl nicht vorkommen: `0` für die Gläsli-Seite,
+`-1` für die Locations.
+
+### Neu: `broschuere/inhalt_pruefen.py`
+Liest die fertige PDF und kontrolliert
+- die in der Fusszeile gedruckte Zahl gegen die tatsächliche Position,
+- jeden Verweis «Seite N» gegen den Umfang der Broschüre,
+- das Inhaltsverzeichnis gegen die Titel der genannten Seiten.
+
+### Stand der Kontrolle
+Reihenfolge, Inhaltsverzeichnis und Querverweise stimmen.
+**Vier Seiten drucken noch ihre alte Nummer**, weil sie unverändert aus dem
+Original kommen:
+
+| steht auf | druckt | Seite |
+|---|---|---|
+| 32 | 34 | Ihr Anlass komplett |
+| 33 | 35 | Getränke |
+| 34 | 36 | Material, Personal & Service |
+| 37 | 39 | Anfrage |
+
+---
+
 ## 2026-10-27 · Seite «Gut zu wissen» gestrichen
 
 Die Seite ist raus. Die Broschüre hat damit wieder **38 Seiten**:

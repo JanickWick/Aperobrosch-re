@@ -755,9 +755,10 @@ def sLoc():
                   'übrigen Locations, und ob weitere Säle auf die Seite sollen.]', arb=False)
     return seite(h)
 
-# Schlüssel = alte Seitenzahl. 0 ist die neue Gläsli-Seite, die es im Original noch nicht gibt.
+# Schlüssel = alte Seitenzahl. Neue Seiten, die es im Original nicht gibt, bekommen eine
+# Zahl, die als alte Seitenzahl nicht vorkommt: 0 für die Gläsli-Seite, -1 für die Locations.
 SEITEN = [(0, sGl), (6, s6), (8, s8), (9, s9), (10, s10), (11, s11alt), (12, s12), (13, s13),
-          (14, s14), (16, s16), (17, s17), (18, s18), (19, s19), (30, s30), (32, s32), (33, s33), (37, s37), (1, sLoc)]
+          (14, s14), (16, s16), (17, s17), (18, s18), (19, s19), (30, s30), (32, s32), (33, s33), (37, s37), (-1, sLoc)]
 # Konzept C: der neue Essensteil. Eigene Nummerierung, noch nicht in die 40 Seiten eingebaut.
 KAPITEL_C = [(20, c20), (21, c21), (22, c22), (23, c23), (24, c24), (25, c24b), (26, c25), (27, c26), (28, c27), (29, c28)]
 
@@ -986,7 +987,7 @@ def zusammenbauen():
         if nr == 38: continue                           # «Gut zu wissen» ist gestrichen
         hol(nr)
         if nr == 37:                                    # dahinter die neue Seite «Weitere Locations»
-            doc.insert_pdf(teil_s, from_page=idx_s[1], to_page=idx_s[1])
+            doc.insert_pdf(teil_s, from_page=idx_s[-1], to_page=idx_s[-1])
 
     out = ROOT / 'out/wick-apero-catering-NEU.pdf'
     doc.save(out, garbage=4, deflate=True)
