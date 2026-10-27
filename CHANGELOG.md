@@ -5,6 +5,26 @@ Neueste Einträge oben.
 
 ---
 
+## 2026-10-27 · Schokokuchen statt Cremeschnitte, Gläsli bei «Für alle»
+
+### Seite 28 · Vegane Dessertvariationen
+Statt der Cremeschnitte steht dort jetzt der **Schokokuchen von der Website**.
+Das Foto ist nicht durch nano banana gelaufen — ich habe es nur abgedunkelt und
+mit einer weichen Vignette versehen, damit es zu den übrigen fünf Karten der
+Seite passt. Produkt und Bildinhalt sind unverändert.
+
+### Seite 31 · Für alle — vegetarisch & vegan
+Neu zuoberst zwei Zeilen mit den **Gläsli**, direkt aus den Sortimentsdaten
+gezogen, damit sie automatisch mitlaufen, wenn sich die Gläsli-Seite ändert:
+
+- **Gläsli vegan:** Hummus · Couscous Orient · Asia-Krautsalat — Seite 11
+- **Gläsli vegetarisch:** Ziegenkäse-Crème · Caprese · Quinoa · Griechisch ·
+  Ebly · Ziegenkäse-Mousse · Tomaten-Tatar — Seite 11
+
+Die Karte auf der Seite ist dafür höher geworden.
+
+---
+
 ## 2026-10-27 · Cremeschnitte bei den veganen Desserts
 
 Die Karte «Vegane Dessertvariationen» auf Seite 28 hat neu ein Bild: unsere

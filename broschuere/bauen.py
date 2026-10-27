@@ -254,7 +254,7 @@ def s30(nr=28):
     h += k6h(5, 'VEGANE<br>DESSERTVARIATIONEN', [tag('NOCH OFFEN', 'beige'), tag('VEGAN', 'beige')],
              'Aus der eigenen Konditorei, ganz ohne tierische Zutaten.',
              [('Sorten', 'Schokoladenkuchen · Mohnroulade · Kaffeekuchen · Erdbeer-Rhabarber-Torte · Cremeschnitte')],
-             [('Vegane Desserts', 'pro Stück', 6.0)], note='bleibt oder weg?', bild=F('seite-28_cremeschnitte'))
+             [('Vegane Desserts', 'pro Stück', 6.0)], note='bleibt oder weg?', bild=F('seite-28_schokokuchen'))
     def liste_(x): return e(' · '.join(x) if isinstance(x, (list, tuple)) else x)
     h += fuss(nr, 'Mindestmenge: 10 Stück pro Sorte oder 10 Stück gemischt pro Kategorie. Saisonal bei der Mini '
                   'Pâtisserie: ' + liste_(mp['saisonal']) + '. Die Mousse-Schale wählen Sie mit einer Basis: '
@@ -662,7 +662,12 @@ def s33():
              ('Falafelbällchen, Ingwer-Karottensauce, Gemüsecouscous', 'pro Portion', 15.0),
              ('Veganer Burgerpatty (2× 113 g), Wedges-Kartoffeln, Gemüse', 'pro Portion', 25.5))
     c1 = sph('Vegan im Sortiment') + '<div class="preise dicht">' + ''.join(pr(*v) for v in vegan) + '</div>'
-    rows = (row('leg-vegan', 'Vegane Torten:', 'Kirsch / Schokolade · Mohnroulade · Kaffeekuchen · Erdbeer / Rhabarber — Seite 30')
+    gl = S['Gläsli-Apéros']
+    def glsorten(art):
+        return ' · '.join(so['sorte'] for k in gl['kategorien'] for so in k['sorten'] if so['kennzeichnung'] == art)
+    rows = (row('leg-vegan', 'Gläsli vegan:', e(glsorten('vegan')) + ' — Seite 11')
+            + row('leg-blatt', 'Gläsli vegetarisch:', e(glsorten('vegetarisch')) + ' — Seite 11')
+            + row('leg-vegan', 'Vegane Torten:', 'Kirsch / Schokolade · Mohnroulade · Kaffeekuchen · Erdbeer / Rhabarber — Seite 30')
             + row('leg-blatt', 'Vegetarisch:', 'Ein grosser Teil des Sortiments ist vegetarisch — Käse, Ei, Tomaten &amp; Mozzarella, Kräuterquark, Spargeln und Zigerbrüüt.')
             + row('leg-korb', 'Mindestmenge:', '10 Stück pro Sorte')
             + row('leg-warm', 'Suppen:', 'Alle Suppen gibt es auch vegan — Seite 26. Das Sortiment ergänzen wir laufend.'))
@@ -674,7 +679,7 @@ def s33():
           '<div class="hand inl">Für einen ausgewogenen Apéro mit zwei bis drei weiteren Sorten kombinieren.</div>')
     def col(x, b, inhalt): return f'<div class="abs col" style="left:{x}mm;top:22mm;width:{b}mm">{inhalt}</div>'
     inner = col(17.1, 150, c1) + col(180, 120, c2) + col(312, 73, c3)
-    h += karte(14.9, 97.9, 390, 122, inner, bild=False) + hand('niemand isst die Reste', 40, 232, -5, 17)
+    h += karte(14.9, 97.9, 390, 148, inner, bild=False) + hand('niemand isst die Reste', 40, 258, -5, 17)
     h += fuss(31, 'Der vegane Apéro Wrap Couscous ist gestrichen — eine vegane Alternative ist in Arbeit. '
                   'Mindestbestellmenge 10 Stück pro Sorte bei Apérogebäck, Canapés, Wraps, Pastetli, Frischkäse-Pralinen '
                   'und Mini-Pâtisserie. Mit «Neu» gekennzeichnete Positionen stammen aus der laufenden '
