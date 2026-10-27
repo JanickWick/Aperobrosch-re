@@ -320,8 +320,8 @@ def s6():
          + '<h4 class="spaeter">DRAUSSEN</h4>' + zeilen(('Grillplausch', 27))
          + '<h4 class="spaeter">FÜR ALLE</h4>' + zeilen(('Vegetarisch &amp; vegan', 31))),
         ('SÜSSER ABSCHLUSS', zeilen(('Fürs Buffet', 28), ('Dessert am Teller', 29), ('Torten &amp; Confiserie', 30))
-         + '<h4 class="spaeter">05 · ANLASS KOMPLETT</h4>' + zeilen(('Vom Raum zum Fest', 32), ('Getränke', 33), ('Material &amp; Personal', 34), ('Eventraum', 35), ('Weitere Locations', 36), ('Gut zu wissen', 37))),
-        ('06 · ANFRAGE', zeilen(('Erzählen Sie uns davon', 38))
+         + '<h4 class="spaeter">05 · ANLASS KOMPLETT</h4>' + zeilen(('Vom Raum zum Fest', 32), ('Getränke', 33), ('Material &amp; Personal', 34), ('Eventraum', 35), ('Weitere Locations', 36))),
+        ('06 · ANFRAGE', zeilen(('Erzählen Sie uns davon', 37))
          + '<h4 class="spaeter">AUSZEICHNUNGEN</h4>'
          + '<p class="ivt">Neu — aus der laufenden Sortimentsentwicklung</p>'
          + '<p class="ivt">Beliebt — bewährt und oft bestellt</p>'
@@ -948,7 +948,7 @@ def zusammenbauen():
     36     neu, Weitere Locations
     12–19  Original 11–19 ohne die alte 15 — Apérogebäck steht neu bei den Warmen Häppchen
     20–29  Kapitel C, ersetzt die bisherigen Seiten 20–31
-    30–38  Original 32–40
+    30–38  Original 32–40 ohne die alte 38 — «Gut zu wissen» ist gestrichen
     """
     import pymupdf
     orig = pymupdf.open(ROOT / 'quellen/broschuere-40s.pdf')
@@ -982,7 +982,8 @@ def zusammenbauen():
     for nr in range(11, 20):                            # alt 11–19 → neu 12–19
         if nr != 15: hol(nr)                            # alt 15 ist in die Warmen Häppchen gewandert
     doc.insert_pdf(teil_c, from_page=0, to_page=teil_c.page_count - 1)  # Kapitel C
-    for nr in range(32, 41):                            # alt 32–40 → neu 30–39
+    for nr in range(32, 41):                            # alt 32–40 → neu 30–38
+        if nr == 38: continue                           # «Gut zu wissen» ist gestrichen
         hol(nr)
         if nr == 37:                                    # dahinter die neue Seite «Weitere Locations»
             doc.insert_pdf(teil_s, from_page=idx_s[1], to_page=idx_s[1])

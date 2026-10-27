@@ -30,7 +30,8 @@ Die Broschüre hat 40 Seiten, A3 quer. Grundlage ist `quellen/broschuere-40s.pdf
 | 32–34 | Anlass komplett, Getränke, Material *(alt 34–36)* | unverändert | |
 | 35 | Eventraum *(alt 37)* | **neu gebaut** | 80 Plätze, mit Zelt bis 400 |
 | **36** | **Weitere Locations** | **neu** | Entra, Eventhouse, Radio Zürisee Loft |
-| 37–39 | Gut zu wissen bis Rückseite *(alt 38–40)* | unverändert | |
+| 37–38 | Anfrage und Rückseite *(alt 39–40)* | unverändert | |
+| ~~Gut zu wissen~~ | *(alt 38)* | **gestrichen** | |
 
 **Achtung:** Die Seiten, die noch unverändert aus dem Original stammen, tragen in
 der Fusszeile noch ihre alte Nummer. Betroffen sind die neuen Seiten 32, 33, 34,

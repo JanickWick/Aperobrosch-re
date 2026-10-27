@@ -5,6 +5,24 @@ Neueste Einträge oben.
 
 ---
 
+## 2026-10-27 · Seite «Gut zu wissen» gestrichen
+
+Die Seite ist raus. Die Broschüre hat damit wieder **38 Seiten**:
+Eventraum 35, Weitere Locations 36, Anfrage 37, Rückseite 38.
+Inhaltsverzeichnis und Querverweise sind nachgeführt.
+
+**Was mit der Seite verschwunden ist** — bitte prüfen, ob etwas davon an einer
+anderen Stelle stehen muss:
+
+- Beratung: «Sind Fragen offen? Wir beraten.»
+- Mindestbestellmenge: steht weiterhin in den Fusszeilen der Produktseiten
+- Getränke: werden nach Verbrauch abgerechnet
+- Personal: CHF 60.00 pro Person und Stunde — steht auch auf der Eventraum-Seite
+- Mietmaterial: Geschirr, Gläser, Besteck
+- Kontakt: Telefon und Adresse stehen auf der Anfrage-Seite und auf der Rückseite
+
+---
+
 ## 2026-10-27 · Die vier offenen Bilder nachgeholt
 
 fal.ai ist wieder gedeckt — die vier Bilder, die seit gestern offen waren, sind da:
