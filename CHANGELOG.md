@@ -5,6 +5,21 @@ Neueste Einträge oben.
 
 ---
 
+## 2026-10-27 · Seite 20 «Drei Wege» neu gestaltet
+
+Die Vergleichstabelle ist weg. Jeder Weg hat jetzt eine eigene Karte über die
+ganze Seitenhöhe: grosse Nummer in Rost, ein Symbol im weissen Kreis, Titel und
+Untertitel, die Wenn-Zeile, dann ein Raster mit Ab / Sie wählen / Abgerechnet
+und zuunterst das rostfarbene Preisband mit der Spanne.
+
+### Noch offen
+Euer neues Chili-Würstli-Foto liegt unter `referenzen/produkte/chili-wuerstli.webp`.
+Es konnte **nicht** durch nano banana — fal.ai hat kein Guthaben
+(*«User is locked. Reason: Exhausted balance.»*). Auf der Karte steht weiterhin
+das bisherige Bild.
+
+---
+
 ## 2026-10-27 · Schokokuchen statt Cremeschnitte, Gläsli bei «Für alle»
 
 ### Seite 28 · Vegane Dessertvariationen

@@ -455,23 +455,38 @@ def sGl():
     return seite(h)
 
 def c20():
-    """Einstieg: die drei Wege im Vergleich."""
-    h = kopf('WARME KÜCHE — DREI WEGE', 'Dieselbe Küche, die am ESAF 80’000 Mahlzeiten produziert hat, kocht auch für dreissig Gäste. Welcher Weg passt, hängt an der Gästezahl und daran, wie serviert wird.', 20, braun=(44,), ghost='WEGE')
-    kopfz = ('<tr><th>&nbsp;</th><th class="l">WEG 01 · BUFFET</th><th class="l">WEG 02 · KLASSIKER</th><th class="l">WEG 03 · EIGENES MENÜ</th></tr>')
-    zeilen = (('Wenn', 'viele Gäste kommen und die Auswahl für sich sprechen soll',
-               'es unkompliziert und sättigend sein soll — Vereinsanlass, Baustellenfest, Grossveranstaltung',
-               'am Tisch serviert wird — Hochzeit, Gala, Geschäftsessen'),
-              ('Ab', '30 Personen', 'keine Mindestmenge', '10 Personen'),
-              ('Preis', 'Pauschale pro Person', 'pro Portion', 'pro Person, aus vier Schritten'),
-              ('Von bis', 'CHF 30.00 bis 62.00', 'CHF 16.50 bis 28.50', 'Beispiel CHF 52.00'),
-              ('Sie wählen', 'eines von sechs Buffets', 'ein Gericht für alle', 'Protein, Beilage, Gemüse, Sauce'),
-              ('Steht auf', 'Seite 21', 'Seite 22', 'Seiten 23 und 24'))
-    tab = ('<table class="tab verg">' + kopfz
-           + ''.join('<tr><td class="lbl2">' + e(z[0]) + '</td>' + ''.join(f'<td class="l">{e(x)}</td>' for x in z[1:]) + '</tr>' for z in zeilen)
-           + '</table>')
-    inner = f'<div class="abs" style="left:17.1mm;top:20mm;width:356mm">{tab}</div>'
-    h += karte(14.9, 44, 390, 96, inner, bild=False)
-    h += f'<div class="abs txt11" style="left:29.9mm;top:152mm;width:356mm;color:#2A2521">Suppe, Salat und Dessert wählen Sie unabhängig davon — sie passen zu allen drei Wegen.</div>'
+    """Einstieg: die drei Wege, jeder als eigene Karte mit Nummer, Symbol und Preisband."""
+    h = kopf('WARME KÜCHE — DREI WEGE',
+             'Dieselbe Küche, die am ESAF 80’000 Mahlzeiten produziert hat, kocht auch für dreissig Gäste. '
+             'Welcher Weg passt, hängt an der Gästezahl und daran, wie serviert wird.', 20, braun=(44,), ghost='WEGE')
+    wege = (
+        ('01', 'korb', 'BUFFET', 'Die Gäste schöpfen selbst',
+         'Wenn viele Gäste kommen und die Auswahl für sich sprechen soll.',
+         (('Ab', '30 Personen'), ('Sie wählen', 'eines von sechs Buffets'), ('Abgerechnet', 'Pauschale pro Person')),
+         'CHF 30.00 – 62.00', 'pro Person', 21),
+        ('02', 'huet', 'KLASSIKER', 'Ein Gericht für alle',
+         'Wenn es unkompliziert und sättigend sein soll — Vereinsanlass, Baustellenfest, Grossveranstaltung.',
+         (('Ab', 'keine Mindestmenge'), ('Sie wählen', 'ein Gericht für alle'), ('Abgerechnet', 'pro Portion')),
+         'CHF 16.50 – 28.50', 'pro Portion', 22),
+        ('03', 'person', 'EIGENES MENÜ', 'Am Tisch serviert, Gang für Gang',
+         'Wenn am Tisch serviert wird — Hochzeit, Gala, Geschäftsessen.',
+         (('Ab', '10 Personen'), ('Sie wählen', 'Protein, Beilage, Gemüse, Sauce'), ('Abgerechnet', 'pro Person, aus vier Schritten')),
+         'Beispiel CHF 52.00', 'pro Person', '23–25'),
+    )
+    for i_, (nr, ic, titel, unter, wenn, daten, preis, einheit, seite_) in enumerate(wege):
+        inner = ('<div class="fuellen" style="padding:0">'
+                 f'<div style="padding:9mm 7mm 0">'
+                 f'<div class="wegkopf"><span class="wegnr">{nr}</span>{icon(ic)}</div>'
+                 f'<h3 class="gross" style="margin-top:6mm">{e(titel)}</h3>'
+                 f'<p class="wegsub">{e(unter)}</p>'
+                 f'<p class="desc" style="margin-top:4mm">{e(wenn)}</p>'
+                 + '<div class="wegdaten">' + ''.join(f'<span>{e(a)}</span><span>{e(b)}</span>' for a, b in daten) + '</div>'
+                 f'<p class="wegseite">Steht auf Seite {e(str(seite_))}</p></div>'
+                 f'<div class="preisband"><span>{e(einheit).upper()}</span><b>{e(preis)}</b></div></div>')
+        h += karte(14.9 + i_ * 131.5, 44, 127.3, 190, inner, bild=False)
+    h += (f'<div class="abs txt11" style="left:19.6mm;top:246mm;width:356mm;color:#2A2521">'
+          'Suppe, Salat und Dessert wählen Sie unabhängig davon — sie passen zu allen drei Wegen. '
+          'Sie stehen auf den Seiten 26 bis 29.</div>')
     h += fuss(20, 'Alle Preise in Schweizer Franken.')
     return seite(h)
 
@@ -855,6 +870,14 @@ h3.gross{font-size:13pt;line-height:5.6mm}
 .preisband{margin-top:auto;background:#7A4424;display:flex;align-items:baseline;justify-content:space-between;padding:3.4mm 4.8mm 3mm}
 .preisband span{font:600 7pt 'Wick Sans';letter-spacing:.16em;color:#F2E4D4}
 .preisband b{font:500 17pt 'Wick Sans';color:#fff;line-height:1}
+.wegkopf{display:flex;align-items:center;justify-content:space-between}
+.wegnr{font:500 34pt 'Wick Sans';line-height:1;color:#7A4424}
+.wegkopf .ic{width:13mm;height:13mm}
+.wegsub{font:400 10.5pt 'Wick Slab';line-height:4.8mm;color:#E6DCCB;margin-top:1.6mm}
+.wegdaten{display:grid;grid-template-columns:26mm 1fr;row-gap:2mm;column-gap:3mm;font-size:9.5pt;line-height:4.2mm;margin-top:5mm;border-top:.2mm solid #3A3836;padding-top:4mm}
+.wegdaten span:nth-child(odd){font:600 7pt 'Wick Sans';letter-spacing:.14em;color:#B9A892;padding-top:.5mm}
+.wegdaten span:nth-child(even){color:#fff}
+.wegseite{font:600 7pt 'Wick Sans';letter-spacing:.16em;color:#E6DCCB;margin-top:5mm}
 .preisband.mehr{display:block}
 .preisband.mehr>div{display:flex;align-items:baseline;gap:2.5mm}
 .preisband.mehr>div+div{margin-top:1.6mm}
