@@ -254,7 +254,7 @@ def s30(nr=28):
     h += k6h(5, 'VEGANE<br>DESSERTVARIATIONEN', [tag('NOCH OFFEN', 'beige'), tag('VEGAN', 'beige')],
              'Aus der eigenen Konditorei, ganz ohne tierische Zutaten.',
              [('Sorten', 'Schokoladenkuchen · Mohnroulade · Kaffeekuchen · Erdbeer-Rhabarber-Torte · Cremeschnitte')],
-             [('Vegane Desserts', 'pro Stück', 6.0)], note='bleibt oder weg?', bild=W('p15-1'))
+             [('Vegane Desserts', 'pro Stück', 6.0)], note='bleibt oder weg?', bild=F('seite-28_cremeschnitte'))
     def liste_(x): return e(' · '.join(x) if isinstance(x, (list, tuple)) else x)
     h += fuss(nr, 'Mindestmenge: 10 Stück pro Sorte oder 10 Stück gemischt pro Kategorie. Saisonal bei der Mini '
                   'Pâtisserie: ' + liste_(mp['saisonal']) + '. Die Mousse-Schale wählen Sie mit einer Basis: '

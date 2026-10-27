@@ -5,6 +5,20 @@ Neueste Einträge oben.
 
 ---
 
+## 2026-10-27 · Cremeschnitte bei den veganen Desserts
+
+Die Karte «Vegane Dessertvariationen» auf Seite 28 hat neu ein Bild: unsere
+Cremeschnitte, aus dem Onlineshop-Archiv, unverändert übernommen und nur
+zugeschnitten.
+
+**Zwei Punkte dazu:**
+- Das Foto zeigt die **normale** Cremeschnitte. Falls die vegane anders aussieht,
+  braucht es ein eigenes Foto. [Bitte prüfen.]
+- Das Bild steht auf weissem Grund und ist damit deutlich heller als die anderen
+  fünf Karten der Seite. Auf Wunsch tone ich es etwas ab.
+
+---
+
 ## 2026-10-27 · Neues Mini-Pâtisserie-Foto
 
 Euer neues Foto der Mini-Pâtisserie-Platte ist **unverändert übernommen** — nicht
