@@ -5,6 +5,55 @@ Neueste Einträge oben.
 
 ---
 
+## 2026-10-27 · Neue Seite «Weitere Locations», Karten mit Preisband, Korrekturen
+
+Die Broschüre hat jetzt **39 Seiten**.
+
+### Neu: Seite 36 · Weitere Locations
+Direkt nach dem Säntisblick. Drei Säle, in die wir regelmässig liefern:
+Entra Rapperswil, Eventhouse Rapperswil, Radio Zürisee Loft — je mit Adresse,
+Grösse und wofür der Saal passt.
+**Die Zahlen stammen aus den öffentlichen Angaben der Locations und sind noch
+nicht bei den Betreibern bestätigt.** [FEHLT: Adresse Eventhouse Rapperswil.]
+[FEHLT: Fotos — euer Entra-Foto zeigt die Leinwand mit Schriftzug und die
+Getränkekarte; beides lässt sich nicht wegschneiden, ohne den Saal zu verlieren.]
+
+### Karten mit Preisband
+Die Buffet-Karten (Seite 21) und die Grillplatten (Seite 27) hatten viel Leere in
+der Mitte und den Preis lose am unteren Rand. Neu sitzt der Preis in einem
+rostfarbenen Band am Kartenfuss — ein Block, der die Karte abschliesst.
+
+### Küche
+- **Jasminreis heisst überall Trockenreis** (5 Stellen).
+- Das Gemüse-Thai-Curry wird mit Reis serviert — steht so in den Zutaten.
+
+### Menü
+- **«Herzstück» heisst neu «Die Proteine»** — auf Seite 23, 24, im
+  Inhaltsverzeichnis und auf der Vergleichsseite.
+- Die vier Schrittbilder auf Seite 23 sind weg, ebenso das Bild auf Seite 24.
+  Seite 23 ist neu eine Kopfseite.
+
+### Bilder
+- **Apéro im Gläsli:** neues Themenbild, nah an eurem Anlassfoto — schräg von
+  oben, Becher in Reihen auf schwarzen Stufen, echter Raum im Hintergrund.
+  Der Studio-Look ist weg.
+- **Klassiker für grosse Runden:** das Bild mit dem Wärmebehälter ist raus, die
+  Seite ist wieder eine Kopfseite. [FEHLT: neues Themenbild — die Buffetlinie.]
+- **Brot XXL:** das Themenbild soll das Laugenherz zeigen. [FEHLT: noch nicht
+  erzeugt.]
+
+### Technik
+Ein Fehler im Zusammenbau ist korrigiert: der Seitenindex folgte der sortierten
+Nummer statt der Reihenfolge in `SEITEN`. Durch die neue Seite mit Schlüssel 1
+landete dadurch das Inhaltsverzeichnis an der falschen Stelle.
+
+### Achtung: fal.ai ohne Guthaben
+Die drei fehlenden Bilder konnte ich nicht mehr erzeugen —
+*«User is locked. Reason: Exhausted balance.»* Sobald das Konto wieder gedeckt
+ist, hole ich sie nach.
+
+---
+
 ## 2026-10-27 · Süsser Abschluss, Torten, «Für alle» und Eventraum
 
 ### Süsser Abschluss (Seite 28)

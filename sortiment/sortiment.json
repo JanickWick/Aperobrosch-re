@@ -790,7 +790,7 @@
      "inhalt": [
       "Thai Curry mit Poulet, auch vegetarisch",
       "Chili con Carne",
-      "Jasminreis",
+      "Trockenreis",
       "Naan-Brot",
       "Gedämpftes Gemüse"
      ]
@@ -829,7 +829,7 @@
     },
     {
      "name": "Chili sin Carne",
-     "zutaten": "Veganes Gemüse, Bohnen, Jasminreis.",
+     "zutaten": "Veganes Gemüse, Bohnen, Trockenreis.",
      "preis": 21.0,
      "kennzeichnung": "vegan"
     },
@@ -845,12 +845,12 @@
     },
     {
      "name": "Chili con Carne",
-     "zutaten": "Rindfleisch, Bohnen, Jasminreis.",
+     "zutaten": "Rindfleisch, Bohnen, Trockenreis.",
      "preis": 23.0
     },
     {
      "name": "Gemüse-Thai-Curry",
-     "zutaten": "Veganes Gemüse, cremiges Thai Curry, Jasminreis.",
+     "zutaten": "Veganes Gemüse, cremiges Thai Curry, Trockenreis.",
      "preis": 23.0,
      "kennzeichnung": "vegan"
     },
@@ -861,7 +861,7 @@
     },
     {
      "name": "Poulet-Thai-Curry",
-     "zutaten": "Poulet, cremiges Thai Curry, Jasminreis.",
+     "zutaten": "Poulet, cremiges Thai Curry, Trockenreis.",
      "preis": 25.0
     },
     {

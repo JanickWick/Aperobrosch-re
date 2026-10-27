@@ -123,9 +123,9 @@ def s14():
     h += fuss(15)
     return seite(h)
 
-def k3(i, titel, ts, desc, gruppen, preise, note=None, bild=None, stil=''):
+def k3(i, titel, ts, desc, gruppen, preise, note=None, bild=None, stil='', y=166.5, h=102.4, by=135):
     inner = f'<h3 class="gross">{titel}</h3>{tags(*ts)}<p class="desc">{e(desc)}</p>' + ''.join(grp(l, t, False) for l, t in gruppen) + '<div class="preise">' + ''.join(pr(*p) for p in preise) + '</div>' + (f'<div class="hand inl">{e(note)}</div>' if note else '')
-    return karte(14.9 + i * 131.5, 166.5, 127.3, 102.4, inner, bild=bild, bw=118.3, bh=52.4, by=135, stil=stil)
+    return karte(14.9 + i * 131.5, y, 127.3, h, inner, bild=bild, bw=118.3, bh=52.4, by=by, stil=stil)
 
 def s16():
     sp = S['Spiessli']
@@ -314,13 +314,13 @@ def s6():
         ('WARME KÜCHE', zeilen(('Drei Wege', 20))
          + '<h4 class="spaeter">WEG 01 · BUFFET</h4>' + zeilen(('Unsere Buffets', 21))
          + '<h4 class="spaeter">WEG 02 · KLASSIKER</h4>' + zeilen(('Für grosse Runden', 22))),
-        ('WEG 03 · EIGENES MENÜ', zeilen(('In vier Schritten', 23), ('Das Herzstück', 24), ('Beilagen und Saucen', 25))
+        ('WEG 03 · EIGENES MENÜ', zeilen(('In vier Schritten', 23), ('Die Proteine', 24), ('Beilagen und Saucen', 25))
          + '<h4 class="spaeter">DAZU</h4>' + zeilen(('Suppen und Salate', 26))
          + '<h4 class="spaeter">DRAUSSEN</h4>' + zeilen(('Grillplausch', 27))
          + '<h4 class="spaeter">FÜR ALLE</h4>' + zeilen(('Vegetarisch &amp; vegan', 31))),
         ('SÜSSER ABSCHLUSS', zeilen(('Fürs Buffet', 28), ('Dessert am Teller', 29), ('Torten &amp; Confiserie', 30))
-         + '<h4 class="spaeter">05 · ANLASS KOMPLETT</h4>' + zeilen(('Vom Raum zum Fest', 32), ('Getränke', 33), ('Material &amp; Personal', 34), ('Eventraum', 35), ('Gut zu wissen', 36))),
-        ('06 · ANFRAGE', zeilen(('Erzählen Sie uns davon', 37))
+         + '<h4 class="spaeter">05 · ANLASS KOMPLETT</h4>' + zeilen(('Vom Raum zum Fest', 32), ('Getränke', 33), ('Material &amp; Personal', 34), ('Eventraum', 35), ('Weitere Locations', 36), ('Gut zu wissen', 37))),
+        ('06 · ANFRAGE', zeilen(('Erzählen Sie uns davon', 38))
          + '<h4 class="spaeter">AUSZEICHNUNGEN</h4>'
          + '<p class="ivt">Neu — aus der laufenden Sortimentsentwicklung</p>'
          + '<p class="ivt">Beliebt — bewährt und oft bestellt</p>'
@@ -464,7 +464,7 @@ def c20():
               ('Ab', '30 Personen', 'keine Mindestmenge', '10 Personen'),
               ('Preis', 'Pauschale pro Person', 'pro Portion', 'pro Person, aus vier Schritten'),
               ('Von bis', 'CHF 30.00 bis 62.00', 'CHF 16.50 bis 28.50', 'Beispiel CHF 52.00'),
-              ('Sie wählen', 'eines von sechs Buffets', 'ein Gericht für alle', 'Herzstück, Beilage, Gemüse, Sauce'),
+              ('Sie wählen', 'eines von sechs Buffets', 'ein Gericht für alle', 'Protein, Beilage, Gemüse, Sauce'),
               ('Steht auf', 'Seite 21', 'Seite 22', 'Seiten 23 und 24'))
     tab = ('<table class="tab verg">' + kopfz
            + ''.join('<tr><td class="lbl2">' + e(z[0]) + '</td>' + ''.join(f'<td class="l">{e(x)}</td>' for x in z[1:]) + '</tr>' for z in zeilen)
@@ -482,8 +482,10 @@ def c21():
              'Weg 01 — fertig zusammengestellt. Sechs Buffets, die sich an hunderten Anlässen bewährt haben. '
              'Sie wählen eines aus, wir bringen alles mit.', ghost='BUFF')
     for i, v in enumerate(bu['varianten']):
-        inner = (f'<div class="fuellen"><div><h3>{e(v["name"])}</h3><p class="desc">{e(v["unterzeile"])}</p>'
-                 + grp('Inhalt', v['inhalt']) + '</div><div class="preise unten">' + pr(bu['einheit'], '', v['preis']) + '</div></div>')
+        inner = ('<div class="fuellen" style="padding:26.6mm 0 0">'
+                 f'<div style="padding:0 4.8mm"><h3>{e(v["name"])}</h3><p class="desc">{e(v["unterzeile"])}</p>'
+                 + grp('Inhalt', v['inhalt']) + '</div>'
+                 f'<div class="preisband"><span>{e(bu["einheit"]).upper()}</span><b>{v["preis"]:.2f}</b></div></div>')
         h += karte(14.9 + i * 65.6, 166.5, 62.2, 102.4, inner, bild=False)
     h += fuss(21, 'Alle Buffets ab 30 Personen. Salatbuffet und Dessert lassen sich dazunehmen. Preise pro Person. Alle Preise in Schweizer Franken.')
     return seite(h)
@@ -491,20 +493,20 @@ def c21():
 def c22():
     """Weg 02 — die Klassiker."""
     kl = S['Klassiker für grosse Runden']
-    h = hero(F('seite-22_hero'), 'KLASSIKER<br>FÜR GROSSE<br>RUNDEN',
+    h = kopf('KLASSIKER FÜR GROSSE RUNDEN',
              'Weg 02 — ein Gericht, eine Menge, ein Preis. Die Form, mit der wir am ESAF 80’000 Mahlzeiten '
-             'ausgegeben haben.', ghost='KLAS')
+             'ausgegeben haben.', 22, braun=(44,), ghost='KLAS')
     def gericht(g):
         tg = f' {tag(g["kennzeichnung"].upper(), "beige")}' if g.get('kennzeichnung') else ''
         return (f'<div class="ger"><div class="gz"><span class="gn">{e(g["name"])}{tg}</span>'
                 f'<span class="gv">{g["preis"]:.2f}</span></div><p>{e(g["zutaten"])}</p></div>')
     sp = [kl['gerichte'][0:4], kl['gerichte'][4:8], kl['gerichte'][8:12]]
-    band = ('<div class="abs salatbox" style="left:4.7mm;top:82mm;width:380.6mm;grid-template-columns:repeat(4,1fr)">'
+    band = ('<div class="abs salatbox" style="left:4.7mm;top:166mm;width:380.6mm;grid-template-columns:repeat(4,1fr)">'
             + ''.join(f'<div><div class="rt">{e(k.upper())}</div><p>{e(v)}</p></div>' for k, v in kl['hinweise'].items())
             + '</div>')
     inner = (''.join(f'<div class="abs col" style="left:{17.1 + i * 127}mm;top:14mm;width:118mm">{"".join(gericht(g) for g in s)}</div>' for i, s in enumerate(sp))
              + band)
-    h += karte(14.9, 138, 390, 130.9, inner, bild=False)
+    h += karte(14.9, 44, 390, 215, inner, bild=False) + hand('in jeder Menge erprobt', 40, 150, -5, 17)
     h += fuss(22, 'Alle Preise pro Portion. Alle Preise in Schweizer Franken.')
     return seite(h)
 
@@ -556,21 +558,28 @@ def c28():
 def c26():
     """Draussen — Grillplausch und Burgerplausch."""
     gp, bp = S['Grillplausch'], S['Burgerplausch']
+    def band(zeilen):
+        """Preiszeilen als rostfarbenes Band am Kartenfuss."""
+        return ('<div class="preisband mehr">' + ''.join(
+            f'<div><span>{e(n).upper()}</span><em>{e(u or "")}</em><b>{v:.2f}</b></div>' for n, u, v in zeilen) + '</div>')
     h = hero(F('seite-27_hero'), 'GRILL-<br>PLAUSCH', e(gp['beschreibung']) + ' Auf Wunsch bringen wir Grill, Zelt und das übrige Material gleich mit.', ghost='GRIL')
     for i, v in enumerate(gp['varianten']):
         ts = [tag(v['kennzeichnung'].upper(), 'beige')] if v.get('kennzeichnung') else []
-        inner = ('<div class="fuellen" style="padding:26.6mm 4.8mm 3mm">'
-                 f'<div><h3>{e(v["name"])}</h3>{tags(*ts)}' + grp('Inhalt', v['inhalt']) + '</div>'
-                 + '<div class="preise unten">' + ''.join(pr(n, u, p) for n, u, p in v['preise']) + '</div></div>')
+        inner = ('<div class="fuellen" style="padding:26.6mm 0 0">'
+                 f'<div style="padding:0 4.8mm"><h3>{e(v["name"])}</h3>{tags(*ts)}' + grp('Inhalt', v['inhalt']) + '</div>'
+                 + band(v['preise']) + '</div>')
         h += karte(14.9 + i * 79.2, 138, 75.8, 130.9, inner, bild=False)
     inner_d = ('<div style="padding:26.6mm 4.8mm 0">' + f'<h3>DAZU</h3><p class="desc">Beilage und Gemüse wählen Sie aus derselben Auswahl wie beim eigenen Menü — Seite 25.</p>'
                + sph('Saucen im Portionentöpfli') + '<div class="preise dicht">' + ''.join(pr(n, u, p) for n, u, p in gp['saucen']) + '</div>'
-               + f'<p class="txt105" style="margin-top:4mm;color:#E6DCCB">Grill, Zelt und Kühlanhänger mieten Sie bei uns.</p></div>')
+               + '</div>')
+    inner_d = ('<div class="fuellen" style="padding:26.6mm 0 0">' + inner_d.replace('<div style="padding:26.6mm 4.8mm 0">', '<div style="padding:0 4.8mm">')
+               + '<div class="preisband" style="display:block"><p style="font-size:9pt;line-height:4mm;color:#F4E6D8">'
+                 'Grill, Zelt und Kühlanhänger mieten Sie bei uns.</p></div></div>')
     h += karte(14.9 + 3 * 79.2, 138, 75.8, 130.9, inner_d, bild=False)
-    inner_b = ('<div class="fuellen" style="padding:26.6mm 4.8mm 3mm">'
-               + f'<div><h3>BURGER-PLAUSCH</h3><p class="desc">{e(bp["beschreibung"])}</p>' + grp('Dazu', bp['inhalt'])
-               + f'<div class="hand inl">{e(bp["hinweis"])}</div></div>'
-               + '<div class="preise unten">' + ''.join(pr(n, u or '', p) for n, u, p in bp['preise']) + '</div></div>')
+    inner_b = ('<div class="fuellen" style="padding:26.6mm 0 0">'
+               + f'<div style="padding:0 4.8mm"><h3>BURGER-PLAUSCH</h3><p class="desc">{e(bp["beschreibung"])}</p>'
+               + grp('Dazu', bp['inhalt']) + f'<div class="hand inl">{e(bp["hinweis"])}</div></div>'
+               + band(bp['preise']) + '</div>')
     h += karte(14.9 + 4 * 79.2, 138, 75.8, 130.9, inner_b, bild=False)
     h += fuss(27, 'Grillplatten ab 20 Personen. Das Fleisch wird gleichmässig verteilt. Alle Preise in Schweizer Franken.')
     return seite(h)
@@ -580,24 +589,22 @@ def c27(): return s30(nr=28)   # «Fürs Buffet» steht in der neuen Zählung au
 def c23():
     hz = S['Eigenes Menü — Schritt 01, Herzstück']
     sc = S['Eigenes Menü — Schritt 02 bis 04']
-    h = hero(F('seite-23_herzstueck'), 'IHR<br>EIGENES<br>MENÜ',
-             'Weg 03 — Sie stellen das Menü selbst zusammen. Am Tisch serviert, Gang für Gang. Vier Schritte, vier Preise, eine Summe. Nebenan steht, was in jedem Schritt zur Wahl steht.', ghost='MENÜ')
-    for i, (cap, n) in enumerate((('Herzstück', 'herzstueck'), ('Stärkebeilage', 'staerkebeilage'), ('Gemüse', 'gemuese'), ('Sauce', 'sauce'))):
-        h += img(F(f'seite-23_{n}'), 84.9 + i * 65.8, 130.5, 52.9, 52.9) + f'<div class="cap" style="left:{84.9 + i * 65.8}mm;top:185.1mm;width:52.9mm">{e(cap)}</div>'
+    h = kopf('IHR EIGENES MENÜ',
+             'Weg 03 — Sie stellen das Menü selbst zusammen. Am Tisch serviert, Gang für Gang. Vier Schritte, vier Preise, eine Summe.', 23, braun=(44,), ghost='MENÜ')
     schritte = ''.join(row(None, nr, f'<b>{t}</b><br>{x}') for nr, t, x in (
-        ('01', 'Das Herzstück', 'Fleisch, Fisch oder eine vegetarische Hauptkomponente. Das Gewicht steht dabei.'),
+        ('01', 'Die Proteine', 'Fleisch, Fisch oder eine vegetarische Hauptkomponente. Das Gewicht steht dabei.'),
         ('02', 'Die Stärkebeilage', 'Gratin, Risotto, Teigwaren, Kartoffeln oder Polenta.'),
         ('03', 'Das Gemüse', 'Saisonal, gegrillt oder als einzelne Sorte.'),
         ('04', 'Die Sauce', 'Was die drei Teile zusammenhält.')))
     tab = ('<table class="tab"><tr><th>SO RECHNET SICH EIN MENÜ</th><th></th><th></th></tr>'
            + ''.join(f'<tr><td>{e(n)}</td><td class="g">{e(u or "")}</td><td>{v:.2f}</td></tr>' for n, u, v in sc['rechenbeispiel'])
            + '</table>')
-    inner = (f'<div class="abs" style="left:17.1mm;top:27mm;width:170mm"><div class="sph">SO GEHEN SIE VOR</div>'
+    inner = (f'<div class="abs" style="left:17.1mm;top:18mm;width:170mm"><div class="sph">SO GEHEN SIE VOR</div>'
              f'<div class="rows eng" style="position:static;width:170mm;margin-top:4mm">{schritte}</div></div>'
-             f'<div class="abs" style="left:205mm;top:27mm;width:182mm">{tab}'
+             f'<div class="abs" style="left:205mm;top:18mm;width:182mm">{tab}'
              f'<p class="txt11" style="margin-top:5mm">Jede der vier Zeilen lässt sich tauschen, die Summe verschiebt sich entsprechend. So wissen Sie vor der Offerte, woran Sie sind.</p>'
              f'<p class="txt105" style="margin-top:3mm;color:#E6DCCB">Mindestmenge {e(hz["mindestmenge"])} · {e(hz["einheit"])}</p></div>')
-    h += karte(14.9, 166.5, 390, 102.4, inner, bild=False) + hand('vier Zeilen,<br>ein Preis', 330, 253, -5, 16)
+    h += karte(14.9, 44, 390, 108, inner, bild=False) + hand('vier Zeilen,<br>ein Preis', 330, 163, -5, 16)
     h += fuss(23, 'Mindestmenge 10 Personen. Alle Preise pro Person. Suppe, Vorspeise und Dessert kommen aus den eigenen Kapiteln dazu. Alle Preise in Schweizer Franken.')
     return seite(h)
 
@@ -605,17 +612,16 @@ def wahlspalte(x, b, inhalt, top=18):
     return f'<div class="abs col" style="left:{x}mm;top:{top}mm;width:{b}mm">{inhalt}</div>'
 
 def c24():
-    """Schritt 01 — das Herzstück, nach Fleischart geordnet."""
+    """Schritt 01 — die Proteine, nach Fleischart geordnet."""
     hz = S['Eigenes Menü — Schritt 01, Herzstück']['gruppen']
-    h = kopf('DIE AUSWAHL · SCHRITT 01 — DAS HERZSTÜCK',
-             'Eine Hauptkomponente pro Menü. Gewicht roh gewogen, Preise pro Person.', 24, braun=(44,), ghost='HERZ')
-    h += img(F('seite-23_herzstueck'), 318, 44, 86, 52.9)
+    h = kopf('DIE AUSWAHL · SCHRITT 01 — DIE PROTEINE',
+             'Eine Hauptkomponente pro Menü. Gewicht roh gewogen, Preise pro Person.', 24, braun=(44,), ghost='PROT')
     inner = (wahlspalte(15, 85, liste(hz, ('Rind', 'Kalb')))
              + wahlspalte(110, 85, liste(hz, ('Schwein',)))
              + wahlspalte(205, 85, liste(hz, ('Geflügel',)))
-             + wahlspalte(300, 85, liste(hz, ('Fisch', 'Vegetarisch & vegan')), top=62))
+             + wahlspalte(300, 85, liste(hz, ('Fisch', 'Vegetarisch & vegan'))))
     h += karte(14.9, 44, 390, 215, inner, bild=False)
-    h += fuss(24, 'Das Herzstück bestimmt den Preis des Menüs. Beilagen, Gemüse und Sauce stehen auf der nächsten Seite. '
+    h += fuss(24, 'Das Protein bestimmt den Preis des Menüs. Beilagen, Gemüse und Sauce stehen auf der nächsten Seite. '
                   'Preise pro Person, Gewicht roh gewogen. Alle Preise in Schweizer Franken.')
     return seite(h)
 
@@ -634,7 +640,7 @@ def c24b():
                'verschiebt sich entsprechend. Risotto, Ravioli und Tagliatelle bringen die Stärkebeilage schon mit — '
                'dann entfällt Schritt 02.</div>')
     h += karte(14.9, 44, 390, 175, inner, bild=False) + hand('vier Zeilen,<br>ein Preis', 300, 205, -5, 16)
-    h += fuss(25, 'Eine Stärkebeilage gehört zu jedem Menü — ausser das Herzstück bringt sie schon mit. Risotto, Ravioli und '
+    h += fuss(25, 'Eine Stärkebeilage gehört zu jedem Menü — ausser das Protein bringt sie schon mit. Risotto, Ravioli und '
                   'Tagliatelle brauchen keine zweite Beilage. Preise pro Person. Alle Preise in Schweizer Franken.')
     return seite(h)
 
@@ -695,9 +701,42 @@ def s37():
     h += fuss(35, 'Der Zeltaufbau vor dem Eventraum ist nach Offerte. Alle Preise in Schweizer Franken.', arb=False)
     return seite(h)
 
+def sLoc():
+    """Neue Seite nach dem Säntisblick: weitere Eventlocations, die wir beliefern.
+
+    Die Zahlen stammen aus den öffentlichen Angaben der Locations und sind noch
+    nicht bei den Betreibern bestätigt.
+    """
+    h = kopf('WEITERE LOCATIONS',
+             'Unser Catering bleibt nicht im eigenen Haus. Wir liefern regelmässig in die grossen Säle der Region.',
+             36, braun=(44,), ghost='LOCA')
+    h += k3(0, 'ENTRA RAPPERSWIL', [tag('BELIEBT')],
+            'Die grosse Bühne der Region. Saal, Foyer und mehrere Seminarräume unter einem Dach.',
+            [('Adresse', 'Obere Bahnhofstrasse 58, 8640 Rapperswil'),
+             ('Grösse', 'Saal: Bankett 432 Personen · Apéro 600 Personen · bis 1050 Personen im ganzen Haus'),
+             ('Passt für', 'Generalversammlung · Firmenanlass · Konzert · Grossanlass')],
+            [], note='Wir waren hier schon mehrfach Cateringpartner.', bild=PH, y=97.9, h=171, by=66.5)
+    h += k3(1, 'EVENTHOUSE RAPPERSWIL', [],
+            'Eine ehemalige Industriehalle mitten in Rapperswil-Jona, roh und grosszügig.',
+            [('Adresse', '[FEHLT: Adresse]'),
+             ('Grösse', 'Halle: bis 600 Gäste · Saal: bis 200 Personen · dazu Foyer und Glaslounge'),
+             ('Passt für', 'Hochzeit · Firmenfest · Abendanlass mit Apéro im Foyer')],
+            [], bild=PH, y=97.9, h=171, by=66.5)
+    h += k3(2, 'RADIO ZÜRISEE LOFT', [],
+            'Das Loft über dem Bahnhof Rapperswil — klein, hell und mitten im Zentrum.',
+            [('Adresse', 'Bahnhofplatz 1, 8640 Rapperswil'),
+             ('Grösse', '120 m² · Bankett 66 Personen · Apéro 100 Personen · Seminar 30 Personen'),
+             ('Passt für', 'Sitzung · Kundenanlass · Apéro riche im kleinen Kreis')],
+            [], bild=PH, y=97.9, h=171, by=66.5)
+    h += fuss(36, 'Die genannten Grössen stammen aus den öffentlichen Angaben der Locations und sind unverbindlich — '
+                  'massgebend ist die Auskunft der Betreiberin. Miete und Technik rechnen die Locations direkt mit '
+                  'Ihnen ab; wir offerieren das Catering. [Bitte bestätigen: Adresse Eventhouse, Fotos der beiden '
+                  'übrigen Locations, und ob weitere Säle auf die Seite sollen.]', arb=False)
+    return seite(h)
+
 # Schlüssel = alte Seitenzahl. 0 ist die neue Gläsli-Seite, die es im Original noch nicht gibt.
 SEITEN = [(0, sGl), (6, s6), (8, s8), (9, s9), (10, s10), (11, s11alt), (12, s12), (13, s13),
-          (14, s14), (16, s16), (17, s17), (18, s18), (19, s19), (30, s30), (32, s32), (33, s33), (37, s37)]
+          (14, s14), (16, s16), (17, s17), (18, s18), (19, s19), (30, s30), (32, s32), (33, s33), (37, s37), (1, sLoc)]
 # Konzept C: der neue Essensteil. Eigene Nummerierung, noch nicht in die 40 Seiten eingebaut.
 KAPITEL_C = [(20, c20), (21, c21), (22, c22), (23, c23), (24, c24), (25, c24b), (26, c25), (27, c26), (28, c27), (29, c28)]
 
@@ -808,6 +847,15 @@ h3.gross{font-size:13pt;line-height:5.6mm}
 .salatbox .tab.staffel{margin-top:2mm}
 .fuellen{height:100%;display:flex;flex-direction:column}
 .preise.unten{margin-top:auto}
+.preisband{margin-top:auto;background:#7A4424;display:flex;align-items:baseline;justify-content:space-between;padding:3.4mm 4.8mm 3mm}
+.preisband span{font:600 7pt 'Wick Sans';letter-spacing:.16em;color:#F2E4D4}
+.preisband b{font:500 17pt 'Wick Sans';color:#fff;line-height:1}
+.preisband.mehr{display:block}
+.preisband.mehr>div{display:flex;align-items:baseline;gap:2.5mm}
+.preisband.mehr>div+div{margin-top:1.6mm}
+.preisband.mehr span{flex:0 0 auto}
+.preisband.mehr em{flex:1 1 auto;font-style:normal;font:400 7pt 'Wick Slab';color:#E7CBA9;text-align:right}
+.preisband.mehr b{font-size:13pt}
 .regelbox .rt{font:600 8pt 'Wick Sans';letter-spacing:.16em;color:#fff;margin-bottom:2.2mm}
 .regelbox p{font-size:9pt;line-height:4mm;color:#F4E6D8}
 .regelbox i{font-style:italic}
@@ -868,6 +916,7 @@ def zusammenbauen():
 
     1–10   Original
     11     neu, Apéro im Gläsli
+    36     neu, Weitere Locations
     12–19  Original 11–19 ohne die alte 15 — Apérogebäck steht neu bei den Warmen Häppchen
     20–29  Kapitel C, ersetzt die bisherigen Seiten 20–31
     30–38  Original 32–40
@@ -892,7 +941,7 @@ def zusammenbauen():
     ersetzt = {n for n, _ in SEITEN}
     teil_s = neu(ersetzt, SEITEN, 's')                      # die überarbeiteten Einzelseiten
     teil_c = neu({n for n, _ in KAPITEL_C}, KAPITEL_C, 'c')  # der neue Essensteil
-    idx_s = {n: i for i, n in enumerate(sorted(ersetzt))}
+    idx_s = {n: i for i, (n, _) in enumerate(SEITEN)}   # gleiche Reihenfolge wie in neu()
 
     def hol(nr):
         """Seite nr der alten Nummerierung — überarbeitet, falls vorhanden."""
@@ -904,7 +953,10 @@ def zusammenbauen():
     for nr in range(11, 20):                            # alt 11–19 → neu 12–19
         if nr != 15: hol(nr)                            # alt 15 ist in die Warmen Häppchen gewandert
     doc.insert_pdf(teil_c, from_page=0, to_page=teil_c.page_count - 1)  # Kapitel C
-    for nr in range(32, 41): hol(nr)                    # alt 32–40
+    for nr in range(32, 41):                            # alt 32–40 → neu 30–39
+        hol(nr)
+        if nr == 37:                                    # dahinter die neue Seite «Weitere Locations»
+            doc.insert_pdf(teil_s, from_page=idx_s[1], to_page=idx_s[1])
 
     out = ROOT / 'out/wick-apero-catering-NEU.pdf'
     doc.save(out, garbage=4, deflate=True)
