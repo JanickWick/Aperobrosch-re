@@ -1,6 +1,7 @@
 out/
 *.png
 !assets/**/*.png
+!broschuere/icons/*.png
 __pycache__/
 # Protokollauszüge bleiben lokal
 quellen/aus-protokoll/_*.txt

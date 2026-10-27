@@ -304,10 +304,6 @@
      "preis": 3.8
     },
     {
-     "sorte": "Antipasti-Spiessli",
-     "preis": 3.8
-    },
-    {
      "sorte": "Käse-Trauben-Spiessli",
      "hinweis": "neu",
      "preis": null
@@ -318,17 +314,13 @@
      "preis": null
     },
     {
-     "sorte": "Weitere saisonale Spiessli",
-     "hinweis": "wechselnd nach Saison — Sorten noch zu bestimmen",
-     "preis": null
-    },
-    {
      "sorte": "Frucht klein",
      "preis": 2.0
     }
    ],
    "gestrichen": [
-    "Frucht-Nutella-Spiessli"
+    "Frucht-Nutella-Spiessli",
+    "Antipasti-Spiessli"
    ],
    "offen": "Erdbeer-Nutella-Spiessli nicht genannt — bleibt oder weg?",
    "preis_offen": "Neue Sorten nach Kalkulation. Referenz bestehende Spiessli: CHF 3.80 pro Stück.",
@@ -337,7 +329,7 @@
     "bilder/produkte/spiessli-2.jpg",
     "bilder/produkte/spiessli-3.jpg"
    ],
-   "bild_hinweis": "Referenzbilder: Frucht, Tomaten-Mozzarella (noch mit Focaccia), Antipasti — neue Sorten ohne Foto"
+   "bild_hinweis": "Tomaten-Mozzarella (ohne Focaccia), Käse-Trauben und Melonen-Rohschinken neu erstellt, liegen in bilder/final/. Antipasti und Frucht klein zeigen die bisherigen Fotos."
   },
   {
    "name": "Mousse-Schale gefüllt",
@@ -471,7 +463,1086 @@
   }
  ],
  "Confiserie": [],
- "Küche": [],
+ "Küche": [
+  {
+   "name": "Suppen",
+   "seite": 21,
+   "beschreibung": "Eine Suppe kostet wenig und verändert viel — sie wärmt Gäste, die draussen gestanden haben.",
+   "hinweis": "Kalt oder heiss geliefert, auf Wunsch mit Wärmebehälter. Alle Suppen gibt es auch im Gläsli als Fingerfood.",
+   "gruppen": {
+    "Klassisch": [
+     [
+      "Tomatencremesuppe",
+      "vegan",
+      5.8
+     ],
+     [
+      "Rüebli-Ingwersuppe",
+      "vegan",
+      5.8
+     ],
+     [
+      "Gemüsecremesuppe",
+      "vegan",
+      6.0
+     ],
+     [
+      "Kartoffelsuppe",
+      "vegetarisch",
+      6.2
+     ],
+     [
+      "Kürbissuppe",
+      "vegan",
+      6.5
+     ]
+    ],
+    "Herzhaft": [
+     [
+      "Linsensuppe",
+      "vegan",
+      6.8
+     ],
+     [
+      "Rieslingsuppe",
+      null,
+      7.2
+     ],
+     [
+      "Rinds-Consommé",
+      null,
+      7.5
+     ],
+     [
+      "Gulaschsuppe",
+      null,
+      8.5
+     ],
+     [
+      "Bündner Gerstensuppe",
+      null,
+      null
+     ]
+    ],
+    "Saisonal": [
+     [
+      "Marronisuppe",
+      "vegan",
+      7.2
+     ],
+     [
+      "Bärlauchsuppe",
+      "vegetarisch",
+      7.5
+     ],
+     [
+      "Pilzsuppe",
+      "vegetarisch",
+      7.8
+     ],
+     [
+      "Spargelsuppe",
+      "vegetarisch",
+      8.2
+     ]
+    ]
+   },
+   "einheit": "pro Portion",
+   "preis_offen": "Bündner Gerstensuppe: die Preisliste nennt keinen Betrag."
+  },
+  {
+   "name": "Vorspeisen am Teller",
+   "seite": 21,
+   "beschreibung": "Für Anlässe, an denen am Tisch serviert wird. Eine Vorspeise eröffnet das Menü und gibt dem Abend seinen Takt.",
+   "gruppen": {
+    "Kalt": [
+     [
+      "Gemüsetatar",
+      "vegan",
+      14.0
+     ],
+     [
+      "Vitello Tonnato",
+      null,
+      15.5
+     ],
+     [
+      "Lachstatar mit Thai-Salsa",
+      null,
+      16.5
+     ],
+     [
+      "Burrata mit Tomaten und Basilikum",
+      "vegetarisch",
+      17.0
+     ],
+     [
+      "Beef-Tatar",
+      null,
+      18.0
+     ]
+    ],
+    "Warm": [
+     [
+      "Hausgemachte Käseravioli mit Bergkäsefüllung",
+      "vegetarisch",
+      16.0
+     ],
+     [
+      "Grüne Spargeln mit Hollandaise-Espuma",
+      "vegetarisch",
+      17.5
+     ],
+     [
+      "Morchel-Tagliatelle mit Rahmsauce",
+      "vegetarisch",
+      19.5
+     ]
+    ]
+   },
+   "einheit": "pro Portion",
+   "saisonal": "Grüne Spargeln mit Hollandaise-Espuma nur im Frühling."
+  },
+  {
+   "name": "Salate am Teller",
+   "seite": 22,
+   "beschreibung": "Als Vorspeise oder als leichte Hauptmahlzeit, sorgfältig angerichtet.",
+   "preise": [
+    [
+     "Bunter Blattsalat mit Hausdressing",
+     "pro Portion",
+     11.5
+    ],
+    [
+     "Gemischter Salat mit saisonalem Gemüse",
+     "pro Portion",
+     12.0
+    ],
+    [
+     "Sommersalat mit Melonen und Feta",
+     "pro Portion",
+     14.0
+    ],
+    [
+     "Caesar Salad",
+     "pro Portion",
+     14.5
+    ],
+    [
+     "Winterlicher Nüsslisalat mit Speck, Ei und Croutons",
+     "pro Portion",
+     15.0
+    ],
+    [
+     "Frühlingssalat mit Spargeln, Orangen und Mandeln",
+     "pro Portion",
+     15.5
+    ],
+    [
+     "Herbstsalat mit Kürbis, Feigen, Walnüssen und Ziegenkäse",
+     "pro Portion",
+     16.0
+    ]
+   ],
+   "kennzeichnung": {
+    "vegan": [
+     "Bunter Blattsalat mit Hausdressing",
+     "Gemischter Salat mit saisonalem Gemüse"
+    ],
+    "vegetarisch": [
+     "Sommersalat mit Melonen und Feta",
+     "Caesar Salad",
+     "Frühlingssalat mit Spargeln, Orangen und Mandeln",
+     "Herbstsalat mit Kürbis, Feigen, Walnüssen und Ziegenkäse"
+    ]
+   },
+   "saison": {
+    "Sommersalat mit Melonen und Feta": "Sommer",
+    "Winterlicher Nüsslisalat mit Speck, Ei und Croutons": "Winter",
+    "Frühlingssalat mit Spargeln, Orangen und Mandeln": "Frühling",
+    "Herbstsalat mit Kürbis, Feigen, Walnüssen und Ziegenkäse": "Herbst"
+   },
+   "hinweis": "Die saisonalen Salate gibt es, solange die Zutaten aus der Region kommen."
+  },
+  {
+   "name": "Salatbuffet",
+   "seite": 22,
+   "beschreibung": "Sie bestimmen, wie viele Sorten auf dem Buffet stehen. Dazu kommen unsere zwei hausgemachten Saucen, French und Italian.",
+   "preise": [
+    [
+     "3 Sorten, ab 20 Personen",
+     "ab, pro Person",
+     8.5
+    ],
+    [
+     "5 Sorten, ab 20 Personen",
+     "ab, pro Person",
+     10.5
+    ],
+    [
+     "7 Sorten, ab 50 Personen",
+     "ab, pro Person",
+     12.5
+    ],
+    [
+     "10 Sorten, ab 80 Personen",
+     "ab, pro Person",
+     14.5
+    ]
+   ],
+   "hinweis": "Je mehr Gäste, desto mehr Sorten lassen sich wirtschaftlich zubereiten — daher die Staffelung.",
+   "gruppen": {
+    "01 Leicht": [
+     "Blattsalat (vegan)",
+     "Tomatensalat (vegan)",
+     "Krautsalat (vegan)",
+     "Karottensalat (vegan)",
+     "Maissalat (vegan)",
+     "Broccoli-Salat (vegan)",
+     "Fenchel-Orangen-Salat (vegan)",
+     "Gurkensalat mit Dill-Joghurt (vegetarisch)"
+    ],
+    "02 Sättigend": [
+     "Grüner Bohnensalat (vegan)",
+     "Mexikanischer Bohnensalat (vegan)",
+     "Quinoa-Avocado-Salat (vegan)",
+     "Couscous-Salat (vegan)",
+     "Bulgursalat (vegan)",
+     "Linsensalat (vegan)",
+     "Kartoffelsalat mit Mayonnaise (vegetarisch)",
+     "Tomaten-Mozzarella-Salat (vegetarisch)",
+     "Griechischer Salat (vegetarisch)",
+     "Selleriesalat Waldorf-Art (vegetarisch)",
+     "Teigwarensalat mit Bauernschinken"
+    ],
+    "03 Saisonal": [
+     "Melonen-Feta-Salat (vegetarisch)",
+     "Pfirsich-Mozzarella-Salat (vegetarisch)"
+    ]
+   }
+  },
+  {
+   "name": "Buffets",
+   "seite": 23,
+   "beschreibung": "Weg 01 — fertig zusammengestellt. Sechs Buffets, die sich an hunderten Anlässen bewährt haben.",
+   "mindestmenge": "ab 30 Personen",
+   "einheit": "pro Person",
+   "varianten": [
+    {
+     "name": "Züri-Fäscht",
+     "unterzeile": "Bodenständig und herzhaft",
+     "preis": 30.0,
+     "inhalt": [
+      "Ghackets mit Hörnli",
+      "Geschmortes Kalbsgeschnetzeltes",
+      "Hörnli & geröstete Zwiebeln",
+      "Apfelmus",
+      "Saisongemüse"
+     ]
+    },
+    {
+     "name": "Glarner Alpabfahrt",
+     "unterzeile": "Mit vegetarischem Hauptgang",
+     "preis": 42.0,
+     "inhalt": [
+      "Vegetarische Gemüselasagne",
+      "Pouletgeschnetzeltes an Champignonsauce",
+      "Nudeln",
+      "Salzkartoffeln",
+      "Marktgemüse",
+      "Butterkartoffeln"
+     ]
+    },
+    {
+     "name": "Alpenrose",
+     "unterzeile": "Der klassische Sonntagsbraten",
+     "preis": 45.0,
+     "inhalt": [
+      "Schweinsbraten",
+      "Kartoffelgratin",
+      "Speckbohnen",
+      "Rüebli",
+      "Ofengemüse"
+     ]
+    },
+    {
+     "name": "BBQ Spareribs",
+     "unterzeile": "Für draussen, zum Zugreifen",
+     "preis": 52.0,
+     "inhalt": [
+      "Zarte BBQ Spareribs",
+      "Chicken Wings",
+      "Hausgemachter Coleslaw",
+      "Ofenkartoffeln mit Sauerrahm",
+      "Gegrillte Maiskolben",
+      "Grillgemüse"
+     ]
+    },
+    {
+     "name": "Matterhorn Exotik",
+     "unterzeile": "Würzig, auch vegetarisch möglich",
+     "preis": 55.0,
+     "inhalt": [
+      "Thai Curry mit Poulet, auch vegetarisch",
+      "Chili con Carne",
+      "Jasminreis",
+      "Naan-Brot",
+      "Gedämpftes Gemüse"
+     ]
+    },
+    {
+     "name": "Rheinfall Genuss",
+     "unterzeile": "Fisch und Geflügel, das festlichste",
+     "preis": 62.0,
+     "inhalt": [
+      "Lachsfilet an Zitronen-Dill-Sauce",
+      "Pouletbrust an Kräutersauce",
+      "Reis-Mix",
+      "Petersilienkartoffeln",
+      "Ratatouille",
+      "Gemüse-Mischung"
+     ]
+    }
+   ],
+   "hinweis": "Salatbuffet und Dessert lassen sich dazunehmen."
+  },
+  {
+   "name": "Klassiker für grosse Runden",
+   "seite": 24,
+   "beschreibung": "Weg 02 — ein Gericht, eine Menge, ein Preis. Die Form, mit der wir am ESAF 80’000 Mahlzeiten ausgegeben haben.",
+   "einheit": "pro Portion",
+   "gerichte": [
+    {
+     "name": "Warmer Schinken mit Kartoffelsalat",
+     "zutaten": "Warmer Beinschinken, Kartoffelsalat.",
+     "preis": 16.5
+    },
+    {
+     "name": "Riz Casimir mit Pouletbruststreifen",
+     "zutaten": "Pouletbruststreifen, fruchtige Currysauce, Reis.",
+     "preis": 19.5
+    },
+    {
+     "name": "Chili sin Carne",
+     "zutaten": "Veganes Gemüse, Bohnen, Jasminreis.",
+     "preis": 21.0,
+     "kennzeichnung": "vegan"
+    },
+    {
+     "name": "Penne Bolognese",
+     "zutaten": "Penne, Bolognese-Sauce, Parmesan.",
+     "preis": 22.0
+    },
+    {
+     "name": "Bami Goreng mit Pouletbruststreifen",
+     "zutaten": "Nudeln, Gemüse, Pouletbruststreifen.",
+     "preis": 22.0
+    },
+    {
+     "name": "Chili con Carne",
+     "zutaten": "Rindfleisch, Bohnen, Jasminreis.",
+     "preis": 23.0
+    },
+    {
+     "name": "Gemüse-Thai-Curry",
+     "zutaten": "Veganes Gemüse, cremiges Thai Curry, Jasminreis.",
+     "preis": 23.0,
+     "kennzeichnung": "vegan"
+    },
+    {
+     "name": "Ghackets mit Hörnli",
+     "zutaten": "Hackfleisch, Hörnli, Röstzwiebeln, Apfelmus, Bergkäse.",
+     "preis": 24.5
+    },
+    {
+     "name": "Poulet-Thai-Curry",
+     "zutaten": "Poulet, cremiges Thai Curry, Jasminreis.",
+     "preis": 25.0
+    },
+    {
+     "name": "Hausgemachte Rindfleisch-Lasagne",
+     "zutaten": "Rindfleischragout, Béchamelsauce, Lasagneplatten, Käsekruste.",
+     "preis": 26.0
+    },
+    {
+     "name": "Schmorbraten",
+     "zutaten": "Schmorbraten, Kartoffelstock, Gemüse.",
+     "preis": 26.0
+    },
+    {
+     "name": "Rindsgeschnetzeltes «Stroganoff»",
+     "zutaten": "Rindsgeschnetzeltes, Stroganoff-Sauce, Teigwaren, Gemüse.",
+     "preis": 28.5
+    }
+   ],
+   "hinweise": {
+    "Menge": "Ein Gericht deckt den ganzen Anlass. Zwei Gerichte geben den Gästen die Wahl — dann rechnen wir mit 60 zu 40.",
+    "Ausgabe": "Wir liefern im Wärmebehälter oder richten vor Ort an. Beides funktioniert auch dort, wo keine Küche steht.",
+    "Ohne Fleisch": "Chili sin Carne und das Gemüse-Thai-Curry sind vollwertige Hauptgänge, keine Beilagen.",
+    "Dazu passt": "Eine Suppe vorweg, ein Salatbuffet daneben, Mini-Pâtisserie danach."
+   }
+  },
+  {
+   "name": "Eigenes Menü — Schritt 01, Herzstück",
+   "seite": "26-27",
+   "beschreibung": "Weg 03 — Fleisch, Fisch oder eine vegetarische Hauptkomponente. Das Gewicht steht jeweils dabei.",
+   "mindestmenge": "10 Personen",
+   "einheit": "pro Person, Gewicht roh gewogen",
+   "gruppen": {
+    "Rind": [
+     [
+      "Rindsburger",
+      "160 g",
+      25.0
+     ],
+     [
+      "Hackbraten",
+      "180 g",
+      26.0
+     ],
+     [
+      "Rindsschmorbraten",
+      "200 g",
+      30.0
+     ],
+     [
+      "Rindsfilet Stroganoff",
+      "150 g",
+      35.0
+     ],
+     [
+      "Rindsentrecôte",
+      "180 g",
+      36.0
+     ],
+     [
+      "Rindsfilet",
+      "180 g",
+      38.0
+     ],
+     [
+      "Rindsfilet Wellington",
+      "200 g",
+      45.0
+     ]
+    ],
+    "Kalb": [
+     [
+      "Kalbshackbraten",
+      "180 g",
+      27.0
+     ],
+     [
+      "Kalbsragout",
+      "180 g",
+      30.0
+     ],
+     [
+      "Kalbsschmorbraten",
+      "200 g",
+      33.0
+     ],
+     [
+      "Kalbsbäggli",
+      "180 g",
+      34.0
+     ],
+     [
+      "Wienerschnitzel",
+      "150 g",
+      34.0
+     ],
+     [
+      "Kalbsschnitzel natur",
+      "150 g",
+      35.0
+     ],
+     [
+      "Kalbsossobucco",
+      "300 g",
+      35.0
+     ],
+     [
+      "Kalbsgeschnetzeltes",
+      "150 g",
+      36.0
+     ],
+     [
+      "Kalbs-Saltimbocca",
+      "160 g",
+      37.0
+     ],
+     [
+      "Kalbskareebraten",
+      "180 g",
+      39.0
+     ],
+     [
+      "Kalbsfilet-Medaillons",
+      "160 g",
+      42.0
+     ]
+    ],
+    "Schwein": [
+     [
+      "Schweinsbratwurst",
+      "120 g",
+      22.0
+     ],
+     [
+      "Olma Bratwurst",
+      "120 g",
+      23.0
+     ],
+     [
+      "Schweinsragout",
+      "180 g",
+      25.0
+     ],
+     [
+      "Kasseler Schinken",
+      "200 g",
+      25.0
+     ],
+     [
+      "Schweinsschmorbraten",
+      "200 g",
+      26.0
+     ],
+     [
+      "Schweinsschnitzel natur",
+      "150 g",
+      26.0
+     ],
+     [
+      "Schweinsgeschnetzeltes",
+      "150 g",
+      27.0
+     ],
+     [
+      "Schweinsschnitzel paniert",
+      "150 g",
+      27.0
+     ],
+     [
+      "Schweinssteak",
+      "180 g",
+      28.0
+     ],
+     [
+      "Tessinerbraten",
+      "200 g",
+      28.0
+     ],
+     [
+      "Schinken im Brotteig",
+      "200 g",
+      28.0
+     ],
+     [
+      "Schweinskotelett",
+      "220 g",
+      29.0
+     ],
+     [
+      "Spare Ribs",
+      "400 g",
+      31.0
+     ],
+     [
+      "Schweinsfilet",
+      "160 g",
+      32.0
+     ],
+     [
+      "Schweinsfilet im Speckmantel",
+      "180 g",
+      34.0
+     ],
+     [
+      "Schweinsfilet im Blätterteig",
+      "200 g",
+      36.0
+     ]
+    ],
+    "Geflügel": [
+     [
+      "Pouletgeschnetzeltes",
+      "150 g",
+      26.0
+     ],
+     [
+      "Pouletschenkelsteak",
+      "180 g",
+      27.0
+     ],
+     [
+      "Pouletbrust",
+      "160 g",
+      28.0
+     ],
+     [
+      "Poulet Piccata",
+      "150 g",
+      29.0
+     ],
+     [
+      "Pouletbrust mit saisonaler Füllung",
+      "180 g",
+      30.0
+     ],
+     [
+      "Poulet Saltimbocca",
+      "160 g",
+      30.0
+     ],
+     [
+      "Konfierte Entenschenkel",
+      "250 g",
+      32.0
+     ]
+    ],
+    "Fisch": [
+     [
+      "Pochierte Forelle",
+      "200 g",
+      32.0
+     ],
+     [
+      "Zanderknusperli",
+      "150 g",
+      33.0
+     ],
+     [
+      "Kabeljaufilet",
+      "150 g",
+      34.0
+     ],
+     [
+      "Lachsfilet",
+      "150 g",
+      35.0
+     ],
+     [
+      "Eglifilet",
+      "150 g",
+      36.0
+     ],
+     [
+      "Thunfischsteak",
+      "160 g",
+      38.0
+     ],
+     [
+      "Riesenkrevetten",
+      "150 g",
+      39.0
+     ]
+    ],
+    "Vegetarisch & vegan": [
+     [
+      "Tagliatelle (vegetarisch)",
+      "200 g",
+      22.0
+     ],
+     [
+      "Saisonales Risotto (vegetarisch)",
+      "250 g",
+      23.0
+     ],
+     [
+      "Tofu gebraten (vegan)",
+      "180 g",
+      24.0
+     ],
+     [
+      "Greenforce-Frikadellen (vegan)",
+      "150 g",
+      25.0
+     ],
+     [
+      "Beyond Meat Burger (vegan)",
+      "150 g",
+      26.0
+     ],
+     [
+      "Hausgemachte Käseravioli mit Bergkäse (vegetarisch)",
+      "200 g",
+      27.0
+     ]
+    ]
+   },
+   "hinweis": "Risotto, Ravioli und Tagliatelle brauchen keine zweite Beilage — hier genügen Schritt 03 und 04."
+  },
+  {
+   "name": "Eigenes Menü — Schritt 02 bis 04",
+   "seite": 28,
+   "beschreibung": "Die drei Schritte, die aus einem Stück Fleisch ein Menü machen. Aus derselben Auswahl kommen auch die Beilagen zum Grillplausch.",
+   "einheit": "pro Person",
+   "gruppen": {
+    "02 Stärkebeilage": [
+     [
+      "Nudeln (vegetarisch)",
+      "180 g",
+      5.0
+     ],
+     [
+      "Reis (vegan)",
+      "180 g",
+      5.0
+     ],
+     [
+      "Kartoffelstock (vegetarisch)",
+      "200 g",
+      5.0
+     ],
+     [
+      "Bratkartoffeln (vegan)",
+      "180 g",
+      5.5
+     ],
+     [
+      "Polenta (vegetarisch)",
+      "150 g",
+      5.5
+     ],
+     [
+      "Kartoffelgratin (vegetarisch)",
+      "200 g",
+      6.0
+     ],
+     [
+      "Gnocchi (vegetarisch)",
+      "180 g",
+      6.0
+     ],
+     [
+      "Risotto (vegetarisch)",
+      "180 g",
+      6.5
+     ]
+    ],
+    "03 Gemüse": [
+     [
+      "Karotten (vegan)",
+      "120 g",
+      4.5
+     ],
+     [
+      "Brokkoli (vegan)",
+      "120 g",
+      5.0
+     ],
+     [
+      "Bohnen (vegan)",
+      "120 g",
+      5.0
+     ],
+     [
+      "Zucchini (vegan)",
+      "120 g",
+      5.0
+     ],
+     [
+      "Saisonales Gemüse (vegan)",
+      "150 g",
+      5.5
+     ],
+     [
+      "Grillgemüse (vegan)",
+      "140 g",
+      6.0
+     ],
+     [
+      "Ratatouille (vegan)",
+      "160 g",
+      6.5
+     ],
+     [
+      "Spargel (vegan)",
+      "150 g",
+      7.0
+     ]
+    ],
+    "04 Sauce": [
+     [
+      "Kräuterbutter (vegetarisch)",
+      null,
+      1.5
+     ],
+     [
+      "Tomatensauce (vegan)",
+      null,
+      1.5
+     ],
+     [
+      "Pfeffersauce",
+      null,
+      2.0
+     ],
+     [
+      "Currysauce (vegetarisch)",
+      null,
+      2.0
+     ],
+     [
+      "Senfsauce (vegetarisch)",
+      null,
+      2.0
+     ],
+     [
+      "Pilzsauce (vegetarisch)",
+      null,
+      2.5
+     ],
+     [
+      "Hollandaise (vegetarisch)",
+      null,
+      2.5
+     ],
+     [
+      "Weinsauce",
+      null,
+      2.5
+     ],
+     [
+      "Kräuterrahmsauce (vegetarisch)",
+      null,
+      2.5
+     ],
+     [
+      "Champagnersauce",
+      null,
+      3.0
+     ],
+     [
+      "Whisky-Sauce",
+      null,
+      3.0
+     ]
+    ]
+   },
+   "rechenbeispiel": [
+    [
+     "01 Rindsfilet",
+     "180 g",
+     38.0
+    ],
+    [
+     "02 Kartoffelgratin",
+     "200 g",
+     6.0
+    ],
+    [
+     "03 Grillgemüse",
+     "140 g",
+     6.0
+    ],
+    [
+     "04 Pfeffersauce",
+     null,
+     2.0
+    ],
+    [
+     "Total pro Person",
+     null,
+     52.0
+    ]
+   ],
+   "hinweis": "Eine Stärkebeilage gehört zu jedem Menü — ausser das Herzstück bringt sie schon mit. Saisonales Gemüse heisst: was gerade aus der Region kommt."
+  },
+  {
+   "name": "Grillplausch",
+   "seite": 29,
+   "beschreibung": "Mariniert aus unserer Küche, fertig zum Auflegen. Drei Platten, von denen Sie eine wählen — das Fleisch wird darauf gleichmässig verteilt.",
+   "mindestmenge": "ab 20 Personen",
+   "varianten": [
+    {
+     "name": "Grillplatte Classic",
+     "inhalt": [
+      "Rindshuft mariniert",
+      "Schweinshals mariniert",
+      "Pouletbrust",
+      "Mini Würstli"
+     ],
+     "preise": [
+      [
+       "Normal",
+       "300 g pro Person",
+       22.0
+      ],
+      [
+       "Klein",
+       "200 g pro Person",
+       18.0
+      ]
+     ]
+    },
+    {
+     "name": "Grillplatte Deluxe",
+     "inhalt": [
+      "Rindshuft mariniert",
+      "Schweinshals mariniert",
+      "Pouletbrust",
+      "Mini Würstli",
+      "Kalbshuft",
+      "Limousin Burger",
+      "Poulet- & Rinds-Satay"
+     ],
+     "preise": [
+      [
+       "Normal",
+       "300 g pro Person",
+       26.5
+      ],
+      [
+       "Klein",
+       "200 g pro Person",
+       23.5
+      ]
+     ]
+    },
+    {
+     "name": "Grillplatte Vegiplatte",
+     "kennzeichnung": "vegetarisch",
+     "inhalt": [
+      "No Meat Balls",
+      "No Bratwurst",
+      "No Burger",
+      "Grillkäse mariniert"
+     ],
+     "preise": [
+      [
+       "Normal",
+       "300 g pro Person",
+       24.0
+      ]
+     ]
+    }
+   ],
+   "saucen": [
+    [
+     "Ketchup",
+     "Portion",
+     0.5
+    ],
+    [
+     "Mayo",
+     "Portion",
+     0.5
+    ],
+    [
+     "Senf",
+     "Portion",
+     0.5
+    ],
+    [
+     "Kräuterbutter",
+     "Portion",
+     0.8
+    ]
+   ],
+   "hinweis": "Beilage und Gemüse wählen Sie aus derselben Auswahl wie beim eigenen Menü. Grill, Zelt und Kühlanhänger mieten Sie bei uns."
+  },
+  {
+   "name": "Burgerplausch",
+   "seite": 29,
+   "beschreibung": "Saftiges 220-g-Rindfleischpatty im Brioche-Bun.",
+   "inhalt": [
+    "Salat, Gurken, Tomaten, Zwiebeln",
+    "Ketchup, Mayo, Tartarsauce"
+   ],
+   "preise": [
+    [
+     "Burgerplausch",
+     "pro Portion",
+     18.0
+    ],
+    [
+     "Zuschlag Bacon",
+     null,
+     2.0
+    ],
+    [
+     "Zuschlag Käse",
+     null,
+     2.0
+    ]
+   ],
+   "hinweis": "Ideal für Baustellenaufrichtungen, Vereinsanlässe und Geburtstage im Freien."
+  },
+  {
+   "name": "Dessert am Teller",
+   "seite": 31,
+   "beschreibung": "Wird am Platz serviert und gehört deshalb zum Tellerservice.",
+   "mindestmenge": "ab 20 Personen",
+   "einheit": "pro Portion",
+   "preise": [
+    [
+     "Saisonale Früchtevariation (vegan)",
+     "pro Portion",
+     6.0
+    ],
+    [
+     "Zitronensorbet mit Prosecco (vegan)",
+     "pro Portion",
+     6.5
+    ],
+    [
+     "Apfelstrudel mit Vanillesauce (vegetarisch)",
+     "pro Portion",
+     7.0
+    ],
+    [
+     "Mousse au Chocolat, dunkle Schokolade (vegetarisch)",
+     "pro Portion",
+     7.5
+    ],
+    [
+     "Weisse Schokoladenmousse (vegetarisch)",
+     "pro Portion",
+     7.5
+    ],
+    [
+     "Panna Cotta mit Beeren- oder Passionsfruchtsauce (vegetarisch)",
+     "pro Portion",
+     8.0
+    ],
+    [
+     "Vermicelles mit Meringues und Rahm (vegetarisch)",
+     "pro Portion",
+     8.0
+    ],
+    [
+     "Hausgemachtes Tiramisu (vegetarisch)",
+     "pro Portion",
+     8.5
+    ],
+    [
+     "Cheesecake, New York Style oder Himbeer (vegetarisch)",
+     "pro Portion",
+     8.5
+    ],
+    [
+     "Mini-Schokoladenküchlein mit flüssigem Kern (vegetarisch)",
+     "pro Portion",
+     9.0
+    ],
+    [
+     "Crème brûlée mit karamellisierter Zuckerkruste (vegetarisch)",
+     "pro Portion",
+     9.5
+    ]
+   ],
+   "saisonal": "Vermicelles mit Meringues und Rahm: Herbst und Winter.",
+   "hinweise": {
+    "Ab 20 Personen": "Unter zwanzig Gästen lohnt sich der Tellerservice nicht — dann empfehlen wir die Mini-Pâtisserie.",
+    "Nach dem Menü": "Ein Dessert am Teller schliesst einen Abend ab, an dem auch der Hauptgang serviert wurde. Zum Buffet passt besser ein süsses Buffet.",
+    "Ohne Tierisches": "Die Früchtevariation und das Zitronensorbet sind vegan.",
+    "Statt Dessert": "An Hochzeiten und Geburtstagen ersetzt oft die Torte den Dessertgang."
+   }
+  }
+ ],
  "Traiteur": [
   {
    "name": "Pain Surprise / Party Brioches",
@@ -685,6 +1756,146 @@
     "bilder/produkte/aperowrap-2.jpg"
    ],
    "bild_hinweis": "Referenzbild: bisheriges Format — neues Foto im kleineren Format nötig"
+  },
+  {
+   "name": "Gläsli-Apéros",
+   "seite": 11,
+   "beschreibung": "Kleine Portionen im Glas, als Ergänzung zum Apéro Riche.",
+   "regel": "Nur zusammen mit einem Apéro Riche bestellbar — nicht einzeln und nicht zu anderen Apéro-Varianten.",
+   "mindestmenge": "15 Stück pro Sorte",
+   "glas": null,
+   "preise": null,
+   "preis_offen": "Preis pro Gläsli noch offen — ein Preis für alle oder je Kategorie.",
+   "kategorien": [
+    {
+     "name": "Dip & Gemüse",
+     "sorten": [
+      {
+       "sorte": "Hummus",
+       "zutaten": "Granatapfel & Minzöl",
+       "kennzeichnung": "vegan"
+      },
+      {
+       "sorte": "Kräuterquark",
+       "zutaten": "Räucherlachs & Radiesli — Zitronenzeste",
+       "kennzeichnung": null
+      },
+      {
+       "sorte": "Ziegenkäse-Crème",
+       "zutaten": "Feigen, Honig & Pistazien — Thymian",
+       "kennzeichnung": "vegetarisch"
+      }
+     ]
+    },
+    {
+     "name": "Salat-Gläsli",
+     "sorten": [
+      {
+       "sorte": "Caprese",
+       "zutaten": "Datterini, Mozzarella-Perlen, Pesto, Balsamico-Perlen",
+       "kennzeichnung": "vegetarisch"
+      },
+      {
+       "sorte": "Quinoa",
+       "zutaten": "Granatapfel, Feta & Pistazien — Zitronen-Dressing",
+       "kennzeichnung": "vegetarisch"
+      },
+      {
+       "sorte": "Couscous Orient",
+       "zutaten": "Rüebli, Datteln, Mandeln, Kreuzkümmel",
+       "kennzeichnung": "vegan"
+      },
+      {
+       "sorte": "Griechisch",
+       "zutaten": "Gurke, Tomate, Feta, Oliven, rote Zwiebel",
+       "kennzeichnung": "vegetarisch"
+      },
+      {
+       "sorte": "Ebly",
+       "zutaten": "Pilze, Trüffelöl & Parmesan",
+       "kennzeichnung": "vegetarisch"
+      },
+      {
+       "sorte": "Asia-Krautsalat",
+       "zutaten": "Edamame & Sesam — Soja-Limette, Cashews",
+       "kennzeichnung": "vegan"
+      }
+     ]
+    },
+    {
+     "name": "Mousses",
+     "sorten": [
+      {
+       "sorte": "Lachs-Mousse",
+       "zutaten": "Forellenkaviar & Gurke — Dill",
+       "kennzeichnung": null
+      },
+      {
+       "sorte": "Rauchforellen-Mousse",
+       "zutaten": "Apfel & Meerrettich — Kaviar",
+       "kennzeichnung": null
+      },
+      {
+       "sorte": "Ziegenkäse-Mousse",
+       "zutaten": "Feigen & Honig — Walnuss",
+       "kennzeichnung": "vegetarisch"
+      }
+     ]
+    },
+    {
+     "name": "Cocktails & Tatare",
+     "sorten": [
+      {
+       "sorte": "Crevettencocktail",
+       "zutaten": "Cocktailsauce, Fenchelstreifen, Zitrone",
+       "kennzeichnung": null
+      },
+      {
+       "sorte": "Räucherlachs-Tatar",
+       "zutaten": "Apfel, Dill, Crème fraîche",
+       "kennzeichnung": null
+      },
+      {
+       "sorte": "Tomaten-Tatar",
+       "zutaten": "Burrata & Pinienkerne — Basilikumöl",
+       "kennzeichnung": "vegetarisch"
+      },
+      {
+       "sorte": "Melone mit Rohschinken",
+       "zutaten": "Minzöl — Pistazien",
+       "kennzeichnung": null
+      }
+     ]
+    }
+   ],
+   "mengenlogik": {
+    "faktor": "Ein Gläsli sättigt etwa wie zwei Häppchen",
+    "empfehlung": "Zusätzlich zum Apéro Riche: 1 Gläsli pro Person. Die acht Häppchen bleiben unverändert — das Gläsli kommt dazu.",
+    "staffelung": [
+     [
+      "ab 20 Personen",
+      1
+     ],
+     [
+      "ab 30 Personen",
+      2
+     ],
+     [
+      "ab 45 Personen",
+      3
+     ],
+     [
+      "ab 60 Personen",
+      4
+     ],
+     [
+      "ab 80 Personen",
+      5
+     ]
+    ]
+   },
+   "nicht_enthalten": "Süsse Gläsli bleiben beim süssen Abschluss (Dessert im Gläsli).",
+   "bilder": []
   }
  ]
 }
