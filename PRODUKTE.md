@@ -45,11 +45,11 @@ Vermicelles) — sie bleiben beim süssen Abschluss unter «Dessert im Gläsli»
 | Picknickbrot | ✅ | ✅ 0.80 / 0.90 / 1.30 |
 | Partybrot | ✅ | ✅ 11.00 pro kg · 15.00 pro Stück |
 
-## Seite 13 · Knöpfli gefüllt *(alt 12)*
+## Seite 13 · Brötli gefüllt *(alt 12)*
 
 | Produkt | Bild | Text |
 |---|---|---|
-| Knöpfli gefüllt — Laugenknöpfli mini · Butterknöpfli mini | ✅ Themenbild, aus den echten Brötli-Fotos erzeugt → echtes Foto **A1** wäre besser | 💰 bisher 2.50 / 2.80 |
+| Brötli gefüllt — Weiss · Para · Sonny · Vollkorn · Laugen | ✅ Themenbild nach eurem Tablettfoto | ✅ Minibrötli 2.50 · Partybrötli 2.80 |
 
 ## Seite 14 · Brot XXL *(alt 13)*
 
@@ -66,21 +66,13 @@ Vermicelles) — sie bleiben beim süssen Abschluss unter «Dessert im Gläsli»
 | Produkt | Bild | Text |
 |---|---|---|
 | Belegte Brötli (diagonal, Viertel) | ✅ | ✅ 3.20 / 2.20 |
-| Belegte Brötli rund | ✅ | ❓ bleibt oder weg? |
+| Belegte Brötli rund | ✅ nach eurer Canapé-Platte | ❓ nur «Tomaten · Avocado» — euer Ordner zeigt zehn Sorten |
 | Apérowrap klein | ✅ | 💰 bisher 2.70 / 2.90 |
-| Frischkäse-Pralinen | ✅ | 💰 bisher 2.50 mit Salzstängeli |
+| Frischkäse-Pralinen | ✅ nach eurem Foto, nur die Kugeln | 💰 bisher 2.50 mit Salzstängeli |
 | Bäckerpastetli gefüllt | ✅ | ❓ bleibt oder weg? |
-| Belegte Brötchen Zwirbelwick Rustico | ✅ | ❓ bleibt oder weg? |
+| Belegte Brötchen Zwirbelwick Rustico | ✅ nach euren Rustico-Fotos | ❓ bleibt oder weg? |
 
-## Seite 16 · Apérogebäck *(alt 15)*
-
-| Produkt | Bild | Text |
-|---|---|---|
-| Chüechli | ✅ | ✅ 2.20 |
-| Schinkengipfel | ✅ | ✅ 2.20 |
-| Chili Würstli im Briochesmantel | ✅ | ✅ 2.80 |
-
-## Seite 17 · Spiessli *(alt 16)*
+## Seite 16 · Spiessli *(alt 16)*
 
 | Produkt | Bild | Text |
 |---|---|---|
@@ -88,23 +80,26 @@ Vermicelles) — sie bleiben beim süssen Abschluss unter «Dessert im Gläsli»
 | Frucht klein | ✅ neu im Broschüren-Look | ✅ 2.00 |
 | **Käse-Trauben** | ✅ neu erstellt | 💰 |
 | **Melonen-Rohschinken** (saisonal) | ✅ nach deiner Referenz, Knotenspiess, ohne Schale | 💰 · [FEHLT: Monate] |
-| ~~Antipasti~~ | – | gestrichen |
+| **Antipasti** | ✅ nach eurer Vorlage | ✅ 3.80 |
 | ~~Weitere saisonale Spiessli~~ | – | gestrichen |
 | ~~Frucht-Nutella~~ | – | gestrichen |
 | Erdbeer-Nutella | – | ❓ bleibt oder weg? |
 
-## Seite 18 · Warme Häppchen *(alt 17, neu gebaut)*
+## Seite 17 · Warme Häppchen *(alt 15 und 17, zusammengelegt)*
 
-**Gestrichen:** Mini-Röstitaschen · Brätchögeli im Blätterteig. Es bleiben vier.
+**Gestrichen:** Mini-Röstitaschen · Brätchögeli im Blätterteig.
+Das Chäs-Chüechli «Rüttiberg» ist neu eine Sorte bei den Chüechli.
 
 | Produkt | Bild | Text |
 |---|---|---|
-| Chäs-Chüechli «Rüttiberg» | ✅ | 💰 |
+| Chüechli — Chäs · Chäs «Rüttiberg» · Saisonal · Pizza · Spinat | ✅ nach euren Fotos | ✅ 2.20 |
+| Schinkengipfel | ✅ nach eurem Foto | ✅ 2.20 |
+| Chili Würstli im Briochesmantel | ✅ | ✅ 2.80 |
 | Älpler-Magronen-Tartelette | ✅ | 💰 |
 | Ghackets-und-Hörnli-Krokette | ✅ | 💰 |
 | Falafel-Bissen | ✅ | 💰 |
 
-## Seite 19 · Platten & Sharing *(alt 18)*
+## Seite 18 · Platten & Sharing *(alt 18)*
 
 | Produkt | Bild | Text |
 |---|---|---|
@@ -112,8 +107,13 @@ Vermicelles) — sie bleiben beim süssen Abschluss unter «Dessert im Gläsli»
 | Platte Käse | ✅ schwarz | ✅ |
 | Platte mit Früchten | ✅ schwarz | ✅ |
 | Platte mit Gemüse und Dips | ✅ schwarz | ✅ |
-| Grissini mit Rohschinken | ✅ schwarz | ✅ 45.00 |
-| Tray of Snacks | ✅ echtes Foto, oranger Tray | 💰 noch offen |
+| ~~Grissini mit Rohschinken~~ | – | gestrichen, gibt es nicht mehr |
+| ~~Tray of Snacks~~ | – | gestrichen, gibt es nicht mehr |
+
+## Seite 19 · Unterwegs *(alt 19, neu gebaut)*
+
+| Produkt | Bild | Text |
+|---
 
 ## Seite 28 · Der süsse Abschluss *(alt 30)*
 
@@ -126,10 +126,7 @@ Vermicelles) — sie bleiben beim süssen Abschluss unter «Dessert im Gläsli»
 | Dessert im Gläsli | ✅ | ❓ bleibt oder weg? · 5.50 |
 | Vegane Dessertvariationen | ✅ | ❓ bleibt oder weg? · 6.00 |
 
-## Seite 20 · Unterwegs *(alt 19, neu gebaut)*
-
-| Produkt | Bild | Text |
-|---|---|---|
+---|---|---|
 | Lunchbag Zürichsee | ✅ | ✅ 12.90 |
 | Lunchbag Holzsteg | ✅ | ✅ 13.90 |
 | Lunchbag Etzel | ✅ | ✅ 16.90 |

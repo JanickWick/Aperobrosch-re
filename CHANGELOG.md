@@ -5,6 +5,71 @@ Neueste Einträge oben.
 
 ---
 
+## 2026-10-27 · Echte Referenzfotos, Warme Häppchen zusammengelegt, Kapitel C überarbeitet
+
+### Neue Referenzbilder
+Alle Bilder dieser Runde stammen aus euren Katalogfotos im Ordner
+«Neue Referenzbilder». Sie liegen im Repo unter `referenzen/produkte/` — **mit
+weggeschnittenem Wick-Logo**, damit in den erzeugten Bildern nie Schrift entsteht.
+Beim Traubenbrot ist zusätzlich das Namensschild weggeschnitten, bei den
+Frischkäsekugeln der Werbetext.
+
+### Seiten des Apéro-Teils
+- **Seite 13 heisst wieder «Brötli gefüllt»** statt «Knöpfli gefüllt». Inhalt und
+  Preise wie im Original: fünf Brotsorten, drei Füllungsgruppen, Minibrötli 2.50,
+  Partybrötli 2.80. Das Themenbild zeigt die echten gefüllten Brötli von eurem
+  Tablettfoto.
+- **Seite 12 · Brot & Brötli:** Traubenbrot, Picknickbrot und Partybrot neu nach
+  euren Fotos.
+- **Seite 14 · Brot XXL:** Laugenherz und Brot am Meter in Zahlenform neu nach
+  euren Fotos.
+- **Seite 15 · Belegtes:** Belegte Brötli rund nach eurer Canapé-Platte,
+  Zwirbelwick Rustico nach den Rustico-Fotos, Frischkäse-Pralinen nach eurem Foto —
+  nur die Kugeln, ohne das Drumherum.
+- **Seite 16 · Spiessli:** **Antipasti-Spiessli wieder aufgenommen**, Bild nach
+  eurer Vorlage. Jetzt fünf Sorten.
+- **Seite 17 · Warme Häppchen:** **Apérogebäck und Warme Häppchen sind eine Seite.**
+  Sechs Karten — Chüechli, Schinkengipfel, Chili Würstli, Älpler-Magronen-Tartelette,
+  Ghackets-Krokette, Falafel. Das **Chäs-Chüechli «Rüttiberg» steht neu als Sorte bei
+  den Chüechli** zu 2.20. Dazu ein eigenes Themenbild aus den vier Produkten.
+- **Seite 18 · Platten:** **Grissini und Tray of Snacks gestrichen** — es bleiben die
+  vier Platten.
+
+### Kapitel C
+- **Seite 21 · Buffets:** neue Namen, die zum Essen passen — Chuchi-Klassiker,
+  Gartenbeiz, Sonntagsbraten, Grillabend, Weltreise, Festtafel. Die Gerichte sind
+  unverändert. Themenbild: euer Buffet von der Website-Cateringseite.
+- **Seite 22 · Klassiker für grosse Runden:** ein Themenbild statt sechs Platzhaltern,
+  die vier Hinweise als Band am Kartenfuss.
+- **Seiten 24 und 25 · Die Auswahl** sind jetzt zwei Seiten: die Proteine auf der
+  einen, Stärkebeilagen, Gemüse und Saucen auf der anderen. Die vier Schrittbilder
+  (Herzstück, Stärkebeilage, Gemüse, Sauce) stammen aus euren Referenzfotos.
+- **Seite 26 · Suppen und Salate:** Bündner Gerstensuppe neu **6.80** statt «nach
+  Kalkulation», **Kürbiscremesuppe** bei den saisonalen Suppen ergänzt. Salate am
+  Teller und das Salatbuffet stehen neu in einem breiten rostfarbenen Band über die
+  ganze Seitenbreite. Als Themenbild steht hier das rohe Gemüse auf dem Brett — das
+  angerichtete Salatbuffet sah zu sehr nach KI aus.
+- **Seite 27 · Grillplausch:** ein Themenbild nach eurem Grillfoto.
+
+### Seitenzahlen
+Durch das Zusammenlegen fällt eine Seite weg, durch die geteilte Auswahl kommt eine
+dazu — die Broschüre bleibt bei 38 Seiten. Inhaltsverzeichnis, Querverweise und
+Fusszeilen sind nachgeführt.
+
+### Neu: Layoutprüfung
+`broschuere/pruefen.py` misst alle Seiten im Browser und meldet Text, der aus seiner
+Karte oder aus der Seite herausragt, sowie Bänder, die eine Spalte überdecken.
+Aktueller Stand: keine Fundstelle.
+
+### Noch offen
+- [FEHLT: Preis] Kürbiscremesuppe. Ist das dasselbe wie die Kürbissuppe (6.50, vegan)
+  unter «Klassisch», oder eine eigene Sorte?
+- Die belegten Brötli rund stehen in der Broschüre nur mit «Tomaten · Avocado».
+  Euer Ordner zeigt zehn Sorten — soll die Liste erweitert werden?
+- [FEHLT] Zopfherz gefüllt hat weiterhin kein Bild.
+
+---
+
 ## 2026-10-27 · Bilder der alten Seiten 11 bis 18, Warme Häppchen gekürzt
 
 Betroffen sind die alten Seiten 11–18, in der neuen Zählung die Seiten 12–19.

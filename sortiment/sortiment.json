@@ -521,7 +521,7 @@
      [
       "Bündner Gerstensuppe",
       null,
-      null
+      6.8
      ]
     ],
     "Saisonal": [
@@ -544,6 +544,11 @@
       "Spargelsuppe",
       "vegetarisch",
       8.2
+     ],
+     [
+      "Kürbiscremesuppe",
+      "vegetarisch",
+      null
      ]
     ]
    },
@@ -729,8 +734,8 @@
    "einheit": "pro Person",
    "varianten": [
     {
-     "name": "Züri-Fäscht",
-     "unterzeile": "Bodenständig und herzhaft",
+     "name": "Chuchi-Klassiker",
+     "unterzeile": "Die Wick-Küche, wie man sie kennt",
      "preis": 30.0,
      "inhalt": [
       "Ghackets mit Hörnli",
@@ -741,7 +746,7 @@
      ]
     },
     {
-     "name": "Glarner Alpabfahrt",
+     "name": "Gartenbeiz",
      "unterzeile": "Mit vegetarischem Hauptgang",
      "preis": 42.0,
      "inhalt": [
@@ -754,8 +759,8 @@
      ]
     },
     {
-     "name": "Alpenrose",
-     "unterzeile": "Der klassische Sonntagsbraten",
+     "name": "Sonntagsbraten",
+     "unterzeile": "Der klassische Braten mit Gratin",
      "preis": 45.0,
      "inhalt": [
       "Schweinsbraten",
@@ -766,7 +771,7 @@
      ]
     },
     {
-     "name": "BBQ Spareribs",
+     "name": "Grillabend",
      "unterzeile": "Für draussen, zum Zugreifen",
      "preis": 52.0,
      "inhalt": [
@@ -779,7 +784,7 @@
      ]
     },
     {
-     "name": "Matterhorn Exotik",
+     "name": "Weltreise",
      "unterzeile": "Würzig, auch vegetarisch möglich",
      "preis": 55.0,
      "inhalt": [
@@ -791,7 +796,7 @@
      ]
     },
     {
-     "name": "Rheinfall Genuss",
+     "name": "Festtafel",
      "unterzeile": "Fisch und Geflügel, das festlichste",
      "preis": 62.0,
      "inhalt": [

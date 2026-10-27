@@ -17,15 +17,14 @@ Die Broschüre hat 40 Seiten, A3 quer. Grundlage ist `quellen/broschuere-40s.pdf
 | 8, 9, 10 | Cateringform · Mengen · Pakete | **neu gebaut** | Verweise nachgeführt |
 | **11** | **Apéro im Gläsli** | **neu** | neue Seite, Themenbild |
 | 12 | Brot & Brötli *(alt 11)* | **neu gebaut** | Inhalt gleich, echte Fotos |
-| 13 | Knöpfli gefüllt *(alt 12)* | **überarbeitet** | ein Themenbild, Preis offen |
+| 13 | Brötli gefüllt *(alt 12)* | **überarbeitet** | Themenbild, Preise wie im Original |
 | 14 | Brot XXL *(alt 13)* | **überarbeitet** | echte Fotos, Zopfherz neu |
 | 15 | Belegtes, Canapés & Fingerfood *(alt 14)* | **überarbeitet** | echte Fotos |
-| 16 | Apérogebäck *(alt 15)* | **überarbeitet** | echte Fotos |
-| 17 | Spiessli *(alt 16)* | **überarbeitet** | fertig bebildert |
-| 18 | Warme Häppchen *(alt 17)* | **neu gebaut** | Röstitaschen und Brätchögeli gestrichen |
-| 19 | Platten & Sharing *(alt 18)* | **überarbeitet** | Platten neu schwarz |
-| 20 | Unterwegs · Lunchbags *(alt 19)* | **neu gebaut** | echte Fotos, Inhalt gleich |
-| **21–29** | **Warme Küche bis Süsser Abschluss** | **Neukonzeption** | siehe `KONZEPT-essen-20-31.md` |
+| 16 | Spiessli *(alt 16)* | **überarbeitet** | fünf Sorten, Antipasti zurück |
+| 17 | Warme Häppchen *(alt 15 und 17)* | **neu gebaut** | Apérogebäck eingegliedert, sechs Karten |
+| 18 | Platten & Sharing *(alt 18)* | **überarbeitet** | vier Platten, schwarz |
+| 19 | Unterwegs · Lunchbags *(alt 19)* | **neu gebaut** | echte Fotos, Inhalt gleich |
+| **20–29** | **Warme Küche bis Süsser Abschluss** | **Neukonzeption** | siehe `KONZEPT-essen-20-31.md` |
 | 30–38 | Torten bis Rückseite *(alt 32–40)* | unverändert | |
 
 **Arbeitsstand-Markierungen in den überarbeiteten Seiten**
@@ -92,8 +91,9 @@ Die echten Wick-Fotos im Broschüren-Look liegen jetzt in `bilder/final/`, benan
 nach der **alten** Seitenzahl (`seite-14_brot-am-stueck.jpg` usw.). Sie decken die
 Seiten 12 bis 19 der neuen Zählung ab. Was dort noch fehlt:
 
-- echte Fotos der **gefüllten Knöpfli** — das Themenbild ist aus den Brötli-Fotos erzeugt
 - **Zopfherz gefüllt** hat kein eigenes Bild
+- der ganze Essensteil der Seiten 20 bis 29 hat weiterhin kein echtes Wick-Foto;
+  die Themenbilder entstehen aus euren Zutaten- und Buffetfotos
 
 Noch nicht eingesetzt, weil die Produkte nicht in der Broschüre stehen: Zwirbelwick-
 Crostino, Hummus auf Vollkorn, Rindstatar-Tartelette, Biräbrot mit Alpkäse,
@@ -125,6 +125,8 @@ Zigerbrüüt-Röllchen, Apéro-Schnecke, Blätterteig-Stängeli Sbrinz.
   (betrifft Seite 32, dort steht ohnehin «nach Offerte»).
 
 ### Technik
+- `broschuere/pruefen.py` misst alle Seiten und meldet Text, der aus seiner Karte
+  oder aus der Seite herausragt. Vor jedem Zusammenbau laufen lassen.
 - `broschuere/bauen.py` braucht Python; auf diesem Rechner ist es nicht installiert.
 - Das Skript erwartet den Chromium-Pfad der Cloud-Umgebung
   (`/opt/pw-browsers/...`). Für den lokalen Bau muss der Pfad auf den

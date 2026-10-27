@@ -59,40 +59,44 @@ def seite(inner): return f'<section class="seite">{inner}</section>'
 # ---------- Seiten ----------
 def s11alt():
     """Alte Seite 11: Brot & Brötli. Inhalt unverändert, neu mit echten Fotos."""
-    h = hero(F('seite-11_hero'), 'BROT &amp;<br>BRÖTLI',
+    h = hero(F('seite-12_hero'), 'BROT &amp;<br>BRÖTLI',
              'Brot ist unser Ursprung. Unsere Teige ruhen bis zu 48 Stunden — das gibt Aroma und macht das Brot bekömmlicher. '
              'Für den Apéro formen wir es zu Trauben, Picknickbroten und Laiben, die man teilt.', ghost='BROT')
     MENGE = ('Menge pro Person', 'Minibrötli (ca. 20 g) 3 Stück · Partybrötli (ca. 30 g) 2 Stück · Bürli (ca. 70 g) 1 Stück')
     PREIS = [('Minibrötli', 'pro Stück', 0.8), ('Partybrötli', 'pro Stück', 0.9), ('Bürli', 'pro Stück', 1.3)]
     h += k3(0, 'TRAUBENBROT', [tag('BELIEBT')], 'Helle, dunkle oder körnige Brötchen, als Traube zusammengefügt.',
-            [MENGE], PREIS, bild=F('seite-11_traubenbrot'))
-    h += k3(1, 'PICKNICKBROT', [], 'Verschiedene Brötli aneinandergeformt.', [MENGE], PREIS, bild=F('seite-11_picknickbrot'))
+            [MENGE], PREIS, bild=F('seite-12_traubenbrot'))
+    h += k3(1, 'PICKNICKBROT', [], 'Verschiedene Brötli aneinandergeformt.', [MENGE], PREIS, bild=F('seite-12_picknickbrot'))
     h += k3(2, 'PARTYBROT', [tag('WICK-SIGNATURE', 'beige')], 'Holzofenbrot, dunkel und sehr kräftig gebacken. Auf Wunsch mit Schriftzug auf einem Schild.',
             [('Menge pro Person', '100–150 g pro Person')], [('Partybrot', 'pro kg', 11.0), ('Partybrot', 'pro Stück', 15.0)],
-            bild=F('seite-11_partybrot'))
+            bild=F('seite-12_partybrot'))
     h += fuss(12, 'Alle Preise in Schweizer Franken.', arb=False)
     return seite(h)
 
 def s12():
-    h = hero(F('seite-12_knoepfli-thema'), 'KNÖPFLI<br>GEFÜLLT',
-             'Mini-Laugenknöpfli und Mini-Butterknöpfli, verschieden gefüllt — sie ersetzen die bisherigen gefüllten Brötli. '
-             'Sie kommen im Korb, angerichtet und griffbereit.', ghost='KNÖP')
-    rows = (row('brot', 'Knöpfli:', 'Laugenknöpfli mini · Butterknöpfli mini') + row('pfeile', 'Fleisch:', 'Fleischkäse · Schinken · Rohschinken · Bündnerfleisch · Salami')
+    """Alte Seite 12: Brötli gefüllt. Inhalt und Preise wie im Original, neu mit Themenbild."""
+    h = hero(F('seite-13_broetli-thema'), 'BRÖTLI<br>GEFÜLLT',
+             'Fünf Brotsorten, drei Füllungsgruppen, beliebig kombinierbar. Standardmässig gemischt, auf Wunsch sortenrein. '
+             'Die Brötli kommen im Korb, angerichtet und griffbereit.', ghost='BRÖT')
+    rows = (row('brot', 'Brotsorten:', 'Weiss · Para · Sonny · Vollkorn · Laugen')
+            + row('pfeile', 'Fleisch:', 'Fleischkäse · Schinken · Rohschinken · Bündnerfleisch · Salami')
             + row(None, 'Fisch:', 'Lachs · Thon') + row(None, 'Vegetarisch:', 'Käse · Ei · Tomaten &amp; Mozzarella · Kräuterquark')
-            + row('korb', 'Mischung:', 'Standardmässig gemischt — auf Wunsch sortenrein.'))
+            + row('korb', 'Mindestmenge:', '10 Stück pro Sorte. Standardmässig gemischt — auf Wunsch sortenrein.'))
     inner = (f'<div class="rows" style="top:20mm;width:255mm">{rows}</div>'
              f'<div class="abs txt11" style="left:4.7mm;top:88mm;width:255mm"><b>Ideal für Firmenanlässe und Empfänge.</b> Ohne Besteck, ohne Teller, ohne Aufwand vor Ort.</div>'
              f'<div class="abs" style="left:275mm;top:20mm;width:105mm;text-align:right">'
-             f'<div class="tags" style="justify-content:flex-end;margin:0">{tag("NEU")}{tag("ERSETZT BRÖTLI GEFÜLLT", "beige")}</div>'
-             f'<div class="lbl" style="margin-top:9mm">LAUGENKNÖPFLI MINI &nbsp;·&nbsp; BUTTERKNÖPFLI MINI</div>{tag("PREIS NACH KALKULATION", "beige")}</div>')
-    h += karte(14.9, 138, 390, 130.9, inner, bild=False) + hand('bisher 2.50 / 2.80', 297, 248, -5, 17)
+             f'<div class="tags" style="justify-content:flex-end;margin:0">{tag("BELIEBT")}</div>'
+             f'<div style="display:flex;gap:5.2mm;justify-content:flex-end;margin-top:12mm">'
+             f'<div class="kreis"><div class="lbl">MINIBRÖTLI</div><div class="c">2.50<small>CHF/St.</small></div></div>'
+             f'<div class="kreis"><div class="lbl">PARTYBRÖTLI</div><div class="c">2.80<small>CHF/St.</small></div></div></div></div>')
+    h += karte(14.9, 138, 390, 130.9, inner, bild=False) + hand('frei kombinierbar', 40, 252, -5, 17)
     h += fuss(13, STD)
     return seite(h)
 
 def s13():
     p = S['Brot am Stück 50 cm / 100 cm']
-    h = hero(F('seite-13_hero'), 'BROT<br>XXL', 'Ein Eyecatcher für jedes Buffet: Brot in XXL, gefüllt und geschnitten. Geliefert im Karton, der sich direkt zur Präsentation verwenden lässt.', ghost='XXL')
-    for i, n in enumerate(('seite-13_party-brioches', 'seite-13_brot-am-stueck', 'seite-13_zahlenform', 'seite-13_laugenherz')):
+    h = hero(F('seite-14_hero'), 'BROT<br>XXL', 'Ein Eyecatcher für jedes Buffet: Brot in XXL, gefüllt und geschnitten. Geliefert im Karton, der sich direkt zur Präsentation verwenden lässt.', ghost='XXL')
+    for i, n in enumerate(('seite-14_party-brioches', 'seite-14_brot-am-stueck', 'seite-14_zahlenform', 'seite-14_laugenherz')):
         h += img(F(n), 19.4 + i * 98.7, 134.5, 85.0, 52.9)
     links = ''.join(pr(n, u, v) for n, u, v in (('Party Brioches, fünf Lagen', 'pro Stück', 56.0), ('Party Brioches klein, drei Lagen', 'pro Stück', 34.0), ('Brot am Stück, 50 cm', 'pro Stück', 44.0), ('Brot am Stück, 100 cm', 'pro Stück', 64.0), ('Zuschlag geschnitten', 'pro Stück', 6.0), ('Brot am Meter in Zahlenform', 'pro Stück', 70.0), ('Laugenherz / Laugenbrezel am Meter', 'pro Stück', 70.0), ('Zopfherz, gefüllt', 'pro Stück', None)))
     rechts = (row('brot', 'Brotsorten:', ' · '.join(p['brotsorten'])) + row('pfeile', 'Fleisch:', 'Fleischkäse · Schinken · Rohschinken · Bündnerfleisch · Salami') + row(None, 'Fisch:', 'Lachs · Thon')
@@ -110,12 +114,12 @@ def k6(i, titel, ts, desc, gruppen, preise, note=None, bild=None, y=97.9):
 def s14():
     bb = S['Belegte Brötli']; aw = S['Apérowrap']; fk = S['Frischkäse-Pralinen']
     h = kopf('BELEGTES, CANAPÉS & FINGERFOOD', 'Von Hand ausgarniert, ohne Sulz. Mindestens 10 Stück pro Sorte, Viertel-Canapés in Viererschritten.', 14, braun=(64.2, 105.8), ghost='CANA')
-    h += k6(0, 'BELEGTE BRÖTLI', [tag('BELIEBT')], 'Ein halbes Toastbrot, schön ausgarniert. Ohne Sulz.', [('Fleisch', 'Schinken · Salami · Rohschinken · Bündnerfleisch · Fleischkäse · Tatar'), ('Fisch', 'Thon · Lachs'), ('Vegetarisch', 'Käse · Ei · Spargeln · Kräuterquark · Zigerbrüüt'), ('Mindestmenge', bb['mindestmenge'])], [('Diagonal', 'pro Stück', 3.2), ('Viertel', 'pro Stück', 2.2)], bild=F('seite-14_broetli-diagonal'))
-    h += k6(1, 'BELEGTE BRÖTLI RUND', [tag('NOCH OFFEN', 'beige')], 'Eine runde Toastscheibe, schön ausgarniert. Ohne Sulz.', [('Vegetarisch', 'Tomaten · Avocado')], [('Brötli rund', 'pro Stück', 3.9)], note='bleibt oder weg?', bild=F('seite-14_broetli-rund'))
-    h += k6(2, 'APÉROWRAP', [tag('GEÄNDERT', 'beige')], 'In zwei Variationen. Neu im kleineren Format, wie für den Circus Knie produziert.', [('Sorten', aw['sorten']), ('Mindestmenge', aw['mindestmenge'])], [('Apérowrap klein', 'pro Stück', None)], note='bisher 2.70 / 2.90 · Couscous-Wrap gestrichen', bild=F('seite-14_aperowrap'))
-    h += k6(3, 'FRISCHKÄSE-PRALINEN', [tag('GEÄNDERT', 'beige')], 'In drei Varianten — neu ohne Salzstängeli, nur die Pralinen.', [('Sorten', fk['sorten']), ('Mindestmenge', fk['mindestmenge'])], [('Frischkäse-Praline', 'pro Stück', None)], note='bisher 2.50 mit Salzstängeli', bild=F('seite-14_frischkaese-pralinen'))
-    h += k6(4, 'BÄCKERPASTETLI GEFÜLLT', [tag('NOCH OFFEN', 'beige')], 'Mini-Blätterteigpastetli, verschieden gefüllt.', [('Füllungen', 'Rüebli-Sesam (vegan) · Ei · Thon · Quark · Poulet')], [('Bäckerpastetli', 'pro Stück', 2.7)], note='bleibt oder weg?', bild=F('seite-14_baeckerpastetli'))
-    h += k6(5, 'BELEGTE BRÖTCHEN ZWIRBELWICK RUSTICO', [tag('NOCH OFFEN', 'beige')], 'Belegte Brötchen, neu interpretiert. Ohne Sulz.', [('Fleisch', 'Salami (pikant) · Bündnerfleisch · Rohschinken · Schinken und Ei'), ('Fisch', 'Lachs'), ('Vegetarisch', 'Tête de Moine · Brie')], [('Brötchen', 'pro Stück', 3.9)], note='bleibt oder weg?', bild=F('seite-14_zwirbelwick-rustico'))
+    h += k6(0, 'BELEGTE BRÖTLI', [tag('BELIEBT')], 'Ein halbes Toastbrot, schön ausgarniert. Ohne Sulz.', [('Fleisch', 'Schinken · Salami · Rohschinken · Bündnerfleisch · Fleischkäse · Tatar'), ('Fisch', 'Thon · Lachs'), ('Vegetarisch', 'Käse · Ei · Spargeln · Kräuterquark · Zigerbrüüt'), ('Mindestmenge', bb['mindestmenge'])], [('Diagonal', 'pro Stück', 3.2), ('Viertel', 'pro Stück', 2.2)], bild=F('seite-15_broetli-diagonal'))
+    h += k6(1, 'BELEGTE BRÖTLI RUND', [tag('NOCH OFFEN', 'beige')], 'Eine runde Toastscheibe, schön ausgarniert. Ohne Sulz.', [('Vegetarisch', 'Tomaten · Avocado')], [('Brötli rund', 'pro Stück', 3.9)], note='bleibt oder weg?', bild=F('seite-15_broetli-rund'))
+    h += k6(2, 'APÉROWRAP', [tag('GEÄNDERT', 'beige')], 'In zwei Variationen. Neu im kleineren Format, wie für den Circus Knie produziert.', [('Sorten', aw['sorten']), ('Mindestmenge', aw['mindestmenge'])], [('Apérowrap klein', 'pro Stück', None)], note='bisher 2.70 / 2.90 · Couscous-Wrap gestrichen', bild=F('seite-15_aperowrap'))
+    h += k6(3, 'FRISCHKÄSE-PRALINEN', [tag('GEÄNDERT', 'beige')], 'In drei Varianten — neu ohne Salzstängeli, nur die Pralinen.', [('Sorten', fk['sorten']), ('Mindestmenge', fk['mindestmenge'])], [('Frischkäse-Praline', 'pro Stück', None)], note='bisher 2.50 mit Salzstängeli', bild=F('seite-15_frischkaese-pralinen'))
+    h += k6(4, 'BÄCKERPASTETLI GEFÜLLT', [tag('NOCH OFFEN', 'beige')], 'Mini-Blätterteigpastetli, verschieden gefüllt.', [('Füllungen', 'Rüebli-Sesam (vegan) · Ei · Thon · Quark · Poulet')], [('Bäckerpastetli', 'pro Stück', 2.7)], note='bleibt oder weg?', bild=F('seite-15_baeckerpastetli'))
+    h += k6(5, 'BELEGTE BRÖTCHEN ZWIRBELWICK RUSTICO', [tag('NOCH OFFEN', 'beige')], 'Belegte Brötchen, neu interpretiert. Ohne Sulz.', [('Fleisch', 'Salami (pikant) · Bündnerfleisch · Rohschinken · Schinken und Ei'), ('Fisch', 'Lachs'), ('Vegetarisch', 'Tête de Moine · Brie')], [('Brötchen', 'pro Stück', 3.9)], note='bleibt oder weg?', bild=F('seite-15_zwirbelwick-rustico'))
     h += fuss(15)
     return seite(h)
 
@@ -123,29 +127,20 @@ def k3(i, titel, ts, desc, gruppen, preise, note=None, bild=None, stil=''):
     inner = f'<h3 class="gross">{titel}</h3>{tags(*ts)}<p class="desc">{e(desc)}</p>' + ''.join(grp(l, t, False) for l, t in gruppen) + '<div class="preise">' + ''.join(pr(*p) for p in preise) + '</div>' + (f'<div class="hand inl">{e(note)}</div>' if note else '')
     return karte(14.9 + i * 131.5, 166.5, 127.3, 102.4, inner, bild=bild, bw=118.3, bh=52.4, by=135, stil=stil)
 
-def s15():
-    ag = S['Apérogebäck']
-    h = hero(F('seite-15_hero'), 'APÉRO-<br>GEBÄCK', 'Alles aus der eigenen Backstube: Chüechli, Gipfel und Würstli im Briochesmantel. Zum kalt oder warm geniessen, mindestens 10 Stück pro Sorte.', ghost='GEBÄ')
-    h += k3(0, 'CHÜECHLI', [tag('BELIEBT')], 'Zum kalt oder warm geniessen.', [('Sorten', 'Chäschüechli · Saisonales Chüechli · Pizzachüechli · Spinatchüechli'), ('Mindestmenge', ag['mindestmenge'])], [('Chüechli', 'pro Stück', 2.2)], note='Lässt sich warm und kalt servieren.', bild=F('seite-15_chuechli'))
-    h += k3(1, 'SCHINKENGIPFEL', [tag('BELIEBT')], 'Blätterteiggipfel mit Schinkenfüllung, zum kalt oder warm geniessen.', [('Mindestmenge', ag['mindestmenge'])], [('Schinkengipfel', 'pro Stück', 2.2)], bild=F('seite-15_schinkengipfel'))
-    h += k3(2, 'CHILI WÜRSTLI IM BRIOCHESMANTEL', [tag('BELIEBT')], 'Chili Würstli im weichen Briocheteig aus unserer Backstube.', [('Mindestmenge', ag['mindestmenge'])], [('Chili Würstli', 'pro Stück', 2.8)], note='Ideal als warmer Posten in einem sonst kalten Apéro.', bild=F('seite-15_chili-wuerstli'))
-    h += fuss(16)
-    return seite(h)
-
 def s16():
     sp = S['Spiessli']
     h = kopf('SPIESSLI', 'Die Spiessli im trendigen Look — kalt, in mehreren Variationen, dazu saisonal wechselnde Sorten.', 16, ghost='SPIE')
-    bilder = ((F('seite-16_spiessli-tomaten-mozzarella'), 'Tomaten & Mozzarella'),
-              (F('seite-16_spiessli-kaese-trauben'), 'Käse-Trauben'), (F('seite-16_spiessli-melonen-rohschinken'), 'Melonen-Rohschinken'),
+    bilder = ((F('seite-16_spiessli-caprese'), 'Tomaten & Mozzarella'), (F('seite-16_spiessli-kaese-trauben'), 'Käse-Trauben'),
+              (F('seite-16_spiessli-melonen-rohschinken'), 'Melonen-Rohschinken'), (F('seite-16_spiessli-antipasti'), 'Antipasti'),
               (F('seite-16_spiessli-frucht-klein'), 'Frucht klein'))
-    for i, (src, cap) in enumerate(bilder): h += img(src, 84.9 + i * 65.8, 65.9, 52.9, 52.9) + f'<div class="cap" style="left:{84.9 + i * 65.8}mm;top:120.5mm;width:52.9mm">{e(cap)}</div>'
-    rows = (row('huet', 'Sorten:', 'Tomaten &amp; Mozzarella <i>(neu ohne Focaccia)</i> 3.80 · Frucht klein 2.00')
+    for i, (src, cap) in enumerate(bilder): h += img(src, 52.0 + i * 65.8, 65.9, 52.9, 52.9) + f'<div class="cap" style="left:{52.0 + i * 65.8}mm;top:120.5mm;width:52.9mm">{e(cap)}</div>'
+    rows = (row('huet', 'Sorten:', 'Tomaten &amp; Mozzarella <i>(neu ohne Focaccia)</i> 3.80 · Antipasti 3.80 · Frucht klein 2.00')
             + row('pfeile', 'Neu:', 'Käse-Trauben · Melonen-Rohschinken <i>(saisonal)</i> — Preis nach Kalkulation')
-            + row(None, 'Gestrichen:', 'Frucht-Nutella-Spiessli · Antipasti-Spiessli'))
+            + row(None, 'Gestrichen:', 'Frucht-Nutella-Spiessli'))
     inner = (f'<div class="rows" style="top:30mm">{rows}</div>'
              f'<div class="abs" style="left:338mm;top:143mm;width:47mm;display:flex;gap:5.2mm;justify-content:flex-end"><div class="kreis"><div class="lbl">SPIESSLI</div><div class="c">3.80<small>CHF/St.</small></div></div><div class="kreis"><div class="lbl">FRUCHT KLEIN</div><div class="c">2.00<small>CHF/St.</small></div></div></div>')
     h += karte(14.9, 97.9, 390, 170.9, inner, bild=False) + hand('Erdbeer-Nutella:<br>bleibt oder weg?', 40, 222, -5) + hand('saisonal<br>ergänzt', 268, 228, -6)
-    h += fuss(17, STD)
+    h += fuss(16, STD)
     return seite(h)
 
 def k4(i, titel, ts, desc, gruppen, preise, note=None, bild=None):
@@ -153,30 +148,45 @@ def k4(i, titel, ts, desc, gruppen, preise, note=None, bild=None):
              + '<div class="preise">' + ''.join(pr(*p) for p in preise) + '</div>' + (f'<div class="hand inl">{e(note)}</div>' if note else ''))
     return karte(14.9 + i * 98.6, 166.5, 94.4, 102.4, inner, bild=bild, bw=85.0, bh=52.4, by=135)
 
+def k6h(i, titel, ts, desc, gruppen, preise, note=None, bild=None):
+    """Sechs Karten unter einem Themenbild."""
+    inner = (f'<h3>{titel}</h3>{tags(*ts)}<p class="desc">{e(desc)}</p>' + ''.join(grp(l, t, True) for l, t in gruppen)
+             + '<div class="preise">' + ''.join(pr(*p, klein=True) for p in preise) + '</div>'
+             + (f'<div class="hand inl">{e(note)}</div>' if note else ''))
+    return karte(14.9 + i * 65.6, 166.5, 62.2, 102.4, inner, bild=bild, bw=52.9, bh=52.9, by=135)
+
 def s17():
-    """Alte Seite 17: Warme Häppchen. Mini-Röstitaschen und Brätchögeli gestrichen — es bleiben vier."""
+    """Alte Seiten 15 und 17 zusammengelegt: alles Warme auf einer Seite.
+
+    Das Chäs-Chüechli «Rüttiberg» steht neu als Sorte bei den Chüechli.
+    Mini-Röstitaschen und Brätchögeli im Blätterteig sind gestrichen.
+    """
     h = hero(F('seite-17_hero'), 'WARME<br>HÄPPCHEN',
-             'Ein warmer Posten verändert einen Apéro. Diese vier Häppchen kommen aus unserer eigenen Küche, lassen sich '
-             'vollständig vorbereiten und vor Ort in wenigen Minuten regenerieren — auch dort, wo keine Küche steht.', ghost='WARM')
-    h += k4(0, 'CHÄS-CHÜECHLI<br>«RÜTTIBERG»', [tag('NEU'), tag('WICK-SIGNATURE', 'beige'), tag('VEGETARISCH', 'beige')],
-            'Unser Chäschüechli mit Alpkäse der Käserei Rüttiberg, Rahm und Muskat — warm serviert.',
-            [('Format', '2 Bissen · warm')], [('Chäs-Chüechli', 'pro Stück', None)],
-            note='Lässt sich warm und kalt servieren.', bild=F('seite-17_chaes-chuechli'))
-    h += k4(1, 'ÄLPLER-MAGRONEN-<br>TARTELETTE', [tag('NEU'), tag('WICK-SIGNATURE', 'beige'), tag('VEGETARISCH', 'beige')],
-            'Mürbeteig-Tartelette mit Älpler Magronen, Bergkäse, Röstzwiebeln und einem Tupfer Apfelmus.',
-            [('Format', '2 Bissen · warm')], [('Tartelette', 'pro Stück', None)],
-            note='Ideal für Geburtstage und Familienfeste.', bild=F('seite-17_magronen-tartelette'))
-    h += k4(2, 'GHACKETS-UND-<br>HÖRNLI-KROKETTE', [tag('NEU'), tag('WICK-SIGNATURE', 'beige')],
-            'Knusprige Krokette aus Ghackets und Hörnli, dazu Apfelmus zum Dippen.',
-            [('Format', '1–2 Bissen · warm')], [('Krokette', 'pro Stück', None)],
-            note='Ideal für Baustellenaufrichtungen und Vereinsanlässe.', bild=F('seite-17_ghackets-krokette'))
-    h += k4(3, 'FALAFEL-BISSEN', [tag('NEU'), tag('VEGAN', 'beige'), tag('KALT ODER WARM', 'beige')],
-            'Kleine Falafel mit Ingwer-Karottensauce zum Dippen.',
-            [('Format', '1 Bissen · kalt oder warm')], [('Falafel-Bissen', 'pro Stück', None)],
-            note='Lässt sich warm und kalt servieren.', bild=F('seite-17_falafel'))
-    h += fuss(18, 'Zwei dieser vier Häppchen sind Wick-Menüs im Kleinformat — Älpler Magronen und Ghackets und Hörnli stehen seit Jahren '
-                  'auf unserer Karte. Mini-Röstitaschen und Brätchögeli im Blätterteig sind gestrichen. Mit «Neu» gekennzeichnete Positionen '
-                  'stammen aus der laufenden Sortimentsentwicklung. Preis, Mindestmenge und Allergene folgen nach Abschluss der Kalkulation.', arb=False)
+             'Ein warmer Posten verändert einen Apéro. Gebäck aus der eigenen Backstube, Häppchen aus der eigenen Küche — '
+             'alles lässt sich vorbereiten und vor Ort in wenigen Minuten regenerieren, auch dort, wo keine Küche steht.', ghost='WARM')
+    h += k6h(0, 'CHÜECHLI', [tag('BELIEBT'), tag('VEGETARISCH', 'beige')], 'Aus der eigenen Backstube, kalt oder warm.',
+             [('Sorten', 'Chäschüechli · Chäs-Chüechli «Rüttiberg» mit Alpkäse der Käserei Rüttiberg · Saisonales · Pizza · Spinat'),
+              ('Mindestmenge', '10 Stück pro Sorte')], [('Chüechli', 'pro Stück', 2.2)], bild=F('seite-17_chuechli'))
+    h += k6h(1, 'SCHINKENGIPFEL', [tag('BELIEBT')], 'Blätterteiggipfel mit Schinkenfüllung, kalt oder warm.',
+             [('Mindestmenge', '10 Stück pro Sorte')], [('Schinkengipfel', 'pro Stück', 2.2)], bild=F('seite-17_schinkengipfel'))
+    h += k6h(2, 'CHILI WÜRSTLI IM<br>BRIOCHESMANTEL', [tag('BELIEBT')], 'Chili Würstli im weichen Briocheteig aus unserer Backstube.',
+             [('Mindestmenge', '10 Stück pro Sorte')], [('Chili Würstli', 'pro Stück', 2.8)],
+             note='Der einfachste warme Posten in einem sonst kalten Apéro.', bild=F('seite-17_chili-wuerstli'))
+    h += k6h(3, 'ÄLPLER-MAGRONEN-<br>TARTELETTE', [tag('NEU'), tag('WICK-SIGNATURE', 'beige'), tag('VEGETARISCH', 'beige')],
+             'Mürbeteig-Tartelette mit Älpler Magronen, Bergkäse, Röstzwiebeln und einem Tupfer Apfelmus.',
+             [('Format', '2 Bissen · warm')], [('Tartelette', 'pro Stück', None)],
+             bild=F('seite-17_magronen-tartelette'))
+    h += k6h(4, 'GHACKETS-UND-<br>HÖRNLI-KROKETTE', [tag('NEU'), tag('WICK-SIGNATURE', 'beige')],
+             'Knusprige Krokette aus Ghackets und Hörnli, dazu Apfelmus zum Dippen.',
+             [('Format', '1–2 Bissen · warm')], [('Krokette', 'pro Stück', None)],
+             note='Ideal für Baustellenaufrichtungen und Vereinsanlässe.', bild=F('seite-17_ghackets-krokette'))
+    h += k6h(5, 'FALAFEL-BISSEN', [tag('NEU'), tag('VEGAN', 'beige'), tag('KALT ODER WARM', 'beige')],
+             'Kleine Falafel mit Ingwer-Karottensauce zum Dippen.',
+             [('Format', '1 Bissen · kalt oder warm')], [('Falafel-Bissen', 'pro Stück', None)],
+             bild=F('seite-17_falafel'))
+    h += fuss(17, 'Älpler Magronen und Ghackets und Hörnli stehen seit Jahren als Menü auf unserer Karte — hier im Kleinformat. '
+                  'Mini-Röstitaschen und Brätchögeli im Blätterteig sind gestrichen. Mindestbestellmenge 10 Stück pro Sorte. '
+                  'Bei den mit «Neu» gekennzeichneten Positionen folgen Preis und Allergene nach Abschluss der Kalkulation.', arb=False)
     return seite(h)
 
 def s19():
@@ -196,25 +206,23 @@ def s19():
         h += k4(i, titel, ts, 'Fertig gepackt in der Papiertüte.' if i == 0 else '',
                 [('Je 1 Stück', items)], [('Lunchbag', 'pro Stück', preis)],
                 note='Wunschfüllung bei der Bestellung angeben.' if i == 0 else None, bild=F(bild))
-    h += fuss(20, 'Wunschfüllung bei der Bestellung angeben. Lunchbags liefern wir auch an Orte ohne Küche und ohne Kühlung. '
+    h += fuss(19, 'Wunschfüllung bei der Bestellung angeben. Lunchbags liefern wir auch an Orte ohne Küche und ohne Kühlung. '
                   'Alle Preise in Schweizer Franken.', arb=False)
     return seite(h)
 
 def s18():
     pl = [S[n] for n in ('Platte Fleisch & Käse', 'Platte Käse', 'Platte mit Früchten', 'Platte mit Gemüse und Dips')]
     h = kopf('PLATTEN & SHARING', 'Fertig angerichtet, direkt aufs Buffet. Für zwei bis acht Personen — neu auf silbrigen oder schwarzen Platten.', 18, braun=(105.8,), ghost='PLAT')
-    platten = ('seite-18_platte-fleisch-kaese', 'seite-18_platte-kaese', 'seite-18_platte-fruechte',
-               'seite-18_platte-gemuese', 'seite-18_grissini', 'seite-18_tray-of-snacks')
-    for i, n in enumerate(platten): h += img(F(n), 19.1 + i * 65.8, 65.9, 52.9, 52.9)
+    platten = ('seite-18_platte-fleisch-kaese', 'seite-18_platte-kaese', 'seite-18_platte-fruechte', 'seite-18_platte-gemuese')
+    for i, n in enumerate(platten): h += img(F(n), 84.9 + i * 65.8, 65.9, 52.9, 52.9)
     tab = '<table class="tab"><tr><th>PLATTEN</th><th>2 PERS.</th><th>4 PERS.</th><th>6 PERS.</th><th>8 PERS.</th></tr>' + ''.join(f'<tr><td>{e(p["name"])}</td>' + ''.join(f'<td>{v:.2f}</td>' for _, _, v in p['preise']) + '</tr>' for p in pl) + '</table>'
     rechts = (row('blatt', 'Dips:', 'Pro Zwei-Personen-Platte kann ein Dip gewählt werden (8 Personen = 4 Dips): Quark · Tartar · Cocktail · Humus (vegan)')
               + row('huet', 'Catering:', 'Für Buffets und gelieferte Caterings kommt die Sauce in separatem Geschirr statt in kleinen Schälchen.')
-              + row('auge', 'Grissini / Tray:', 'Grissini mit Rohschinken, ganze Platte à 15 Stück 45.00 · Tray of Snacks 45.00 — <i>noch offen</i>')
               + row('person', 'Empfehlung:', 'Zwei Platten decken einen Apéro für acht bis zehn Gäste als Ergänzung zu Häppchen ab.'))
     inner = (f'<div class="abs" style="left:17.1mm;top:25mm;width:195mm">{tab}<p class="txt11" style="margin-top:7mm">Käse unter anderem von der Käserei Rüttiberg in Schänis, Früchte und Gemüse nach Saison. Neu auf silbrigen oder schwarzen Platten statt Palmblatt — klein, mittel und gross nach Personenzahl. Bis die neuen Grössen festgelegt sind, gelten die Preise für 2, 4, 6 und 8 Personen.</p></div>'
              f'<div class="rows eng" style="left:232mm;top:25mm;width:155mm">{rechts}</div>')
     h += karte(14.9, 97.9, 390, 118, inner, bild=False) + hand('zum Teilen gemacht', 40, 201, -5)
-    h += fuss(19, 'Alle Preise in Schweizer Franken.')
+    h += fuss(18, 'Alle Preise in Schweizer Franken.')
     return seite(h)
 
 def s30(nr=30):
@@ -260,13 +268,13 @@ def s6():
         ('01 · VERTRAUEN', zeilen(('Wick in Zahlen', 2), ('Referenzen', 3), ('Warum Wick Catering', 4), ('Ein Haus, viele Handwerke', 5))
          + '<h4 class="spaeter">02 · IHR ANLASS</h4>' + zeilen(('Was planen Sie?', 7))),
         ('03 · DIE PASSENDE FORM', zeilen(('Cateringformen', 8), ('Mengen planen', 9))
-         + '<h4 class="spaeter">04 · DAS ANGEBOT</h4>' + zeilen(('Apéro-Pakete', 10), ('Apéro im Gläsli', 11), ('Brot &amp; Brötli', 12), ('Knöpfli gefüllt', 13), ('Brot XXL', 14))),
-        ('APÉRO INDIVIDUELL', zeilen(('Belegtes, Canapés &amp; Fingerfood', 15), ('Apérogebäck', 16), ('Spiessli', 17), ('Warme Häppchen', 18), ('Platten &amp; Sharing', 19))
-         + '<h4 class="spaeter">UNTERWEGS</h4>' + zeilen(('Lunchbags', 20))),
-        ('WARME KÜCHE', zeilen(('Drei Wege', 21))
-         + '<h4 class="spaeter">WEG 01 · BUFFET</h4>' + zeilen(('Unsere Buffets', 22))
-         + '<h4 class="spaeter">WEG 02 · KLASSIKER</h4>' + zeilen(('Für grosse Runden', 23))),
-        ('WEG 03 · EIGENES MENÜ', zeilen(('In vier Schritten', 24), ('Die Auswahl', 25))
+         + '<h4 class="spaeter">04 · DAS ANGEBOT</h4>' + zeilen(('Apéro-Pakete', 10), ('Apéro im Gläsli', 11), ('Brot &amp; Brötli', 12), ('Brötli gefüllt', 13), ('Brot XXL', 14))),
+        ('APÉRO INDIVIDUELL', zeilen(('Belegtes, Canapés &amp; Fingerfood', 15), ('Spiessli', 16), ('Warme Häppchen', 17), ('Platten &amp; Sharing', 18))
+         + '<h4 class="spaeter">UNTERWEGS</h4>' + zeilen(('Lunchbags', 19))),
+        ('WARME KÜCHE', zeilen(('Drei Wege', 20))
+         + '<h4 class="spaeter">WEG 01 · BUFFET</h4>' + zeilen(('Unsere Buffets', 21))
+         + '<h4 class="spaeter">WEG 02 · KLASSIKER</h4>' + zeilen(('Für grosse Runden', 22))),
+        ('WEG 03 · EIGENES MENÜ', zeilen(('In vier Schritten', 23), ('Das Herzstück', 24), ('Beilagen und Saucen', 25))
          + '<h4 class="spaeter">DAZU</h4>' + zeilen(('Suppen und Salate', 26))
          + '<h4 class="spaeter">DRAUSSEN</h4>' + zeilen(('Grillplausch', 27))
          + '<h4 class="spaeter">FÜR ALLE</h4>' + zeilen(('Vegetarisch &amp; vegan', 31))),
@@ -305,10 +313,10 @@ def s8():
             ('APÉRO RICHE', 'Acht Häppchen pro Person, davon zwei süss. Ersetzt eine Mahlzeit. — Seite 10'),
             ('APÉRO IM GLÄSLI', 'Kleine Portionen im Glas, zusätzlich zum Apéro Riche. — Seite 11')])
     h += k(1, 'ESSEN', 'BUFFET', 'Salate, warme Speisen und Desserts zum Selbstschöpfen — frei zusammengestellt.',
-           [(None, 'Seiten 21 bis 26'), ('WARMES MENÜ', 'Tellerservice oder Wärmebehälter, vom einfachen Gericht bis zum mehrgängigen Essen. — Seite 24'),
+           [(None, 'Seiten 20 bis 26'), ('WARMES MENÜ', 'Tellerservice oder Wärmebehälter, vom einfachen Gericht bis zum mehrgängigen Essen. — Seite 23'),
             ('GRILLPLAUSCH', 'Mariniertes Fleisch oder Vegiplatte, Beilagen und Saucen — Sie grillieren selbst. — Seite 27')])
     h += k(2, 'UNTERWEGS', 'LUNCHBAG &amp; MOBILE VERPFLEGUNG', 'Fertig gepackt für unterwegs, Sitzungen und Anlässe ohne Küche.',
-           [(None, 'Seite 20'), (None, 'Lunchbags liefern wir auch an Orte ohne Küche und ohne Kühlung.')])
+           [(None, 'Seite 19'), (None, 'Lunchbags liefern wir auch an Orte ohne Küche und ohne Kühlung.')])
     h += k(3, 'RUNDUM', 'VOLLSTÄNDIGES CATERING MIT SERVICE', 'Geschirr, Mobiliar, Getränke, Aufbau und Betreuung vor Ort — Sie sind Gast am eigenen Anlass.',
            [(None, 'Seiten 32 bis 36'), (None, 'Sie wissen noch nicht, was passt? Rufen Sie an — 055 210 15 44. Die Beratung ist kostenlos und unverbindlich.')], rost=True)
     h += fuss(8, 'Auf Seite 9 steht, wie viel es von jeder Form braucht. Alle Preise in Schweizer Franken.')
@@ -368,8 +376,8 @@ def s10():
           + paar('Variante B — CHF 21.00 pro Person', 'Belegtes Brötchen diagonal, Frischkäsekugeln, Spiessli Frucht, Apéro Chiliwürstli im Briochesmantel, Apéro Wrap Couscous, Apéro Wrap Poulet, 2 Stk. Mini Pâtisserie')
           + f'<div class="hinweis" style="margin-top:4mm"><span class="kreis2">{icon("korb")}</span><p><b>Ergänzen Sie Ihren Apéro Riche mit Gläsli.</b> Kleine Portionen im Glas, 1 Gläsli pro Person — Seite 11.</p></div>')
     seiten = (('12–14', 'Brot, Brötli und Brot XXL'), ('15', 'Belegtes, Canapés und Fingerfood'),
-              ('16', 'Apérogebäck'), ('17', 'Spiessli'), ('18', 'Warme Häppchen'),
-              ('19', 'Platten zum Teilen'), ('28–29', 'Süsser Abschluss'))
+              ('16', 'Spiessli'), ('17', 'Warme Häppchen'), ('18', 'Platten zum Teilen'),
+              ('28–29', 'Süsser Abschluss'))
     c3 = ('<p class="txt105">Lieber eigene Sorten? Dann bauen Sie den Apéro aus dem Sortiment zusammen. Die Reihenfolge der folgenden Seiten entspricht dem Aufbau eines Buffets:</p>'
           + '<div class="daten2">' + ''.join(f'<span>{e(a)}</span><span>{e(b)}</span>' for a, b in seiten) + '</div>'
           + '<p class="txt105">Als Richtwert gelten dieselben Mengen wie bei den Paketen: vier Häppchen pro Person vor einem Essen, acht statt eines Essens.</p>')
@@ -424,56 +432,71 @@ def c20():
     inner = f'<div class="abs" style="left:17.1mm;top:20mm;width:356mm">{tab}</div>'
     h += karte(14.9, 44, 390, 96, inner, bild=False)
     h += f'<div class="abs txt11" style="left:29.9mm;top:152mm;width:356mm;color:#2A2521">Suppe, Salat und Dessert wählen Sie unabhängig davon — sie passen zu allen drei Wegen.</div>'
-    h += fuss(21, 'Alle Preise in Schweizer Franken.')
+    h += fuss(20, 'Alle Preise in Schweizer Franken.')
     return seite(h)
 
 def c21():
     """Weg 01 — die sechs Buffets."""
     bu = S['Buffets']
-    h = hero(K(229, 23) if pathlib.Path(ROOT / 'assets/img/kunde/s23-229.jpeg').exists() else K(80, 25),
-             'UNSERE<br>BUFFETS', 'Weg 01 — fertig zusammengestellt. Sechs Buffets, die sich an hunderten Anlässen bewährt haben. Sie wählen eines aus, wir bringen alles mit.', ghost='BUFF')
+    h = hero(F('seite-21_hero'), 'UNSERE<br>BUFFETS',
+             'Weg 01 — fertig zusammengestellt. Sechs Buffets, die sich an hunderten Anlässen bewährt haben. '
+             'Sie wählen eines aus, wir bringen alles mit.', ghost='BUFF')
     for i, v in enumerate(bu['varianten']):
-        inner = (f'<h3>{e(v["name"])}</h3><p class="desc">{e(v["unterzeile"])}</p>'
-                 + grp('Inhalt', v['inhalt']) + '<div class="preise">' + pr(bu['einheit'], '', v['preis']) + '</div>')
-        h += karte(14.9 + i * 65.6, 162, 62.2, 107, inner, bild=PH, bw=52.9, by=130)
-    h += fuss(22, 'Alle Buffets ab 30 Personen. Salatbuffet und Dessert lassen sich dazunehmen. Preise pro Person. Alle Preise in Schweizer Franken.')
+        inner = (f'<div class="fuellen"><div><h3>{e(v["name"])}</h3><p class="desc">{e(v["unterzeile"])}</p>'
+                 + grp('Inhalt', v['inhalt']) + '</div><div class="preise unten">' + pr(bu['einheit'], '', v['preis']) + '</div></div>')
+        h += karte(14.9 + i * 65.6, 166.5, 62.2, 102.4, inner, bild=False)
+    h += fuss(21, 'Alle Buffets ab 30 Personen. Salatbuffet und Dessert lassen sich dazunehmen. Preise pro Person. Alle Preise in Schweizer Franken.')
     return seite(h)
 
 def c22():
     """Weg 02 — die Klassiker."""
     kl = S['Klassiker für grosse Runden']
-    h = kopf('KLASSIKER FÜR GROSSE RUNDEN', 'Weg 02 — ein Gericht, eine Menge, ein Preis. Die Form, mit der wir am ESAF 80’000 Mahlzeiten ausgegeben haben.', 22, ghost='KLAS')
-    for i in range(6): h += img(PH, 19.1 + i * 65.8, 65.9, 52.9, 52.9)
+    h = hero(F('seite-22_hero'), 'KLASSIKER<br>FÜR GROSSE<br>RUNDEN',
+             'Weg 02 — ein Gericht, eine Menge, ein Preis. Die Form, mit der wir am ESAF 80’000 Mahlzeiten '
+             'ausgegeben haben.', ghost='KLAS')
     def gericht(g):
         tg = f' {tag(g["kennzeichnung"].upper(), "beige")}' if g.get('kennzeichnung') else ''
         return (f'<div class="ger"><div class="gz"><span class="gn">{e(g["name"])}{tg}</span>'
                 f'<span class="gv">{g["preis"]:.2f}</span></div><p>{e(g["zutaten"])}</p></div>')
     sp = [kl['gerichte'][0:4], kl['gerichte'][4:8], kl['gerichte'][8:12]]
-    hinw = ''.join(row(ic, k + ':', e(v)) for ic, (k, v) in zip(('person', 'huet', 'blatt', 'korb'), kl['hinweise'].items()))
-    inner = (''.join(f'<div class="abs col" style="left:{17.1 + i * 93}mm;top:22mm;width:86mm">{"".join(gericht(g) for g in s)}</div>' for i, s in enumerate(sp))
-             + f'<div class="rows eng" style="left:300mm;top:22mm;width:85mm">{hinw}</div>')
-    h += karte(14.9, 97.9, 390, 170.9, inner, bild=False) + hand('in jeder Menge<br>erprobt', 300, 232, -5, 16)
-    h += fuss(23, 'Alle Preise pro Portion. Alle Preise in Schweizer Franken.')
+    band = ('<div class="abs salatbox" style="left:4.7mm;top:82mm;width:380.6mm;grid-template-columns:repeat(4,1fr)">'
+            + ''.join(f'<div><div class="rt">{e(k.upper())}</div><p>{e(v)}</p></div>' for k, v in kl['hinweise'].items())
+            + '</div>')
+    inner = (''.join(f'<div class="abs col" style="left:{17.1 + i * 127}mm;top:14mm;width:118mm">{"".join(gericht(g) for g in s)}</div>' for i, s in enumerate(sp))
+             + band)
+    h += karte(14.9, 138, 390, 130.9, inner, bild=False)
+    h += fuss(22, 'Alle Preise pro Portion. Alle Preise in Schweizer Franken.')
     return seite(h)
 
 def c25():
-    """Dazu — Suppen, Vorspeisen und Salate auf einer Seite."""
+    """Dazu — Suppen und Vorspeisen oben, alles rund um den Salat im eigenen Band."""
     su, vs, st, sb = S['Suppen'], S['Vorspeisen am Teller'], S['Salate am Teller'], S['Salatbuffet']
-    h = kopf('DAZU — SUPPEN UND SALATE', 'Passt zu allen drei Wegen. Eine Suppe vorweg, eine Vorspeise am Tisch, ein Salat daneben oder als eigenes Buffet.', 25, ghost='DAZU')
-    for i in range(6): h += img(PH, 19.1 + i * 65.8, 65.9, 52.9, 52.9)
-    def col(x, inhalt): return f'<div class="abs col" style="left:{x}mm;top:22mm;width:85mm">{inhalt}</div>'
-    c1 = liste(su['gruppen'], ('Klassisch', 'Herzhaft', 'Saisonal')) + f'<p class="txt105" style="margin-top:4mm;color:#E6DCCB">{e(su["hinweis"])}</p>'
-    c2 = liste(vs['gruppen'], ('Kalt', 'Warm')) + f'<p class="txt105" style="margin-top:4mm;color:#E6DCCB">{e(vs["saisonal"])}</p>'
-    c3 = (sph('Salate am Teller') + '<div class="preise dicht">' + ''.join(pr(n, '', v) for n, _, v in st['preise']) + '</div>'
-          + f'<p class="txt105" style="margin-top:3mm;color:#E6DCCB">{e(st["hinweis"])}</p>'
-          + sph('Salatbuffet') + '<div class="preise dicht">'
-          + ''.join(pr(n, 'pro Person', v) for n, _, v in sb['preise']) + '</div>'
-          + f'<p class="txt105" style="margin-top:3mm;color:#E6DCCB">{e(sb["hinweis"])}</p>')
-    c4 = (sph('Die Sorten zur Auswahl') + f'<p class="txt105">{e(sb["beschreibung"])}</p>'
-          + ''.join(f'<div class="sph klein">{e(k)}</div><p class="txt105">{e(" · ".join(x))}</p>' for k, x in sb['gruppen'].items()))
-    inner = col(15, c1) + col(110, c2) + col(205, c3) + col(300, c4)
-    h += karte(14.9, 97.9, 390, 170.9, inner, bild=False)
-    h += fuss(26, 'Alle Preise pro Portion, Salatbuffet pro Person. Bei der Bündner Gerstensuppe nennt unsere Preisliste keinen Betrag — wir offerieren sie gerne. Alle Preise in Schweizer Franken.')
+    h = hero(F('seite-26_hero'), 'SUPPEN<br>UND SALATE',
+             'Passt zu allen drei Wegen. Eine Suppe vorweg, eine Vorspeise am Tisch — und alles rund um den Salat '
+             'im Band darunter.', ghost='DAZU')
+    def col(x, b, inhalt): return f'<div class="abs col" style="left:{x}mm;top:12mm;width:{b}mm">{inhalt}</div>'
+    def zeilen(paare):
+        return ('<table class="tab staffel">' + ''.join(
+            '<tr><td class="l">{}</td><td>{}</td></tr>'.format(e(n), chf(v)) for n, v in paare) + '</table>')
+    c1 = liste(su['gruppen'], ('Klassisch',))
+    c2 = liste(su['gruppen'], ('Herzhaft',))
+    c3 = liste(su['gruppen'], ('Saisonal',))
+    c4 = liste(vs['gruppen'], ('Kalt',))
+    c5 = liste(vs['gruppen'], ('Warm',))
+    staffel = ('<table class="tab staffel"><tr><th class="l">SORTEN</th><th>AB PERS.</th><th>PRO PERS.</th></tr>'
+               + ''.join('<tr><td class="l">{}</td><td>{}</td><td>{:.2f}</td></tr>'.format(
+                   e(n.split(',')[0]), e(n.split('ab ')[1].replace(' Personen', '')), v) for n, _, v in sb['preise'])
+               + '</table>')
+    band = ('<div class="abs salatbox" style="left:4.7mm;top:60mm;width:380.6mm;grid-template-columns:1.4fr 1fr .8fr 1fr .62fr;gap:5mm">'
+            f'<div><div class="rt">SALATE AM TELLER</div>{zeilen([(n, v) for n, _, v in st["preise"]])}</div>'
+            f'<div><div class="rt">SALATBUFFET</div><p>{e(sb["beschreibung"])}</p>{staffel}</div>'
+            + ''.join(f'<div><div class="rt">{e(k)}</div><p>{e(" · ".join(x))}</p></div>' for k, x in sb['gruppen'].items())
+            + '</div>')
+    spalten = ((12, 62, c1), (77, 62, c2), (142, 62, c3), (207, 88, c4), (299, 88, c5))
+    inner = ''.join(col(x, b_, c) for x, b_, c in spalten) + band
+    h += karte(14.9, 138, 390, 130.9, inner, bild=False)
+    h += fuss(26, 'Alle Preise pro Portion, Salatbuffet pro Person. ' + e(su['hinweis']) + ' ' + e(vs['saisonal'])
+                  + ' ' + e(sb['hinweis']) + ' Alle Preise in Schweizer Franken.')
     return seite(h)
 
 def c28():
@@ -493,20 +516,22 @@ def c28():
 def c26():
     """Draussen — Grillplausch und Burgerplausch."""
     gp, bp = S['Grillplausch'], S['Burgerplausch']
-    h = hero(K(454, 29), 'GRILL-<br>PLAUSCH', e(gp['beschreibung']) + ' Auf Wunsch bringen wir Grill, Zelt und das übrige Material gleich mit.', ghost='GRIL')
+    h = hero(F('seite-27_hero'), 'GRILL-<br>PLAUSCH', e(gp['beschreibung']) + ' Auf Wunsch bringen wir Grill, Zelt und das übrige Material gleich mit.', ghost='GRIL')
     for i, v in enumerate(gp['varianten']):
         ts = [tag(v['kennzeichnung'].upper(), 'beige')] if v.get('kennzeichnung') else []
-        inner = (f'<h3>{e(v["name"])}</h3>{tags(*ts)}' + grp('Inhalt', v['inhalt'])
-                 + '<div class="preise">' + ''.join(pr(n, u, p) for n, u, p in v['preise']) + '</div>')
-        h += karte(14.9 + i * 79.2, 162, 75.8, 107, inner, bild=PH, bw=66.5, by=130)
-    inner_d = (f'<h3>DAZU</h3><p class="desc">Beilage und Gemüse wählen Sie aus derselben Auswahl wie beim eigenen Menü — Seite 24.</p>'
+        inner = ('<div class="fuellen" style="padding:26.6mm 4.8mm 3mm">'
+                 f'<div><h3>{e(v["name"])}</h3>{tags(*ts)}' + grp('Inhalt', v['inhalt']) + '</div>'
+                 + '<div class="preise unten">' + ''.join(pr(n, u, p) for n, u, p in v['preise']) + '</div></div>')
+        h += karte(14.9 + i * 79.2, 138, 75.8, 130.9, inner, bild=False)
+    inner_d = ('<div style="padding:26.6mm 4.8mm 0">' + f'<h3>DAZU</h3><p class="desc">Beilage und Gemüse wählen Sie aus derselben Auswahl wie beim eigenen Menü — Seite 25.</p>'
                + sph('Saucen im Portionentöpfli') + '<div class="preise dicht">' + ''.join(pr(n, u, p) for n, u, p in gp['saucen']) + '</div>'
-               + f'<p class="txt105" style="margin-top:4mm;color:#E6DCCB">Grill, Zelt und Kühlanhänger mieten Sie bei uns.</p>')
-    h += karte(14.9 + 3 * 79.2, 162, 75.8, 107, f'<div style="padding:26.6mm 4.8mm 0">{inner_d}</div>', bild=False)
-    inner_b = (f'<h3>BURGER-PLAUSCH</h3><p class="desc">{e(bp["beschreibung"])}</p>' + grp('Dazu', bp['inhalt'])
-               + '<div class="preise">' + ''.join(pr(n, u or '', p) for n, u, p in bp['preise']) + '</div>'
-               + f'<div class="hand inl">{e(bp["hinweis"])}</div>')
-    h += karte(14.9 + 4 * 79.2, 162, 75.8, 107, inner_b, bild=PH, bw=66.5, by=130)
+               + f'<p class="txt105" style="margin-top:4mm;color:#E6DCCB">Grill, Zelt und Kühlanhänger mieten Sie bei uns.</p></div>')
+    h += karte(14.9 + 3 * 79.2, 138, 75.8, 130.9, inner_d, bild=False)
+    inner_b = ('<div class="fuellen" style="padding:26.6mm 4.8mm 3mm">'
+               + f'<div><h3>BURGER-PLAUSCH</h3><p class="desc">{e(bp["beschreibung"])}</p>' + grp('Dazu', bp['inhalt'])
+               + f'<div class="hand inl">{e(bp["hinweis"])}</div></div>'
+               + '<div class="preise unten">' + ''.join(pr(n, u or '', p) for n, u, p in bp['preise']) + '</div></div>')
+    h += karte(14.9 + 4 * 79.2, 138, 75.8, 130.9, inner_b, bild=False)
     h += fuss(27, 'Grillplatten ab 20 Personen. Das Fleisch wird gleichmässig verteilt. Alle Preise in Schweizer Franken.')
     return seite(h)
 
@@ -515,10 +540,10 @@ def c27(): return s30(nr=28)   # «Fürs Buffet» steht in der neuen Zählung au
 def c23():
     hz = S['Eigenes Menü — Schritt 01, Herzstück']
     sc = S['Eigenes Menü — Schritt 02 bis 04']
-    h = hero(K(80, 25), 'IHR<br>EIGENES<br>MENÜ',
+    h = hero(F('seite-23_herzstueck'), 'IHR<br>EIGENES<br>MENÜ',
              'Weg 03 — Sie stellen das Menü selbst zusammen. Am Tisch serviert, Gang für Gang. Vier Schritte, vier Preise, eine Summe. Nebenan steht, was in jedem Schritt zur Wahl steht.', ghost='MENÜ')
-    for i, cap in enumerate(('Herzstück', 'Stärkebeilage', 'Gemüse', 'Sauce')):
-        h += img(PH, 84.9 + i * 65.8, 130.5, 52.9, 52.9) + f'<div class="cap" style="left:{84.9 + i * 65.8}mm;top:185.1mm;width:52.9mm">{e(cap)}</div>'
+    for i, (cap, n) in enumerate((('Herzstück', 'herzstueck'), ('Stärkebeilage', 'staerkebeilage'), ('Gemüse', 'gemuese'), ('Sauce', 'sauce'))):
+        h += img(F(f'seite-23_{n}'), 84.9 + i * 65.8, 130.5, 52.9, 52.9) + f'<div class="cap" style="left:{84.9 + i * 65.8}mm;top:185.1mm;width:52.9mm">{e(cap)}</div>'
     schritte = ''.join(row(None, nr, f'<b>{t}</b><br>{x}') for nr, t, x in (
         ('01', 'Das Herzstück', 'Fleisch, Fisch oder eine vegetarische Hauptkomponente. Das Gewicht steht dabei.'),
         ('02', 'Die Stärkebeilage', 'Gratin, Risotto, Teigwaren, Kartoffeln oder Polenta.'),
@@ -533,28 +558,51 @@ def c23():
              f'<p class="txt11" style="margin-top:5mm">Jede der vier Zeilen lässt sich tauschen, die Summe verschiebt sich entsprechend. So wissen Sie vor der Offerte, woran Sie sind.</p>'
              f'<p class="txt105" style="margin-top:3mm;color:#E6DCCB">Mindestmenge {e(hz["mindestmenge"])} · {e(hz["einheit"])}</p></div>')
     h += karte(14.9, 166.5, 390, 102.4, inner, bild=False) + hand('vier Zeilen,<br>ein Preis', 330, 253, -5, 16)
-    h += fuss(24, 'Mindestmenge 10 Personen. Alle Preise pro Person. Suppe, Vorspeise und Dessert kommen aus den eigenen Kapiteln dazu. Alle Preise in Schweizer Franken.')
+    h += fuss(23, 'Mindestmenge 10 Personen. Alle Preise pro Person. Suppe, Vorspeise und Dessert kommen aus den eigenen Kapiteln dazu. Alle Preise in Schweizer Franken.')
     return seite(h)
 
+def wahlspalte(x, b, inhalt, top=18):
+    return f'<div class="abs col" style="left:{x}mm;top:{top}mm;width:{b}mm">{inhalt}</div>'
+
 def c24():
+    """Schritt 01 — das Herzstück, nach Fleischart geordnet."""
     hz = S['Eigenes Menü — Schritt 01, Herzstück']['gruppen']
-    sc = S['Eigenes Menü — Schritt 02 bis 04']['gruppen']
-    h = kopf('DIE AUSWAHL',
-             'Alle vier Schritte auf einen Blick. Gewicht roh gewogen, Preise pro Person.', 24, braun=(44,), ghost='WAHL')
-    def col(x, inhalt): return f'<div class="abs col" style="left:{x}mm;top:18mm;width:85mm">{inhalt}</div>'
-    inner = (col(15, liste(hz, ('Rind', 'Kalb')))
-             + col(110, liste(hz, ('Schwein',)))
-             + col(205, liste(hz, ('Geflügel', 'Fisch', 'Vegetarisch & vegan')))
-             + col(300, liste(sc, ('02 Stärkebeilage', '03 Gemüse', '04 Sauce'))))
+    h = kopf('DIE AUSWAHL · SCHRITT 01 — DAS HERZSTÜCK',
+             'Eine Hauptkomponente pro Menü. Gewicht roh gewogen, Preise pro Person.', 24, braun=(44,), ghost='HERZ')
+    h += img(F('seite-23_herzstueck'), 318, 44, 86, 52.9)
+    inner = (wahlspalte(15, 85, liste(hz, ('Rind', 'Kalb')))
+             + wahlspalte(110, 85, liste(hz, ('Schwein',)))
+             + wahlspalte(205, 85, liste(hz, ('Geflügel',)))
+             + wahlspalte(300, 85, liste(hz, ('Fisch', 'Vegetarisch & vegan')), top=62))
     h += karte(14.9, 44, 390, 215, inner, bild=False)
-    h += fuss(25, 'Eine Stärkebeilage gehört zu jedem Menü — ausser das Herzstück bringt sie schon mit. Risotto, Ravioli und Tagliatelle brauchen keine zweite Beilage. Preise pro Person, Gewicht roh gewogen. Alle Preise in Schweizer Franken.')
+    h += fuss(24, 'Das Herzstück bestimmt den Preis des Menüs. Beilagen, Gemüse und Sauce stehen auf der nächsten Seite. '
+                  'Preise pro Person, Gewicht roh gewogen. Alle Preise in Schweizer Franken.')
+    return seite(h)
+
+def c24b():
+    """Schritt 02 bis 04 — Beilage, Gemüse und Sauce, mit den drei Schrittbildern."""
+    sc = S['Eigenes Menü — Schritt 02 bis 04']['gruppen']
+    h = kopf('DIE AUSWAHL · BEILAGEN UND SAUCEN',
+             'Schritt 02 bis 04: eine Stärkebeilage, ein Gemüse, eine Sauce. Preise pro Person.', 25, braun=(44,), ghost='BEIL')
+    for i, (cap, n) in enumerate((('02 · Stärkebeilage', 'staerkebeilage'), ('03 · Gemüse', 'gemuese'), ('04 · Sauce', 'sauce'))):
+        x = 15 + i * 131.5
+        h += img(F(f'seite-23_{n}'), x, 44, 127.3, 52.9) + f'<div class="cap" style="left:{x}mm;top:98.6mm;width:127.3mm">{e(cap)}</div>'
+    inner = (wahlspalte(0.1, 127.3, liste(sc, ('02 Stärkebeilage',)), top=66)
+             + wahlspalte(131.6, 127.3, liste(sc, ('03 Gemüse',)), top=66)
+             + wahlspalte(263.1, 127.3, liste(sc, ('04 Sauce',)), top=66)
+             + '<div class="abs txt11" style="left:0.1mm;top:150mm;width:258mm">Jede Zeile lässt sich tauschen, die Summe '
+               'verschiebt sich entsprechend. Risotto, Ravioli und Tagliatelle bringen die Stärkebeilage schon mit — '
+               'dann entfällt Schritt 02.</div>')
+    h += karte(14.9, 44, 390, 175, inner, bild=False) + hand('vier Zeilen,<br>ein Preis', 300, 205, -5, 16)
+    h += fuss(25, 'Eine Stärkebeilage gehört zu jedem Menü — ausser das Herzstück bringt sie schon mit. Risotto, Ravioli und '
+                  'Tagliatelle brauchen keine zweite Beilage. Preise pro Person. Alle Preise in Schweizer Franken.')
     return seite(h)
 
 # Schlüssel = alte Seitenzahl. 0 ist die neue Gläsli-Seite, die es im Original noch nicht gibt.
 SEITEN = [(0, sGl), (6, s6), (8, s8), (9, s9), (10, s10), (11, s11alt), (12, s12), (13, s13),
-          (14, s14), (15, s15), (16, s16), (17, s17), (18, s18), (19, s19), (30, s30)]
+          (14, s14), (16, s16), (17, s17), (18, s18), (19, s19), (30, s30)]
 # Konzept C: der neue Essensteil. Eigene Nummerierung, noch nicht in die 40 Seiten eingebaut.
-KAPITEL_C = [(20, c20), (21, c21), (22, c22), (23, c23), (24, c24), (25, c25), (26, c26), (27, c27), (28, c28)]
+KAPITEL_C = [(20, c20), (21, c21), (22, c22), (23, c23), (24, c24), (25, c24b), (26, c25), (27, c26), (28, c27), (29, c28)]
 
 CSS = r'''
 @font-face{font-family:'Wick Sans';src:url(../assets/fonts/QGYsz_wNahGAdqQ43Rh_cqDpp_k.woff2) format('woff2');font-weight:100 900;unicode-range:U+0100-02AF,U+1E00-1EFF,U+20A0-20AB,U+20AD-20CF}
@@ -648,11 +696,21 @@ h3.gross{font-size:13pt;line-height:5.6mm}
 .ger .gv{font:500 11pt 'Wick Sans';white-space:nowrap}
 .ger p{font-size:8.5pt;line-height:3.8mm;color:#C9BCA8;margin-top:.6mm}
 .sph.klein{font-size:7pt;margin:3.5mm 0 1.2mm;border:0;padding:0}
+.pr.klein{line-height:4.9mm}
+.pr.klein .n{font-size:10.5pt}
+.pr.klein .u{font-size:7.5pt}
+.pr.klein .v{font-size:10.5pt;min-width:11mm}
 .gl{margin-bottom:2.5mm}
 .gl .gn{font-size:10.5pt;line-height:4.6mm;font-weight:700}
 .gl .gn .tag{margin-left:1.5mm;vertical-align:.4mm}
 .gl p{font-size:8.5pt;line-height:3.8mm;color:#C9BCA8;margin-top:.4mm}
 .regelbox{display:grid;grid-template-columns:1fr 1fr 1fr .62fr;gap:8mm;background:#7A4424;padding:4.5mm 7mm}
+.salatbox{display:grid;grid-template-columns:1.15fr 1fr 1.25fr .62fr;gap:7mm;background:#7A4424;padding:4.5mm 6mm}
+.salatbox .rt{font:600 8pt 'Wick Sans';letter-spacing:.16em;color:#fff;margin-bottom:2.2mm}
+.salatbox p{font-size:8.5pt;line-height:3.9mm;color:#F4E6D8}
+.salatbox .tab.staffel{margin-top:2mm}
+.fuellen{height:100%;display:flex;flex-direction:column}
+.preise.unten{margin-top:auto}
 .regelbox .rt{font:600 8pt 'Wick Sans';letter-spacing:.16em;color:#fff;margin-bottom:2.2mm}
 .regelbox p{font-size:9pt;line-height:4mm;color:#F4E6D8}
 .regelbox i{font-style:italic}
@@ -713,8 +771,8 @@ def zusammenbauen():
 
     1–10   Original
     11     neu, Apéro im Gläsli
-    12–20  Original 11–19 (darin die überarbeiteten Seiten)
-    21–29  Kapitel C, ersetzt die bisherigen Seiten 20–31
+    12–19  Original 11–19 ohne die alte 15 — Apérogebäck steht neu bei den Warmen Häppchen
+    20–29  Kapitel C, ersetzt die bisherigen Seiten 20–31
     30–38  Original 32–40
     """
     import pymupdf
@@ -746,7 +804,8 @@ def zusammenbauen():
 
     for nr in range(1, 11): hol(nr)                     # 1–10
     doc.insert_pdf(teil_s, from_page=idx_s[0], to_page=idx_s[0])     # neue Seite 11: Gläsli
-    for nr in range(11, 20): hol(nr)                    # alt 11–19 → neu 12–20
+    for nr in range(11, 20):                            # alt 11–19 → neu 12–19
+        if nr != 15: hol(nr)                            # alt 15 ist in die Warmen Häppchen gewandert
     doc.insert_pdf(teil_c, from_page=0, to_page=teil_c.page_count - 1)  # Kapitel C
     for nr in range(32, 41): hol(nr)                    # alt 32–40
 
