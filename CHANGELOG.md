@@ -5,6 +5,23 @@ Neueste Einträge oben.
 
 ---
 
+## 2026-10-27 · Die vier offenen Bilder nachgeholt
+
+fal.ai ist wieder gedeckt — die vier Bilder, die seit gestern offen waren, sind da:
+
+- **Seite 14 · Brot XXL:** Themenbild neu das gefüllte Laugenherz auf der
+  schwarzen Platte, nach eurem Referenzfoto.
+- **Seite 17 · Chili Würstli im Briochesmantel:** neues Kartenbild nach eurem
+  neuen Foto — der gedrehte Briocheteig und die sichtbaren Enden stimmen jetzt.
+- **Seite 22 · Klassiker für grosse Runden:** die Seite ist wieder eine
+  Hero-Seite. Das Themenbild zeigt die Ausgabe für grosse Runden — vier offene
+  Wärmebehälter in einer Reihe, Tellerstapel und Besteck am Ende.
+- **Seite 36 · Weitere Locations:** Themenbild aus eurem Entra-Foto, neu ohne
+  Leinwand und ohne Getränkekarte. Die drei Location-Karten stehen jetzt unter
+  dem Bild und haben ihren Rand zurück.
+
+---
+
 ## 2026-10-27 · Seite 20 «Drei Wege» neu gestaltet
 
 Die Vergleichstabelle ist weg. Jeder Weg hat jetzt eine eigene Karte über die

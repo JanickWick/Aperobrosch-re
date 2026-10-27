@@ -125,6 +125,7 @@ def s14():
 
 def k3(i, titel, ts, desc, gruppen, preise, note=None, bild=None, stil='', y=166.5, h=102.4, by=135):
     inner = f'<h3 class="gross">{titel}</h3>{tags(*ts)}<p class="desc">{e(desc)}</p>' + ''.join(grp(l, t, False) for l, t in gruppen) + '<div class="preise">' + ''.join(pr(*p) for p in preise) + '</div>' + (f'<div class="hand inl">{e(note)}</div>' if note else '')
+    if bild is False: inner = f'<div style="padding:26.6mm 4.8mm 3mm">{inner}</div>'   # Karte ohne Bild braucht den Rand selbst
     return karte(14.9 + i * 131.5, y, 127.3, h, inner, bild=bild, bw=118.3, bh=52.4, by=by, stil=stil)
 
 def s16():
@@ -508,20 +509,20 @@ def c21():
 def c22():
     """Weg 02 — die Klassiker."""
     kl = S['Klassiker für grosse Runden']
-    h = kopf('KLASSIKER FÜR GROSSE RUNDEN',
+    h = hero(F('seite-22_hero'), 'KLASSIKER<br>FÜR GROSSE<br>RUNDEN',
              'Weg 02 — ein Gericht, eine Menge, ein Preis. Die Form, mit der wir am ESAF 80’000 Mahlzeiten '
-             'ausgegeben haben.', 22, braun=(44,), ghost='KLAS')
+             'ausgegeben haben.', ghost='KLAS')
     def gericht(g):
         tg = f' {tag(g["kennzeichnung"].upper(), "beige")}' if g.get('kennzeichnung') else ''
         return (f'<div class="ger"><div class="gz"><span class="gn">{e(g["name"])}{tg}</span>'
                 f'<span class="gv">{g["preis"]:.2f}</span></div><p>{e(g["zutaten"])}</p></div>')
     sp = [kl['gerichte'][0:4], kl['gerichte'][4:8], kl['gerichte'][8:12]]
-    band = ('<div class="abs salatbox" style="left:4.7mm;top:166mm;width:380.6mm;grid-template-columns:repeat(4,1fr)">'
+    band = ('<div class="abs salatbox" style="left:4.7mm;top:78mm;width:380.6mm;grid-template-columns:repeat(4,1fr)">'
             + ''.join(f'<div><div class="rt">{e(k.upper())}</div><p>{e(v)}</p></div>' for k, v in kl['hinweise'].items())
             + '</div>')
     inner = (''.join(f'<div class="abs col" style="left:{17.1 + i * 127}mm;top:14mm;width:118mm">{"".join(gericht(g) for g in s)}</div>' for i, s in enumerate(sp))
              + band)
-    h += karte(14.9, 44, 390, 215, inner, bild=False) + hand('in jeder Menge erprobt', 40, 150, -5, 17)
+    h += karte(14.9, 138, 390, 130.9, inner, bild=False)
     h += fuss(22, 'Alle Preise pro Portion. Alle Preise in Schweizer Franken.')
     return seite(h)
 
@@ -727,27 +728,27 @@ def sLoc():
     Die Zahlen stammen aus den öffentlichen Angaben der Locations und sind noch
     nicht bei den Betreibern bestätigt.
     """
-    h = kopf('WEITERE LOCATIONS',
-             'Unser Catering bleibt nicht im eigenen Haus. Wir liefern regelmässig in die grossen Säle der Region.',
-             36, braun=(44,), ghost='LOCA')
+    h = hero(F('seite-36_locations'), 'WEITERE<br>LOCATIONS',
+             'Unser Catering bleibt nicht im eigenen Haus. Wir liefern regelmässig in die grossen Säle der Region — '
+             'eingespielt mit den Betreibern, mit eigenem Material und eigenem Personal vor Ort.', ghost='LOCA')
     h += k3(0, 'ENTRA RAPPERSWIL', [tag('BELIEBT')],
             'Die grosse Bühne der Region. Saal, Foyer und mehrere Seminarräume unter einem Dach.',
             [('Adresse', 'Obere Bahnhofstrasse 58, 8640 Rapperswil'),
              ('Grösse', 'Saal: Bankett 432 Personen · Apéro 600 Personen · bis 1050 Personen im ganzen Haus'),
              ('Passt für', 'Generalversammlung · Firmenanlass · Konzert · Grossanlass')],
-            [], note='Wir waren hier schon mehrfach Cateringpartner.', bild=PH, y=97.9, h=171, by=66.5)
+            [], note='Wir waren hier schon mehrfach Cateringpartner.', bild=False)
     h += k3(1, 'EVENTHOUSE RAPPERSWIL', [],
             'Eine ehemalige Industriehalle mitten in Rapperswil-Jona, roh und grosszügig.',
             [('Adresse', '[FEHLT: Adresse]'),
              ('Grösse', 'Halle: bis 600 Gäste · Saal: bis 200 Personen · dazu Foyer und Glaslounge'),
              ('Passt für', 'Hochzeit · Firmenfest · Abendanlass mit Apéro im Foyer')],
-            [], bild=PH, y=97.9, h=171, by=66.5)
+            [], bild=False)
     h += k3(2, 'RADIO ZÜRISEE LOFT', [],
             'Das Loft über dem Bahnhof Rapperswil — klein, hell und mitten im Zentrum.',
             [('Adresse', 'Bahnhofplatz 1, 8640 Rapperswil'),
              ('Grösse', '120 m² · Bankett 66 Personen · Apéro 100 Personen · Seminar 30 Personen'),
              ('Passt für', 'Sitzung · Kundenanlass · Apéro riche im kleinen Kreis')],
-            [], bild=PH, y=97.9, h=171, by=66.5)
+            [], bild=False)
     h += fuss(36, 'Die genannten Grössen stammen aus den öffentlichen Angaben der Locations und sind unverbindlich — '
                   'massgebend ist die Auskunft der Betreiberin. Miete und Technik rechnen die Locations direkt mit '
                   'Ihnen ab; wir offerieren das Catering. [Bitte bestätigen: Adresse Eventhouse, Fotos der beiden '
