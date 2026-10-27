@@ -5,6 +5,50 @@ Neueste Einträge oben.
 
 ---
 
+## 2026-10-27 · Süsser Abschluss, Torten, «Für alle» und Eventraum
+
+### Süsser Abschluss (Seite 28)
+Neu eine Hero-Seite mit sechs Karten statt vier Spalten. Die Bilder stammen aus
+euren Pâtisserie-Fotos: die gefüllte Platte für die Mini Pâtisserie, die runde
+Platte für die Cup Cakes, eure Mousse-Schale und das Dessert im Gläsli.
+Dazu ein Themenbild aus beiden Platten. Cake Pops und die veganen Desserts haben
+weiterhin kein echtes Foto.
+
+### Dessert am Teller (Seite 29)
+Ein einziges Themenbild — die Reihe angerichteter Dessertteller von eurer Website.
+Die sechs Platzhalter sind weg.
+
+### Torten & Confiserie (Seite 30)
+Neu gebaut, Inhalt wie im Original. Themenbild: eure Hochzeitstorte.
+Drei Karten — Torten nach Ihrer Idee (die Beeren-Torte), Confiserie (die kleinen
+Pralinenschachteln als Gastgeschenk, einzeln verpackt) und Was sonst noch süss ist
+(die Mini-Pâtisserie-Platte). Torten und Confiserie stehen neu ohne Preisplakette,
+weil beides nach Offerte geht.
+
+### Für alle — vegetarisch & vegan (Seite 31)
+Neu gebaut und auf den aktuellen Stand gebracht:
+- **Zigerbrüüt-Röllchen gestrichen.**
+- **Apéro Wrap Couscous gestrichen** — er ist auch auf Seite 15 weg. Eine vegane
+  Alternative ist in Arbeit; der Hinweis steht in der Fusszeile.
+- **Falafel-Bissen** neu in der veganen Liste, mit Verweis auf Seite 17.
+- Verweise nachgeführt: vegane Torten Seite 30, vegane Suppen Seite 26.
+- Bilder: Partybrot, Bäckerpastetli Rüebli-Sesam, Spiessli Frucht klein,
+  Falafel-Bissen und Mini Pâtisserie — alles Bilder, die auch sonst in der
+  Broschüre stehen.
+
+### Eventraum (Seite 35)
+Neu gebaut, mit einem Themenbild aus euren Säntisblick-Fotos.
+**Neu 80 Sitzplätze statt 120** — und der Hinweis, dass der Anlass mit Zeltaufbau
+auf bis zu 400 Personen wächst. Der Zeltaufbau selbst ist nach Offerte.
+
+### Noch offen
+- [FEHLT: Preis] Rüebli-Sesam-Tartelette, Falafel-Bissen pro Stück.
+- [FEHLT] Vegane Alternative zum gestrichenen Apéro Wrap Couscous.
+- Cake Pops und vegane Desserts haben kein echtes Foto.
+- [FEHLT] Preis für den Zeltaufbau vor dem Eventraum.
+
+---
+
 ## 2026-10-27 · Echte Referenzfotos, Warme Häppchen zusammengelegt, Kapitel C überarbeitet
 
 ### Neue Referenzbilder

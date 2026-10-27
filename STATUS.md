@@ -25,7 +25,11 @@ Die Broschüre hat 40 Seiten, A3 quer. Grundlage ist `quellen/broschuere-40s.pdf
 | 18 | Platten & Sharing *(alt 18)* | **überarbeitet** | vier Platten, schwarz |
 | 19 | Unterwegs · Lunchbags *(alt 19)* | **neu gebaut** | echte Fotos, Inhalt gleich |
 | **20–29** | **Warme Küche bis Süsser Abschluss** | **Neukonzeption** | siehe `KONZEPT-essen-20-31.md` |
-| 30–38 | Torten bis Rückseite *(alt 32–40)* | unverändert | |
+| 30 | Torten & Confiserie *(alt 32)* | **neu gebaut** | Hochzeitstorte, Gastgeschenke |
+| 31 | Für alle — vegetarisch & vegan *(alt 33)* | **neu gebaut** | Zigerbrüüt-Röllchen gestrichen |
+| 32–34 | Anlass komplett, Getränke, Material *(alt 34–36)* | unverändert | |
+| 35 | Eventraum *(alt 37)* | **neu gebaut** | 80 Plätze, mit Zelt bis 400 |
+| 36–38 | Gut zu wissen bis Rückseite *(alt 38–40)* | unverändert | |
 
 **Arbeitsstand-Markierungen in den überarbeiteten Seiten**
 «Preis nach Kalkulation» = neue oder geänderte Position, Preis folgt.

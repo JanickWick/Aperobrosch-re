@@ -153,7 +153,7 @@ def k6h(i, titel, ts, desc, gruppen, preise, note=None, bild=None):
     inner = (f'<h3>{titel}</h3>{tags(*ts)}<p class="desc">{e(desc)}</p>' + ''.join(grp(l, t, True) for l, t in gruppen)
              + '<div class="preise">' + ''.join(pr(*p, klein=True) for p in preise) + '</div>'
              + (f'<div class="hand inl">{e(note)}</div>' if note else ''))
-    return karte(14.9 + i * 65.6, 166.5, 62.2, 102.4, inner, bild=bild, bw=52.9, bh=52.9, by=135)
+    return karte(14.9 + i * 65.6, 156, 62.2, 112.9, inner, bild=bild, bw=52.9, bh=52.9, by=125)
 
 def s17():
     """Alte Seiten 15 und 17 zusammengelegt: alles Warme auf einer Seite.
@@ -225,26 +225,66 @@ def s18():
     h += fuss(18, 'Alle Preise in Schweizer Franken.')
     return seite(h)
 
-def s30(nr=30):
+def s30(nr=28):
+    """Der süsse Abschluss — sechs Karten unter einem Themenbild."""
     mp, ms, cc, cp = S['Mini Pâtisserie'], S['Mousse-Schale gefüllt'], S['Cup Cakes'], S['Cake Pops']
-    h = kopf('DER SÜSSE ABSCHLUSS', 'Was aufs Buffet kommt und aus der Hand gegessen wird. Alles entsteht in unserer eigenen Konditorei. Am Platz serviert steht auf der nächsten Seite.', nr, braun=(147.1, 188.6), ghost='SÜSS')
-    for i, src in enumerate((K(485, 30), K(486, 30), K(487, 30), K(488, 30), W('p16-4'), W('p15-1'))): h += img(src, 19.1 + i * 65.8, 65.9, 52.9, 52.9)
-    def col(x, w, inner): return f'<div class="abs col" style="left:{x}mm;top:25mm;width:{w}mm">{inner}</div>'
-    c1 = (f'<h3 class="gross">MINI PÂTISSERIE<br>ASSORTIERT</h3>{tags(tag("BELIEBT"), tag("VEGETARISCH", "beige"))}<p class="desc">Ein Querschnitt durch unsere Konditorei, in einem Bissen. Wir stellen nach Saison zusammen.</p>'
-          + grp('Sorten', mp['sorten']) + grp('Saisonal', mp['saisonal']) + grp('Mindestmenge', mp['mindestmenge']) + '<div class="preise">' + pr('Mini Pâtisserie', 'pro Stück', 2.6) + '</div>')
-    c2 = (f'<h3 class="gross">MOUSSE-SCHALE<br>GEFÜLLT</h3>{tags(tag("VEGETARISCH", "beige"))}<p class="desc">Eine Geschmacksrichtung, eine Basis — beides wählen Sie. Für 4 bis 8 Personen.</p>'
-          + grp('Sorten', ms['sorten']) + grp('Basis', ms['basis']) + '<div class="preise">' + ''.join(pr(n, u, v) for n, u, v in ms['preise']) + '</div>')
-    c3 = (f'<h3 class="gross">CUP CAKES</h3>{tags(tag("VEGETARISCH", "beige"))}<p class="desc">In herzigen Kinder-Sujets oder in zeitlosen Pastellfarben.</p>' + grp('Sorten', cc['sorten']) + grp('Mindestmenge', cc['mindestmenge'])
-          + '<div class="preise">' + pr('Cup Cake', 'pro Stück', 5.9) + '</div>'
-          + f'<h3 class="gross" style="margin-top:7mm">CAKE POPS</h3>{tags(tag("VEGETARISCH", "beige"))}<p class="desc">Am Stiel, nach Ihren Wünschen ausdekoriert.</p>' + grp('Sorten', cp['sorten']) + grp('Mit Alkohol', cp['alkoholisch']) + grp('Mindestmenge', cp['mindestmenge'])
-          + '<div class="preise">' + pr('Cake Pop', 'pro Stück', 4.5) + '</div>')
-    c4 = (f'<h3 class="gross">DESSERT IM GLÄSLI</h3>{tags(tag("NOCH OFFEN", "beige"))}<p class="desc">Im Glas serviert, ohne Teller und ohne Besteck.</p>' + grp('Sorten', 'Panna Cotta · Tobleronemousse · Schoggimousse · Gebrannte Creme')
-          + '<div class="preise">' + pr('Dessert im Gläsli', 'pro Stück', 5.5) + '</div><div class="hand inl">bleibt oder weg?</div>'
-          + f'<h3 class="gross" style="margin-top:7mm">VEGANE DESSERTVARIATIONEN</h3>{tags(tag("NOCH OFFEN", "beige"), tag("VEGAN", "beige"))}' + grp('Sorten', 'Schokoladenkuchen · Mohnroulade · Kaffeekuchen · Erdbeer-Rhabarber-Torte · Cremeschnitte')
-          + '<div class="preise">' + pr('Vegane Desserts', 'pro Stück', 6.0) + '</div><div class="hand inl">bleibt oder weg?</div>')
-    inner = col(17.1, 80, c1) + col(110, 80, c2) + col(203, 80, c3) + col(296, 80, c4)
-    h += karte(14.9, 98, 390, 172, inner, bild=False)
-    h += fuss(nr, 'Mindestmenge: 10 Stück pro Sorte oder 10 Stück gemischt pro Kategorie. Alle Preise in Schweizer Franken.')
+    h = hero(F('seite-28_hero'), 'DER SÜSSE<br>ABSCHLUSS',
+             'Was aufs Buffet kommt und aus der Hand gegessen wird. Alles entsteht in unserer eigenen Konditorei. '
+             'Am Platz serviert steht auf der nächsten Seite.', ghost='SÜSS')
+    h += k6h(0, 'MINI PÂTISSERIE<br>ASSORTIERT', [tag('BELIEBT'), tag('VEGETARISCH', 'beige')],
+             'Ein Querschnitt durch unsere Konditorei, in einem Bissen.',
+             [('Sorten', mp['sorten'])],
+             [('Mini Pâtisserie', 'pro Stück', 2.6)], bild=F('seite-28_patisserie'))
+    h += k6h(1, 'MOUSSE-SCHALE<br>GEFÜLLT', [tag('VEGETARISCH', 'beige')],
+             'Eine Geschmacksrichtung, eine Basis — beides wählen Sie. Für 4 bis 8 Personen.',
+             [('Sorten', ms['sorten'])],
+             [(n, u, v) for n, u, v in ms['preise']], bild=F('seite-28_mousse'))
+    h += k6h(2, 'CUP CAKES', [tag('VEGETARISCH', 'beige')],
+             'In herzigen Kinder-Sujets oder in zeitlosen Pastellfarben.',
+             [('Sorten', cc['sorten']), ('Mindestmenge', cc['mindestmenge'])],
+             [('Cup Cake', 'pro Stück', 5.9)], bild=F('seite-28_cupcakes'))
+    h += k6h(3, 'CAKE POPS', [tag('VEGETARISCH', 'beige')],
+             'Am Stiel, nach Ihren Wünschen ausdekoriert.',
+             [('Sorten', cp['sorten']), ('Mit Alkohol', cp['alkoholisch'])],
+             [('Cake Pop', 'pro Stück', 4.5)], bild=K(488, 30))
+    h += k6h(4, 'DESSERT IM GLÄSLI', [tag('NOCH OFFEN', 'beige')],
+             'Im Glas serviert, ohne Teller und ohne Besteck.',
+             [('Sorten', 'Panna Cotta · Tobleronemousse · Schoggimousse · Gebrannte Creme')],
+             [('Dessert im Gläsli', 'pro Stück', 5.5)], note='bleibt oder weg?', bild=F('seite-28_glaesli'))
+    h += k6h(5, 'VEGANE<br>DESSERTVARIATIONEN', [tag('NOCH OFFEN', 'beige'), tag('VEGAN', 'beige')],
+             'Aus der eigenen Konditorei, ganz ohne tierische Zutaten.',
+             [('Sorten', 'Schokoladenkuchen · Mohnroulade · Kaffeekuchen · Erdbeer-Rhabarber-Torte · Cremeschnitte')],
+             [('Vegane Desserts', 'pro Stück', 6.0)], note='bleibt oder weg?', bild=W('p15-1'))
+    def liste_(x): return e(' · '.join(x) if isinstance(x, (list, tuple)) else x)
+    h += fuss(nr, 'Mindestmenge: 10 Stück pro Sorte oder 10 Stück gemischt pro Kategorie. Saisonal bei der Mini '
+                  'Pâtisserie: ' + liste_(mp['saisonal']) + '. Die Mousse-Schale wählen Sie mit einer Basis: '
+                  + liste_(ms['basis']) + '. Alle Preise in Schweizer Franken.')
+    return seite(h)
+
+def s32():
+    """Alte Seite 32: Torten & Confiserie. Inhalt wie im Original, neu mit echten Bildern."""
+    h = hero(F('seite-30_hero'), 'TORTEN &amp;<br>CONFISERIE',
+             'Eine Torte kauft man nicht ein, man bespricht sie. Konditorei, Tortenhandwerk und Confiserie sind drei '
+             'der sechs Handwerke in unserem Haus — der Teil, den andere Cateringbetriebe zukaufen müssen.', ghost='TORT')
+    h += k3(0, 'TORTEN NACH IHRER IDEE', [tag('WICK-SIGNATURE', 'beige')],
+            'Motiv, Grösse und Geschmack besprechen wir persönlich. Daraus entsteht die Offerte.',
+            [('Auch vegan', 'Kirsch / Schokolade · Mohnroulade · Kaffeekuchen · Erdbeer / Rhabarber'),
+             ('Beratung', 'Motiv, Grösse und Geschmack besprechen wir am Tisch')],
+            [], note='das Stück, an das sich alle erinnern', bild=F('seite-30_torte'))
+    h += k3(1, 'CONFISERIE', [tag('BELIEBT')],
+            'Pralinen und Schokolade aus eigener Herstellung, mit Grand-Cru-Couverture von Felchlin.',
+            [('Als Gastgeschenk', 'Am Platz, zum Kaffee oder als Dankeschön für die Helferinnen und Helfer'),
+             ('Einzeln verpackt', 'Pralinen in kleinen Schachteln, auf Wunsch mit Ihrem Datum oder Ihrem Logo')],
+            [], bild=F('seite-30_gastgeschenk'))
+    h += k3(2, 'WAS SONST NOCH SÜSS IST', [],
+            'Mini-Pâtisserie, Cup Cakes, Cake Pops, Mousse-Schalen und die Frucht-Spiessli stehen beim süssen '
+            'Abschluss auf Seite 28. Die Desserts für den Tellerservice auf Seite 29.',
+            [('Mit Logo oder Wunschdesign', 'Cup Cakes mit Logo oder Wunschdesign, vegetarisch')],
+            [('Cup Cakes mit Logo', 'pro Stück', 7.5), ('Cake Pops mit Alkohol', 'pro Stück', 5.0)],
+            bild=F('seite-28_patisserie'))
+    h += fuss(30, 'Torten und Confiserie fertigen wir nach Offerte — für Torten nennt unsere Preisliste bewusst '
+                  'keinen Betrag, weil Grösse, Motiv und Aufwand zu verschieden sind. '
+                  'Alle übrigen Preise in Schweizer Franken.', arb=False)
     return seite(h)
 
 # ---------- Konzept C: Menü-Doppelseite (ersetzt die bisherigen Seiten 25–28) ----------
@@ -502,14 +542,14 @@ def c25():
 def c28():
     """Dessert am Teller."""
     de = S['Dessert am Teller']
-    h = kopf('DESSERT AM TELLER', 'Wird am Platz serviert und gehört deshalb zum Tellerservice — wie das eigene Menü.', 28, ghost='DESS')
-    for i in range(6): h += img(PH, 19.1 + i * 65.8, 65.9, 52.9, 52.9)
+    h = hero(F('seite-29_hero'), 'DESSERT<br>AM TELLER',
+             'Wird am Platz serviert und gehört deshalb zum Tellerservice — wie das eigene Menü.', ghost='DESS')
     hinw = ''.join(row(ic, k + ':', e(v)) for ic, (k, v) in zip(('person', 'korb', 'blatt', 'huet'), de['hinweise'].items()))
-    inner = (f'<div class="abs col" style="left:15mm;top:22mm;width:180mm">{sph("Die Auswahl")}<div class="preise dicht">'
+    inner = (f'<div class="abs col" style="left:15mm;top:16mm;width:180mm">{sph("Die Auswahl")}<div class="preise dicht">'
              + ''.join(pr(n, '', v) for n, _, v in de['preise']) + '</div>'
              + f'<p class="txt105" style="margin-top:4mm;color:#E6DCCB">{e(de["saisonal"])}</p></div>'
-             + f'<div class="rows eng" style="left:215mm;top:22mm;width:170mm">{hinw}</div>')
-    h += karte(14.9, 97.9, 390, 170.9, inner, bild=False) + hand('der letzte<br>Eindruck bleibt', 300, 232, -5, 16)
+             + f'<div class="rows eng" style="left:215mm;top:16mm;width:170mm">{hinw}</div>')
+    h += karte(14.9, 138, 390, 130.9, inner, bild=False)
     h += fuss(29, 'Alle Preise pro Portion, Tellerservice ab 20 Personen. Alle Preise in Schweizer Franken.')
     return seite(h)
 
@@ -598,9 +638,66 @@ def c24b():
                   'Tagliatelle brauchen keine zweite Beilage. Preise pro Person. Alle Preise in Schweizer Franken.')
     return seite(h)
 
+def s33():
+    """Alte Seite 33: Für alle — vegetarisch und vegan. Nachgeführt auf den neuen Stand."""
+    h = kopf('FÜR ALLE — VEGETARISCH & VEGAN',
+             'Vegetarische und vegane Gäste sollen nicht die Reste essen. Diese Seite fasst zusammen, was rein '
+             'pflanzlich ist.', 31, braun=(64.2, 105.8), ghost='VEGA')
+    bilder = (('seite-12_partybrot', 'Partybrot'), ('seite-15_baeckerpastetli', 'Bäckerpastetli Rüebli-Sesam'),
+              ('seite-16_spiessli-frucht-klein', 'Spiessli Frucht klein'), ('seite-17_falafel', 'Falafel-Bissen'),
+              ('seite-28_patisserie', 'Mini Pâtisserie'))
+    for i, (n, cap) in enumerate(bilder):
+        x = 52.0 + i * 65.8
+        h += img(F(n), x, 65.9, 52.9, 52.9) + f'<div class="cap" style="left:{x}mm;top:60.5mm;width:52.9mm;color:#7A4424">{e(cap)}</div>'
+    vegan = (('Partybrot', 'pro kg', 11.0), ('Traubenbrötli', 'pro Grösse', 0.8),
+             ('Partybrötli leer (Weiss, Para)', 'pro Stück', 0.8), ('Bäckerpastetli Rüebli-Sesam', 'pro Stück', 2.7),
+             ('Spiessli Frucht klein', 'pro Stück', 2.0), ('Mini Pâtisserie (Cremeschnitte)', 'pro Stück', 2.6),
+             ('Falafel-Bissen, Ingwer-Karottensauce', 'pro Stück', None),
+             ('Falafelbällchen, Ingwer-Karottensauce, Gemüsecouscous', 'pro Portion', 15.0),
+             ('Veganer Burgerpatty (2× 113 g), Wedges-Kartoffeln, Gemüse', 'pro Portion', 25.5))
+    c1 = sph('Vegan im Sortiment') + '<div class="preise dicht">' + ''.join(pr(*v) for v in vegan) + '</div>'
+    rows = (row('leg-vegan', 'Vegane Torten:', 'Kirsch / Schokolade · Mohnroulade · Kaffeekuchen · Erdbeer / Rhabarber — Seite 30')
+            + row('leg-blatt', 'Vegetarisch:', 'Ein grosser Teil des Sortiments ist vegetarisch — Käse, Ei, Tomaten &amp; Mozzarella, Kräuterquark, Spargeln und Zigerbrüüt.')
+            + row('leg-korb', 'Mindestmenge:', '10 Stück pro Sorte')
+            + row('leg-warm', 'Suppen:', 'Alle Suppen gibt es auch vegan — Seite 26. Das Sortiment ergänzen wir laufend.'))
+    c2 = f'<div class="rows eng" style="position:static;width:100%">{rows}</div>'
+    c3 = (f'<h3>RÜEBLI-SESAM-TARTELETTE</h3>{tags(tag("NEU"), tag("VEGAN", "beige"))}'
+          '<p class="desc">Veganes Tartelette mit Rüebli-Sesam-Crème, geröstetem Sesam und Kresse.</p>'
+          + grp('Format', '1–2 Bissen · kalt', False)
+          + '<div class="preise">' + pr('Rüebli-Sesam-Tartelette', 'pro Stück', None) + '</div>'
+          '<div class="hand inl">Für einen ausgewogenen Apéro mit zwei bis drei weiteren Sorten kombinieren.</div>')
+    def col(x, b, inhalt): return f'<div class="abs col" style="left:{x}mm;top:22mm;width:{b}mm">{inhalt}</div>'
+    inner = col(17.1, 150, c1) + col(180, 120, c2) + col(312, 73, c3)
+    h += karte(14.9, 97.9, 390, 122, inner, bild=False) + hand('niemand isst die Reste', 40, 232, -5, 17)
+    h += fuss(31, 'Der vegane Apéro Wrap Couscous ist gestrichen — eine vegane Alternative ist in Arbeit. '
+                  'Mindestbestellmenge 10 Stück pro Sorte bei Apérogebäck, Canapés, Wraps, Pastetli, Frischkäse-Pralinen '
+                  'und Mini-Pâtisserie. Mit «Neu» gekennzeichnete Positionen stammen aus der laufenden '
+                  'Sortimentsentwicklung; Preis, Mindestmenge und Allergene folgen nach Abschluss der Kalkulation. '
+                  'Alle Preise in Schweizer Franken.', arb=False)
+    return seite(h)
+
+def s37():
+    """Alte Seite 37: Eventraum Säntisblick. Neu 80 Sitzplätze, mit Zelt bis 400 Personen."""
+    h = hero(F('seite-35_hero'), 'EVENT-<br>RAUM',
+             'Wicks Eventraum «Säntisblick» — bis 80 Sitzplätze, mit Zeltaufbau bis 400 Personen. Heimelig, '
+             'vielfältig und buchbar für Ihren persönlichen Anlass. Auf Wunsch mit Catering aus unserem Haus: '
+             'Raum, Catering und Betreuung aus einer Hand.', ghost='RAUM')
+    preise = (('Raummiete, Rückgabe am Folgetag bis Mittag', '', 450.0), ('TV, 86 Zoll Ultra HD', '', 100.0),
+              ('Zusätzlicher Kühlschrank', 'pro Stück', 30.0), ('Tischgarnitur / Stehtisch inkl. Tuch', 'pro Stück', 30.0),
+              ('Kaffee', 'pro Portion', 3.0), ('Personal vor Ort', 'pro Person und Stunde', 60.0))
+    rows = (row('person', 'Platz:', 'Bis 80 Sitzplätze im Raum. Mit Zeltaufbau davor wächst der Anlass auf bis zu 400 Personen — für Sitzung, Geschäftsessen, Geburtstagsfeier oder Trauerfeier.')
+            + row('huet', 'Catering:', 'Catering, Brunch und Mietgeschirr nach Offerte.')
+            + row('auge', 'Gut zu wissen:', 'Bei einer Konsumation ab CHF 2000.00 entfällt die Raummiete. Rückgabe besenrein, allfällige Reinigung CHF 200.00.'))
+    inner = (f'<div class="abs" style="left:17.1mm;top:18mm;width:180mm"><div class="sph">Was der Raum kostet</div>'
+             + '<div class="preise dicht">' + ''.join(pr(*v) for v in preise) + '</div></div>'
+             + f'<div class="rows eng" style="left:215mm;top:18mm;width:170mm">{rows}</div>')
+    h += karte(14.9, 138, 390, 130.9, inner, bild=False) + hand('Raum, Catering und<br>Betreuung aus einer Hand', 215, 255, -5, 16)
+    h += fuss(35, 'Der Zeltaufbau vor dem Eventraum ist nach Offerte. Alle Preise in Schweizer Franken.', arb=False)
+    return seite(h)
+
 # Schlüssel = alte Seitenzahl. 0 ist die neue Gläsli-Seite, die es im Original noch nicht gibt.
 SEITEN = [(0, sGl), (6, s6), (8, s8), (9, s9), (10, s10), (11, s11alt), (12, s12), (13, s13),
-          (14, s14), (16, s16), (17, s17), (18, s18), (19, s19), (30, s30)]
+          (14, s14), (16, s16), (17, s17), (18, s18), (19, s19), (30, s30), (32, s32), (33, s33), (37, s37)]
 # Konzept C: der neue Essensteil. Eigene Nummerierung, noch nicht in die 40 Seiten eingebaut.
 KAPITEL_C = [(20, c20), (21, c21), (22, c22), (23, c23), (24, c24), (25, c24b), (26, c25), (27, c26), (28, c27), (29, c28)]
 
