@@ -42,7 +42,7 @@ def hero(bild, titel, intro, braun=(132.2,), ghost=''):
             f'<div class="box"><div>{titel}</div></div><div class="bar" style="left:-3mm;width:17mm"></div><div class="bar" style="left:75mm;width:35mm"></div>'
             f'<div class="intro">{e(intro)}</div>' + zeitleiste(125.4, 132, braun) + ghostbox(ghost, 196))
 def zeitleiste(y04, y0, braun):
-    h = f'<div class="nr04" style="top:{y04}mm">04</div><div class="vline" style="top:{y0}mm;height:{272 - y0}mm"></div>'
+    h = f'<div class="nr04" style="top:{y04}mm"><span class="z4">04</span><span class="z5">05</span></div><div class="vline" style="top:{y0}mm;height:{272 - y0}mm"></div>'
     for y in (64.2, 105.8, 147.1, 188.6, 230.1, 271.5):
         if y < y0 - 1: continue
         h += f'<div class="{"dot b" if y in braun else "dot s"}" style="top:{y}mm"></div>'
@@ -55,6 +55,9 @@ ARB = 'Arbeitsstand: «Preis nach Kalkulation» = neue oder geänderte Position,
 def fuss(nr, text=STD, arb=True):
     return f'<div class="fuss">{e(text)}{" " + e(ARB) if arb else ""}</div><div class="marke">WICK — APÉRO &amp; CATERING</div><div class="pnr">{nr}</div>'
 def seite(inner): return f'<section class="seite">{inner}</section>'
+def kap05(h):
+    """Kapitelmarke und Randziffer auf 05 setzen — kopf() und hero() schreiben 04."""
+    return h.replace('KAPITEL 04 / 06', 'KAPITEL 05 / 06').replace('"nr04" style="top:', '"nr04 f" style="top:')
 
 # ---------- Seiten ----------
 def s11alt():
@@ -720,7 +723,7 @@ def s37():
              + f'<div class="rows eng" style="left:215mm;top:18mm;width:170mm">{rows}</div>')
     h += karte(14.9, 138, 390, 130.9, inner, bild=False) + hand('Raum, Catering und<br>Betreuung aus einer Hand', 215, 255, -5, 16)
     h += fuss(35, 'Der Zeltaufbau vor dem Eventraum ist nach Offerte. Alle Preise in Schweizer Franken.', arb=False)
-    return seite(h)
+    return seite(kap05(h))
 
 def sLoc():
     """Neue Seite nach dem Säntisblick: weitere Eventlocations, die wir beliefern.
@@ -753,12 +756,140 @@ def sLoc():
                   'massgebend ist die Auskunft der Betreiberin. Miete und Technik rechnen die Locations direkt mit '
                   'Ihnen ab; wir offerieren das Catering. [Bitte bestätigen: Adresse Eventhouse, Fotos der beiden '
                   'übrigen Locations, und ob weitere Säle auf die Seite sollen.]', arb=False)
+    return seite(kap05(h))
+
+def s34():
+    """Alte Seite 34: Ihr Anlass komplett. Inhalt wie im Original, neue Seitenzahl 32."""
+    h = (f'<div class="rostvoll" style="height:88mm"></div>'
+         f'<div class="kap hell" style="left:26mm;top:22mm">KAPITEL 05 / 06 &nbsp;·&nbsp; IHR ANLASS KOMPLETT</div>'
+         f'<h1 class="rosth" style="top:36mm">Aus einem leeren Raum<br>wird ein Fest.</h1>'
+         f'<p class="rostt" style="top:62mm;width:250mm">Essen ist der eine Teil. Der andere sind Tische, Gläser, '
+         'Getränke, Aufbau und ein Team, das den Abend über da ist. In acht Schritten entsteht daraus Ihr Anlass — '
+         'und Sie sind Gast am eigenen Fest.</p>'
+         + zeitleiste(96, 103, (103,)) + ghostbox('ANLASS', 160))
+    schritte = (
+        ('01', 'DIE LOCATION', 'Sie sagen uns, wo gefeiert wird. Alles Weitere planen wir von dort aus.'),
+        ('02', 'INFRASTRUKTUR', 'Zelte, Tische, Stühle und weiteres Eventmaterial — wir bringen mit, was fehlt.'),
+        ('03', 'GEDECKTE TISCHE', 'Geschirr, Gläser, Besteck und Service. Eingedeckt, bevor die ersten Gäste kommen.'),
+        ('04', 'GETRÄNKE', 'Von Kaffee bis Wein. Nicht konsumierte Getränke werden nicht verrechnet.'),
+        ('05', 'APÉRO', 'Von Hand kreierte Häppchen aus unserer eigenen Küche — süss wie salzig.'),
+        ('06', 'DAS ESSEN', 'Vom einfachen Buffet bis zum mehrgängigen Menü, frisch aus unserer Küche.'),
+        ('07', 'DESSERT & TORTE', 'Pâtisserie aus der Konditorei, Pralinen aus der Confiserie, Torte nach Ihrer Idee.'),
+        ('08', 'IHR FEST', 'Ein Ansprechpartner, eine Organisation. Sie geniessen den Anlass.'))
+    for i, (nr, titel, text) in enumerate(schritte):
+        x = 14.9 + (i % 4) * 98.2
+        y = 103 + (i // 4) * 74
+        inner = (f'<div style="padding:7mm 6mm"><span class="wegnr" style="font-size:22pt">{nr}</span>'
+                 f'<h3 style="margin-top:4mm">{e(titel)}</h3>'
+                 f'<p class="desc" style="margin-top:2.5mm">{e(text)}</p></div>')
+        h += karte(x, y, 92.8, 66, inner, bild=False)
+    h += (f'<div class="abs txt11" style="left:19.6mm;top:258mm;width:356mm;color:#2A2521">'
+          'Welche dieser Schritte wir übernehmen, entscheiden Sie. Auch nur das Essen ist möglich — '
+          'dann liefern wir und Sie richten selbst an.</div>')
+    h += fuss(32, 'Alle Preise in Schweizer Franken.', arb=False)
+    return seite(kap05(h))
+
+def s35():
+    """Alte Seite 35: Getränke. Inhalt wie im Original, neue Seitenzahl 33."""
+    h = kopf('GETRÄNKE', 'Wir liefern, kühlen und nehmen zurück. Verrechnet wird nur, was geöffnet wurde.',
+             33, braun=(64.2,), ghost='GETR')
+    for i, x in enumerate((558, 559, 560, 561, 562, 563)): h += img(K(x, 35), 19.1 + i * 65.8, 65.9, 52.9, 52.9)
+    alkfrei = (('Mineral mit/ohne Kohlensäure', '1.5 l', 6.0), ('Orangensaft', '1 l', 6.0),
+               ('Zitronen-Ice-Tea, hausgemacht', '1 l', 5.0), ('Süssgetränk, diverse', '1.5 l', 6.0),
+               ('Kaffee / Espresso', 'pro Tasse', 4.0), ('Rappi Hoppel', '33 cl', 3.5))
+    wein = (('Bier, diverse', '33 cl Flasche', 4.0),
+            ('Pinot Grigio Corte delle Rose, Delle Venezie', '75 cl', 28.5),
+            ('Primitivo Salento IGT Senza Parole', '50 cl', 21.0),
+            ('Spes Rioja DOC a Bodegas Loa', '75 cl', 44.0),
+            ('Zürichsee AOC Rosé', '75 cl', 32.5), ('Prosecco Borgo Molina Brut', '75 cl', 25.0))
+    rows = (row('korb', 'Lieferung:', 'Wir bringen die Getränke und nehmen die übrigen nach dem Anlass zurück.')
+            + row('auge', 'Gläser:', 'Passende Gläser mieten Sie mit — Seite 34.')
+            + row('pfeile', 'Abrechnung:', 'Wird nach effektivem Verbrauch abgerechnet. Geschlossenes kommt retour.'))
+    inner = (f'<div class="abs col" style="left:17.1mm;top:22mm;width:150mm">{sph("Alkoholfrei")}'
+             + '<div class="preise dicht">' + ''.join(pr(*v) for v in alkfrei) + '</div>'
+             + '<p class="txt105" style="margin-top:4mm;color:#E6DCCB">Kaffee und Espresso zuzüglich Miete Maschine, '
+               'inklusive Becher, Rahm und Zucker.</p></div>'
+             + f'<div class="abs col" style="left:180mm;top:22mm;width:160mm">{sph("Bier & Wein")}'
+             + '<div class="preise dicht">' + ''.join(pr(*v) for v in wein) + '</div></div>'
+             + f'<div class="rows eng" style="left:352mm;top:22mm;width:33mm;display:none">{rows}</div>')
+    h += karte(14.9, 97.9, 390, 118, inner, bild=False)
+    h += (f'<div class="abs salatbox" style="left:19.6mm;top:224mm;width:380.6mm;grid-template-columns:repeat(3,1fr)">'
+          '<div><div class="rt">LIEFERUNG</div><p>Wir bringen die Getränke und nehmen die übrigen nach dem Anlass zurück.</p></div>'
+          '<div><div class="rt">GLÄSER</div><p>Passende Gläser mieten Sie mit — Seite 34.</p></div>'
+          '<div><div class="rt">ABRECHNUNG</div><p>Wird nach effektivem Verbrauch abgerechnet. Geschlossenes kommt retour.</p></div></div>')
+    h += hand('kein Schleppen mehr', 300, 258, -5, 17)
+    h += fuss(33, 'Getränke werden nach effektivem Verbrauch abgerechnet. Geschlossene, nicht konsumierte Ware kommt '
+                  'zurück und wird nicht verrechnet. Alle Preise in Schweizer Franken.', arb=False)
+    return seite(kap05(h))
+
+def s36m():
+    """Alte Seite 36: Material, Personal & Service. Inhalt wie im Original, neue Seitenzahl 34."""
+    h = kopf('MATERIAL, PERSONAL & SERVICE',
+             'Alles, was um das Essen herum gebraucht wird — aus demselben Haus und auf derselben Offerte.',
+             34, braun=(44,), ghost='SERV')
+    geschirr = (('Teller (Hauptgang, Vorspeise, Dessert, Suppentasse)', 'pro Stück', 1.0),
+                ('Messer, Gabel, Löffel, Dessertgabel, Kaffeelöffel', 'pro Stück', 0.8),
+                ('Kaffee komplett (Tasse, Untersetzer, Löffeli)', 'pro Set', 2.3),
+                ('Wein-/Mineralglas', 'pro Stück', 1.0), ('Prosecco-Glas', 'pro Stück', 1.0))
+    mobiliar = (('Tischgarnitur komplett (2 Bänke, 1 Tisch)', 'pro Garnitur', 40.0),
+                ('Tischgarnitur komplett inkl. Tischtuch', 'pro Garnitur', 50.0),
+                ('Stehtisch', 'pro Stück', 60.0), ('Kaffeemaschine', 'pro Anlass', 100.0))
+    personal = (('Servicepersonal, inkl. Anfahrt und Rückreise', 'pro Stunde', 60.0),)
+    einweg = (('Einweg Kartönli', '10 Stk.', 2.0), ('Einweg Löffel', '10 Stk.', 2.0),
+              ('Einweg Gabel', '10 Stk.', 2.0), ('Einweg Messer', '10 Stk.', 2.0),
+              ('Einweg Kaffeebecher 3 dl', '10 Stk.', 4.0), ('Einweg Servietten', '10 Stk.', 1.0))
+    def spalte(x, b, *bloecke):
+        inhalt = ''.join(sph(t) + '<div class="preise dicht">' + ''.join(pr(*v) for v in zs) + '</div>'
+                         for t, zs in bloecke)
+        return f'<div class="abs col" style="left:{x}mm;top:22mm;width:{b}mm">{inhalt}</div>'
+    rows = (row('korb', 'Mieten statt kaufen:', 'Bei uns lässt sich praktisch alles mieten — Einweggeschirr ebenso wie Porzellan.')
+            + row('person', 'Zurücklehnen:', 'Unsere Cateringcrew kümmert sich vor Ort um alles, vom Eindecken bis zum Abräumen.')
+            + row('pfeile', 'Kein Schleppen:', 'Wir liefern die Getränke und nehmen nach dem Anlass die übrigen zurück. Verrechnet wird nur der effektive Verbrauch.')
+            + row('auge', 'Sagen Sie es uns:', 'Braucht es Stehtische, Sonnenschirme oder einen Ofen? Gibt es eine spezielle Anfahrt? Je mehr wir wissen, desto besser bereiten wir uns vor.'))
+    inner = (spalte(17.1, 126, ('Geschirr', geschirr))
+             + spalte(151, 118, ('Mobiliar', mobiliar), ('Personal', personal))
+             + spalte(277, 108, ('Einweg', einweg))
+             + f'<div class="rows eng" style="left:17.1mm;top:120mm;width:368mm">{rows}</div>')
+    h += karte(14.9, 44, 390, 215, inner, bild=False)
+    h += fuss(34, 'Servicepersonal CHF 60.00 pro Stunde, inklusive Anfahrt und Rückreise. '
+                  'Alle Preise in Schweizer Franken.', arb=False)
+    return seite(kap05(h))
+
+def s39():
+    """Alte Seite 39: Anfrage. Inhalt wie im Original, neue Seitenzahl 37."""
+    h = hero(K(601, 39), 'ANFRAGE',
+             'Erzählen Sie uns von Ihrem Anlass. Ob 20 Gäste oder mehrere Tausend: Wir hören zu, beraten persönlich '
+             'und stellen ein Catering zusammen, das zu Ihrem Anlass, Ihren Gästen und Ihrem Budget passt.',
+             ghost='FRAGE')
+    h = h.replace('KAPITEL 04 / 06', 'KAPITEL 06 / 06').replace('"nr04" style="top:', '"nr04 f" style="top:').replace('>05<', '>06<')
+    schritte = (('01', 'ANFRAGE SENDEN', 'Anrufen oder schreiben — mit Datum, Anlassart und ungefährer Personenzahl.'),
+                ('02', 'PERSÖNLICHE BERATUNG', 'Wir melden uns und besprechen Ihre Wünsche — unverbindlich und individuell.'),
+                ('03', 'INDIVIDUELLE OFFERTE', 'Sie erhalten ein passendes Angebot, ganz nach Anlass und Budget.'),
+                ('04', 'GENUSS AM GROSSEN TAG', 'Wir liefern, richten ein oder bewirten vor Ort — Sie geniessen den Anlass.'))
+    for i, (nr, titel, text) in enumerate(schritte):
+        inner = (f'<div style="padding:9mm 6mm"><span class="wegnr" style="font-size:26pt">{nr}</span>'
+                 f'<h3 style="margin-top:5mm">{e(titel)}</h3>'
+                 f'<p class="desc" style="margin-top:3mm">{e(text)}</p></div>')
+        h += karte(14.9 + i * 78.5, 138, 74.5, 130.9, inner, bild=False)
+    liste_ = ('Datum und Uhrzeit', 'Ort des Anlasses', 'Ungefähre Personenzahl', 'Art des Anlasses',
+              'Apéro, Buffet oder Menü', 'Brauchen Sie Geschirr, Mobiliar oder Service?')
+    inner_k = ('<div style="padding:9mm 7mm"><h3>DAS HILFT UNS BEIM START</h3>'
+               + '<div class="preise dicht" style="margin-top:4mm">'
+               + ''.join(f'<div class="pr klein"><span class="n">{e(x)}</span></div>' for x in liste_) + '</div>'
+               + '<div class="sph" style="margin-top:7mm">Direkt zu uns</div>'
+               + '<p class="txt11">055 210 15 44<br>info@baeckerei-wick.ch<br>baeckerei-wick.ch</p>'
+               + '<p class="txt105" style="margin-top:5mm;color:#E6DCCB">Beratung und Offerte sind kostenlos '
+                 'und unverbindlich.</p></div>')
+    h += karte(14.9 + 4 * 78.5, 138, 75.9, 130.9, inner_k, bild=False)
+    h += hand('wir freuen uns', 40, 128, -5, 19)
+    h += fuss(37, 'Bäckerei Konditorei Confiserie Wick AG · Rapperswil-Jona · 055 210 15 44 · '
+                  'info@baeckerei-wick.ch', arb=False)
     return seite(h)
 
 # Schlüssel = alte Seitenzahl. Neue Seiten, die es im Original nicht gibt, bekommen eine
 # Zahl, die als alte Seitenzahl nicht vorkommt: 0 für die Gläsli-Seite, -1 für die Locations.
 SEITEN = [(0, sGl), (6, s6), (8, s8), (9, s9), (10, s10), (11, s11alt), (12, s12), (13, s13),
-          (14, s14), (16, s16), (17, s17), (18, s18), (19, s19), (30, s30), (32, s32), (33, s33), (37, s37), (-1, sLoc)]
+          (14, s14), (16, s16), (17, s17), (18, s18), (19, s19), (30, s30), (32, s32), (33, s33), (34, s34), (35, s35), (36, s36m), (37, s37), (39, s39), (-1, sLoc)]
 # Konzept C: der neue Essensteil. Eigene Nummerierung, noch nicht in die 40 Seiten eingebaut.
 KAPITEL_C = [(20, c20), (21, c21), (22, c22), (23, c23), (24, c24), (25, c24b), (26, c25), (27, c26), (28, c27), (29, c28)]
 
@@ -783,6 +914,8 @@ body{background:#888}
 .dot.b{left:7.5mm;width:3.4mm;height:3.4mm}
 .dot.s{left:8.3mm;width:1.8mm;height:1.8mm;background:#E6DBCB}
 .nr04{position:absolute;left:6.1mm;font:600 9pt 'Wick Sans';letter-spacing:.1em;color:#7A4424}
+.nr04 .z5,.nr04.f .z4{display:none}
+.nr04.f .z5{display:inline}
 .vline{position:absolute;left:9.1mm;width:.3mm;background:#E6DBCB}
 .hero{position:absolute;left:-3mm;top:-3mm;width:426mm;height:124.1mm;overflow:hidden}
 .hero img{width:100%;height:100%;object-fit:cover;display:block}

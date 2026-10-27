@@ -33,9 +33,10 @@ Die Broschüre hat 40 Seiten, A3 quer. Grundlage ist `quellen/broschuere-40s.pdf
 | 37–38 | Anfrage und Rückseite *(alt 39–40)* | unverändert | |
 | ~~Gut zu wissen~~ | *(alt 38)* | **gestrichen** | |
 
-**Achtung:** Die Seiten, die noch unverändert aus dem Original stammen, tragen in
-der Fusszeile noch ihre alte Nummer. Betroffen sind die neuen Seiten 32, 33, 34,
-37, 38 und 39. Sie müssen noch nachgebaut werden.
+**Stand:** Alle Seiten ab 6 sind nachgebaut. `broschuere/inhalt_pruefen.py`
+meldet keine Abweichung mehr — jede gedruckte Seitenzahl stimmt mit der Position
+überein. Unverändert aus dem Original kommen nur noch die Seiten 1 bis 5
+(Umschlag bis «Ein Haus, viele Handwerke»); dort stimmen die Nummern ohnehin.
 
 **Arbeitsstand-Markierungen in den überarbeiteten Seiten**
 «Preis nach Kalkulation» = neue oder geänderte Position, Preis folgt.

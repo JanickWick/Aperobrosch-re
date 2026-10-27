@@ -5,6 +5,34 @@ Neueste Einträge oben.
 
 ---
 
+## 2026-10-27 · Die letzten vier Originalseiten nachgebaut
+
+Damit ist jede Seite der Broschüre aus einer Hand gesetzt und jede druckt ihre
+richtige Nummer.
+
+- **Seite 32 · Ihr Anlass komplett** — rostfarbener Kopf wie bei den Apéro-Paketen,
+  darunter die acht Schritte als Karten mit grosser Ziffer.
+- **Seite 33 · Getränke** — alkoholfrei und Bier & Wein in zwei Spalten, die drei
+  Hinweise zu Lieferung, Gläsern und Abrechnung als rostfarbenes Band.
+  Der Verweis «Gläser mieten Sie mit» zeigt neu auf Seite 34 statt 28.
+- **Seite 34 · Material, Personal & Service** — Geschirr, Mobiliar, Personal und
+  Einweg in drei Spalten, darunter die vier Hinweise mit Symbolen.
+- **Seite 37 · Anfrage** — die vier Schritte als Karten, daneben die Checkliste
+  «Das hilft uns beim Start» und die Kontaktangaben.
+
+Inhalt und Preise sind eins zu eins aus dem Original übernommen.
+
+### Kapitelmarke
+`kopf()` und `hero()` schreiben immer «KAPITEL 04 / 06». Die Seiten aus Kapitel 05
+und 06 setzen das jetzt über `kap05()` richtig — betrifft auch die Randziffer.
+
+### Kontrolle
+`broschuere/inhalt_pruefen.py` meldet keine Abweichung mehr: 38 Seiten,
+jede gedruckte Nummer stimmt mit der Position überein, alle Verweise zeigen auf
+vorhandene Seiten.
+
+---
+
 ## 2026-10-27 · Reihenfolge korrigiert, neue Inhaltsprüfung
 
 ### Fehler
