@@ -5,6 +5,30 @@ Neueste Einträge oben.
 
 ---
 
+## 2026-11-02 · Neues Dokument: Eventraum «Säntisblick»
+
+`saentisblick/bauen.py` baut `out/wick-saentisblick.pdf` — A4 hoch, vier Seiten,
+in der Bildsprache der Apéro-Broschüre. Fotos liegen unter
+`assets/img/saentisblick/`, sie stammen aus der Website.
+
+1. **Titel** — Bild des Saals, Eckdaten im rostfarbenen Band, Adresse und Kontakt.
+2. **Der Raum** — wofür er passt, Ausstattung, sechs Bilder.
+3. **Preise** — Raummiete, was dazukommt, die vier Bedingungen.
+4. **Catering & Anfrage** — vier Cateringformen, der Ablauf in vier Schritten,
+   Kontaktblock.
+
+### Angaben
+Alles aus `content/eventraum.ts` der Website und aus der Apéro-Broschüre
+übernommen. Zwei Abweichungen:
+
+- **80 Sitzplätze statt 120.** Die Website nennt noch 120 — dort muss es
+  ebenfalls korrigiert werden. Dazu neu der Hinweis auf den Zeltaufbau
+  bis 400 Personen.
+- **Adresse Alte Jonastrasse 77, 8640 Rapperswil-Jona.** Auf der Website fehlt
+  sie bisher ganz.
+
+---
+
 ## 2026-10-27 · Die letzten vier Originalseiten nachgebaut
 
 Damit ist jede Seite der Broschüre aus einer Hand gesetzt und jede druckt ihre

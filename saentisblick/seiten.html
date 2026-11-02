@@ -1,0 +1,79 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><style>
+@font-face{font-family:'Wick Sans';src:url(../assets/fonts/QGYsz_wNahGAdqQ43Rh_cqDpp_k.woff2) format('woff2');font-weight:100 900;unicode-range:U+0100-02AF,U+1E00-1EFF,U+20A0-20AB,U+20AD-20CF}
+@font-face{font-family:'Wick Sans';src:url(../assets/fonts/QGYsz_wNahGAdqQ43Rh_fKDp.woff2) format('woff2');font-weight:100 900}
+@font-face{font-family:'Wick Slab';src:url(../assets/fonts/rax8HiqOu8IVPmn7cYxpPDk.woff2) format('woff2');font-weight:100 900;unicode-range:U+0100-02AF,U+1E00-1EFF,U+20A0-20AB,U+20AD-20CF}
+@font-face{font-family:'Wick Slab';src:url(../assets/fonts/rax8HiqOu8IVPmn7f4xp.woff2) format('woff2');font-weight:100 900}
+@page{size:210mm 297mm;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#888}
+.seite{width:210mm;height:297mm;position:relative;overflow:hidden;background:#F6F2EA;
+  font-family:'Wick Slab',serif;color:#1F1F1F;page-break-after:always;-webkit-print-color-adjust:exact}
+.marke{position:absolute;left:16mm;bottom:9mm;font:500 6.6pt 'Wick Sans';letter-spacing:.16em;color:#7A4424}
+.pnr{position:absolute;right:16mm;bottom:8.6mm;font:500 9pt 'Wick Sans';color:#1F1F1F}
+
+/* Titelseite */
+.titelbild{position:absolute;left:0;top:0;width:210mm;height:206mm;overflow:hidden}
+.titelbild img{width:100%;height:100%;object-fit:cover;display:block}
+.titelbild .ov{position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(18,17,16,.62) 0%,rgba(18,17,16,.16) 34%,rgba(18,17,16,.1) 56%,rgba(18,17,16,.86) 100%)}
+.kap{position:absolute;left:16mm;top:16mm;font:600 7.4pt 'Wick Sans';letter-spacing:.24em;color:#7A4424;z-index:3}
+.kap.hell{color:#F2E4D4}
+.box{position:absolute;left:16mm;top:28mm;width:72mm;height:52mm;background:#fff;z-index:3;
+  display:flex;align-items:center;justify-content:center;text-align:center;
+  font:500 17pt 'Wick Sans';letter-spacing:.1em;line-height:8mm;color:#1F1F1F}
+.titelintro{position:absolute;left:16mm;top:164mm;width:150mm;z-index:3;
+  font-size:11pt;line-height:5.4mm;color:#fff}
+.eckband{position:absolute;left:0;top:206mm;width:210mm;background:#7A4424;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:6mm;padding:9mm 16mm}
+.eckband b{display:block;font:500 17pt 'Wick Sans';line-height:1;color:#fff}
+.eckband span{display:block;margin-top:2.4mm;font-size:7.6pt;line-height:3.5mm;color:#F2E4D4}
+.titelfuss{position:absolute;left:16mm;top:250mm;width:178mm;font-size:9.5pt;line-height:4.8mm;color:#2A2521}
+
+/* Kopf der Innenseiten */
+.titel{position:absolute;left:16mm;top:24mm;font:600 15pt 'Wick Sans';letter-spacing:.1em;color:#1F1F1F}
+.sub{position:absolute;left:16mm;top:34mm;width:178mm;font-size:10.5pt;line-height:5mm;color:#2A2521}
+.rule{position:absolute;left:16mm;top:52mm;width:178mm;height:.3mm;background:#E6DBCB}
+.sph{font:600 7.4pt 'Wick Sans';letter-spacing:.18em;color:#7A4424;
+  border-bottom:.2mm solid #E6DBCB;padding-bottom:1.8mm;margin-bottom:4mm}
+
+.halb{position:absolute;left:16mm;top:60mm;width:178mm;display:grid;grid-template-columns:1fr 1fr;gap:10mm}
+.tagliste{display:flex;flex-wrap:wrap;gap:2mm}
+.tagliste span{border:.25mm solid #CFC3B0;padding:1.6mm 3mm 1.2mm;font-size:8.6pt;line-height:1.2;color:#2A2521}
+.raster{position:absolute;left:16mm;top:98mm;width:178mm;display:grid;grid-template-columns:repeat(3,1fr);gap:2mm}
+.bild{overflow:hidden;background:#E6DBCB;aspect-ratio:1/1}
+.bild img{width:100%;height:100%;object-fit:cover;display:block}
+.fuss{position:absolute;left:16mm;bottom:20mm;width:178mm;font-size:8pt;line-height:3.8mm;color:#5A5048}
+
+/* Preise */
+.rostkarte{position:absolute;left:16mm;top:60mm;width:178mm;background:#7A4424;color:#fff;
+  display:grid;grid-template-columns:.8fr 1.2fr;gap:10mm;padding:9mm 10mm}
+.rkl{display:block;font:600 7.4pt 'Wick Sans';letter-spacing:.18em;color:#F2E4D4}
+.rkp{display:block;margin-top:3mm;font:500 24pt 'Wick Sans';line-height:1;color:#fff}
+.rostkarte p{margin-top:3mm;font-size:9.5pt;line-height:4.6mm;color:#F4E6D8}
+.rostkarte .rk2 p{margin-top:0}
+.preisliste{position:absolute;left:16mm;top:112mm;width:178mm}
+.pz{display:flex;align-items:baseline;gap:4mm;border-bottom:.2mm solid #E6DBCB;padding:2.4mm 0}
+.pz .n{flex:1 1 auto;font-size:10pt}
+.pz .u{font-size:7.6pt;color:#5A5048;white-space:nowrap}
+.pz .v{font:500 10pt 'Wick Sans';white-space:nowrap;min-width:34mm;text-align:right}
+.bedingungen{position:absolute;left:16mm;top:210mm;width:178mm;display:grid;grid-template-columns:1fr 1fr;gap:6mm 10mm}
+.bedingungen b{display:block;font:600 7.4pt 'Wick Sans';letter-spacing:.14em;color:#7A4424;margin-bottom:1.6mm}
+.bedingungen p{font-size:9.5pt;line-height:4.4mm;color:#2A2521}
+
+/* Catering & Anfrage */
+.catering{position:absolute;left:16mm;top:60mm;width:178mm;display:grid;grid-template-columns:1fr 1fr;gap:5mm}
+.catering>div{background:#1F1F1F;color:#fff;padding:7mm 7mm 8mm}
+.catering h3{font:500 9.4pt 'Wick Sans';letter-spacing:.14em;color:#fff}
+.catering p{margin-top:2.6mm;font-size:9.2pt;line-height:4.4mm;color:#D6CCBE}
+.hinweis{position:absolute;left:16mm;top:142mm;width:178mm;font-size:9.5pt;line-height:4.6mm;color:#2A2521}
+.schritte{position:absolute;left:16mm;top:166mm;width:178mm;display:grid;grid-template-columns:repeat(4,1fr);gap:5mm}
+.schritte .nr{font:500 15pt 'Wick Sans';line-height:1;color:#7A4424}
+.schritte h3{margin-top:3mm;font:500 8pt 'Wick Sans';letter-spacing:.14em;color:#1F1F1F}
+.schritte p{margin-top:2mm;font-size:8.4pt;line-height:4mm;color:#2A2521}
+.kontakt{position:absolute;left:16mm;top:212mm;width:178mm;background:#1F1F1F;color:#fff;padding:9mm 10mm 10mm}
+.kl{font:600 7.4pt 'Wick Sans';letter-spacing:.18em;color:#E6DCCB}
+.kt{margin-top:4mm;font:500 20pt 'Wick Sans';line-height:1;color:#fff}
+.km{margin-top:2.6mm;font-size:11pt;color:#fff}
+.ka{margin-top:4mm;font-size:9.4pt;line-height:4.4mm;color:#C9BCA8}
+.kh{margin-top:4mm;font-size:8.6pt;color:#C9BCA8}
+</style></head><body><section class="seite"><div class="titelbild"><img src="../assets/img/saentisblick/titel.jpg"><div class="ov"></div></div><div class="kap hell">WICKS EVENTRAUM</div><div class="box">SÄNTIS-<br>BLICK</div><p class="titelintro">Heimelig, vielfältig und für jeden Anlass buchbar. Ob Sitzung, Geschäftsessen, Geburtstagsfeier, Brunch oder Apéro — wir bringen alles unter einen Hut. Raum, Catering und Betreuung aus einer Hand.</p><div class="eckband"><div><b>80</b><span>Sitzplätze im Raum</span></div><div><b>400</b><span>Personen mit Zeltaufbau</span></div><div><b>450.–</b><span>Raummiete in Franken</span></div><div><b>2000.–</b><span>Konsumation, dann entfällt die Miete</span></div></div><p class="titelfuss">Alte Jonastrasse 77 · 8640 Rapperswil-Jona<br>055 210 15 44 · info@baeckerei-wick.ch · baeckerei-wick.ch</p><div class="marke">WICK — EVENTRAUM «SÄNTISBLICK»</div><div class="pnr">1</div></section><section class="seite"><div class="kap">WICKS EVENTRAUM</div><h1 class="titel">DER RAUM</h1><p class="sub">Eine Alphütte mitten in Rapperswil-Jona — Holz, Wandbilder und Platz für 80 Gäste an Tischen. Mit Zeltaufbau davor wächst der Anlass auf bis zu 400 Personen.</p><div class="rule"></div><div class="halb"><div><div class="sph">Wofür der Raum passt</div><div class="tagliste"><span>Sitzungen</span><span>Geschäftsessen</span><span>Geburtstagsfeiern</span><span>Brunch</span><span>Apéro</span><span>Trauerfeiern</span></div></div><div><div class="sph">Ausstattung</div><div class="tagliste"><span>Kühlschrank</span><span>Musikanlage</span><span>Rattan-Lounge</span><span>WC-Anlage</span><span>WiFi</span><span>TV 86 Zoll Ultra HD</span></div></div></div><div class="raster"><div class="bild" style="grid-column:span 2;aspect-ratio:2/1"><img src="../assets/img/saentisblick/raum-1.jpg"></div><div class="bild" style=""><img src="../assets/img/saentisblick/raum-2.jpg"></div><div class="bild" style=""><img src="../assets/img/saentisblick/raum-3.jpg"></div><div class="bild" style=""><img src="../assets/img/saentisblick/raum-4.jpg"></div><div class="bild" style=""><img src="../assets/img/saentisblick/raum-5.jpg"></div><div class="bild" style="grid-column:span 3;aspect-ratio:4/1"><img src="../assets/img/saentisblick/raum-6.jpg"></div></div><p class="fuss">Die Bilder zeigen den Raum an verschiedenen Anlässen. Bestuhlung und Tischstellung richten wir nach Ihrem Anlass ein.</p><div class="marke">WICK — EVENTRAUM «SÄNTISBLICK»</div><div class="pnr">2</div></section><section class="seite"><div class="kap">WICKS EVENTRAUM</div><h1 class="titel">PREISE</h1><p class="sub">Klar und ohne Überraschungen. Was Sie nicht brauchen, verrechnen wir nicht.</p><div class="rule"></div><div class="rostkarte"><div class="rk1"><span class="rkl">RAUMMIETE</span><span class="rkp">CHF 450.–</span><p>Rückgabe am Folgetag bis Mittag.</p></div><div class="rk2"><p><b>Ab einer Konsumation von CHF 2000.– entfällt die Raummiete.</b> Gezählt wird alles, was an Essen und Getränken über uns läuft.</p></div></div><div class="sph" style="position:absolute;left:16mm;top:104mm;width:178mm">Was Sie dazunehmen können</div><div class="preisliste"><div class="pz"><span class="n">TV, 86 Zoll Ultra HD</span><span class="u"></span><span class="v">CHF 100.–</span></div><div class="pz"><span class="n">Zusätzlicher Kühlschrank</span><span class="u">pro Stück</span><span class="v">CHF 30.–</span></div><div class="pz"><span class="n">Tischgarnitur oder Stehtisch inkl. Tischtuch</span><span class="u">pro Stück</span><span class="v">CHF 30.–</span></div><div class="pz"><span class="n">Kaffee</span><span class="u">pro Portion</span><span class="v">CHF 3.–</span></div><div class="pz"><span class="n">Personal vor Ort</span><span class="u">pro Person und Stunde</span><span class="v">CHF 60.–</span></div><div class="pz"><span class="n">Getränkeservice</span><span class="u"></span><span class="v">nach effektivem Verbrauch</span></div><div class="pz"><span class="n">Catering oder Brunch</span><span class="u"></span><span class="v">nach individueller Offerte</span></div><div class="pz"><span class="n">Mietgeschirr</span><span class="u"></span><span class="v">nach individueller Offerte</span></div><div class="pz"><span class="n">Zeltaufbau vor dem Raum</span><span class="u"></span><span class="v">nach individueller Offerte</span></div></div><div class="sph" style="position:absolute;left:16mm;top:202mm;width:178mm">Gut zu wissen</div><div class="bedingungen"><div><b>Raummiete</b><p>CHF 450.– pauschal. Rückgabe am Folgetag bis Mittag.</p></div><div><b>Ab CHF 2000.–</b><p>Bei einer Konsumation ab CHF 2000.– entfällt die Raummiete.</p></div><div><b>Rückgabe</b><p>Besenrein. Allfällige Reinigung CHF 200.–.</p></div><div><b>Getränke</b><p>Werden nach effektivem Verbrauch abgerechnet. Geschlossenes kommt retour.</p></div></div><p class="fuss">Alle Preise in Schweizer Franken, inklusive Mehrwertsteuer. Catering, Brunch, Mietgeschirr und Zeltaufbau offerieren wir individuell.</p><div class="marke">WICK — EVENTRAUM «SÄNTISBLICK»</div><div class="pnr">3</div></section><section class="seite"><div class="kap">WICKS EVENTRAUM</div><h1 class="titel">CATERING &amp; ANFRAGE</h1><p class="sub">Essen kommt aus dem eigenen Haus — Backstube, Konditorei, Confiserie und Küche unter einem Dach.</p><div class="rule"></div><div class="catering"><div><h3>APÉRO</h3><p>Häppchen aus der eigenen Backstube und Küche — vom kleinen Apéro bis zum Apéro Riche, der eine Mahlzeit ersetzt.</p></div><div><h3>BRUNCH</h3><p>Zopf, Brötli, Confiserie und Warmes aus dem eigenen Haus.</p></div><div><h3>BUFFET ODER MENÜ</h3><p>Vom einfachen Buffet bis zum mehrgängigen Menü, am Tisch serviert oder zum Selbstschöpfen.</p></div><div><h3>SÜSSER ABSCHLUSS</h3><p>Mini-Pâtisserie, Desserts im Glas und Torten nach Ihrer Idee.</p></div></div><p class="hinweis">Das vollständige Catering-Angebot steht in unserer Apéro- und Catering-Broschüre. Wir schicken sie Ihnen gerne zu.</p><div class="sph" style="position:absolute;left:16mm;top:158mm;width:178mm">So kommen wir zusammen</div><div class="schritte"><div><span class="nr">01</span><h3>ANFRAGEN</h3><p>Anrufen oder schreiben — mit Datum, Anlassart und ungefährer Personenzahl.</p></div><div><span class="nr">02</span><h3>BESPRECHEN</h3><p>Wir melden uns und gehen Raum, Essen und Material durch — unverbindlich.</p></div><div><span class="nr">03</span><h3>OFFERTE</h3><p>Sie erhalten ein Angebot für Raum und Catering auf einem Blatt.</p></div><div><span class="nr">04</span><h3>IHR ANLASS</h3><p>Wir richten ein, bewirten und räumen ab. Sie sind Gast am eigenen Fest.</p></div></div><div class="kontakt"><div class="kl">SPRECHEN WIR DARÜBER</div><p class="kt">055 210 15 44</p><p class="km">info@baeckerei-wick.ch</p><p class="ka">Alte Jonastrasse 77 · 8640 Rapperswil-Jona<br>baeckerei-wick.ch</p><p class="kh">Beratung und Offerte sind kostenlos und unverbindlich.</p></div><div class="marke">WICK — EVENTRAUM «SÄNTISBLICK»</div><div class="pnr">4</div></section></body></html>
