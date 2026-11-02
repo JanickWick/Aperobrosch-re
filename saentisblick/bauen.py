@@ -95,7 +95,7 @@ def s1():
 
 
 def s2():
-    h = kopf('DER RAUM', 'Eine Alphütte mitten in Rapperswil-Jona — Holz, Wandbilder und Platz für '
+    h = kopf('DER RAUM', 'Holz, Wandbilder und Alphütten-Stimmung mitten in Rapperswil-Jona — Platz für '
                          f'{PLAETZE} Gäste an Tischen. Mit Zeltaufbau davor wächst der Anlass auf bis zu '
                          f'{ZELT} Personen.')
     h += (f'<div class="halb"><div>{sph("Wofür der Raum passt")}{tags(NUTZUNG)}</div>'
@@ -122,7 +122,7 @@ def s3():
     h += sph('Gut zu wissen', 202)
     h += ('<div class="bedingungen">' + ''.join(
         f'<div><b>{e(t)}</b><p>{e(x)}</p></div>' for t, x in BEDINGUNGEN) + '</div>')
-    h += ('<p class="fuss">Alle Preise in Schweizer Franken, inklusive Mehrwertsteuer. '
+    h += ('<p class="fuss">Alle Preise in Schweizer Franken. '
           'Catering, Brunch, Mietgeschirr und Zeltaufbau offerieren wir individuell.</p>')
     return seite(h, 3)
 
